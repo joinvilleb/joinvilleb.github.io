@@ -246,20 +246,5 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-    /* Adjust the layout and content for smaller screens here */
 
-    /* For example, if you have a navigation menu that's displayed horizontally on larger screens, you might want to stack the menu items vertically on smaller screens. */
-
-    nav {
-        display: flex;
-        flex-direction: column;
-    }
-
-    /* If you have sections that are displayed side by side on larger screens, you might want to stack them vertically on smaller screens. */
-
-    .section {
-        width: 100%;
-    }
-}
 
