@@ -246,5 +246,16 @@ body {
 }
 
 
+@media screen and (max-width: 768px) { /* this changes the layout and content for smaller screens */
 
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+}
 
