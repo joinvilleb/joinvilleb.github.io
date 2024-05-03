@@ -251,7 +251,7 @@ body {
 
     /* For example, if you have a navigation menu that's displayed horizontally on larger screens, you might want to stack the menu items vertically on smaller screens. */
 
-    .menu {
+    nav {
         display: flex;
         flex-direction: column;
     }
