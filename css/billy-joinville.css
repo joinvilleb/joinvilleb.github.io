@@ -248,8 +248,5 @@ body {
 
 @media screen and (max-width: 768px) { /* this changes the layout and content for smaller screens */
 
-    section {
-        width: 100%;
-    }
 }
 
