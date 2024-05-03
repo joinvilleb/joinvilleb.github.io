@@ -2,8 +2,8 @@
 /* link styling */ 
 
 a {
-    text-decoration: none; /* Removes underline from all links */
-    font-family: Arial, sans-serif; /* Ensures link text stands out */
+    text-decoration: none; 
+    font-family: Arial, sans-serif; 
 }
 
 a:link { 
@@ -66,7 +66,7 @@ p {
 
     font-size: 16px;
     font-family: "Verdana", "sans-serif";
-    margin-bottom: 1em; /* adds space below paragraphs */
+    margin-bottom: 1em; /* this will add space below paragraphs */
 
     text-align: justify;
     line-height: 1.8;
@@ -93,7 +93,7 @@ nav {
     position: fixed;
     top: 0; 
     width: 100%;
-    font-size: 10px;
+    font-size: 15px;
     z-index: 1000;
 }
 
