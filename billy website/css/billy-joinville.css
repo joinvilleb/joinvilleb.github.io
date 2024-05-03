@@ -56,12 +56,6 @@ h2 {
 
 }
 
-h3 {
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-}
-
 p {
 
     font-size: 16px;
@@ -136,12 +130,14 @@ footer {
     color: black;
     margin-top: auto;
     margin-bottom: 0;
-    background: linear-gradient(white, gray);
+    
+    background-color: lightblue;
+    color: black;
 
     width: 100%;
     box-sizing: border-box;
     bottom: 0;
-    padding: 10px 0; /* Adds padding inside the footer vertically */
+    padding: 10px 0; /* Adds padding inside the footer top to bottom */
 
 }
 
@@ -242,4 +238,10 @@ html, body {
     overflow-x: hidden; 
 }
 
+/* body styling to make the background a bit more colorful */
+
+
+body {
+    background-color: aliceblue;
+}
 
