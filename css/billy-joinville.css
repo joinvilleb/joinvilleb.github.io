@@ -248,16 +248,23 @@ body {
         width: auto; /* Allow images to retain their original width up to the max-width */
     }
 
+    #instagram, #linked-in, #x-social, #email {
+        flex-direction: column;
+        align-items: center; /* Aligns cards centrally on smaller screens */
+    }
+
     .contact-card {
         padding: 10px; /* Slightly less padding on smaller screens */
-        margin: 10px; /* Consistent margin on all sides */
+        margin: 10px auto; /* Consistent margin on all sides */
         max-width: 100%; /* Allows the card to fill the container if needed */
     }
 
     .contact-card img {
         width: 100%; /* Full width on smaller screens for better visibility */
     }
-    
+
+
+
 }
 
 
@@ -272,27 +279,34 @@ body {
 
 /* styling for the contact cards */
 
-#instagram, #linked-in, #x-social, #email {
+ /* #instagram, #linked-in, #x-social, #email {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns to be responsive */
-    grid-gap: 20px; /* Increase gap for better separation */
-    padding: 20px; /* Add padding around the grid container */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust columns to be responsive 
+    grid-gap: 20px; /* Increase gap for better separation 
+    padding: 20px; /* Add padding around the grid container 
     margin-top: 0;
-    margin-bottom: 20px; /* Add some margin at the bottom */
+    margin-bottom: 20px; /* Add some margin at the bottom 
+} */
+
+
+#instagram, #linked-in, #x-social, #email {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the cards within the container */
+    gap: 20px; /* Adds space between the cards */
+    padding: 20px; /* Padding around the container for better spacing */
 }
 
+
 .contact-card {
-    background-color: #f7f7f7; 
-    border: 1px solid #ccc; 
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
-    border-radius: 10px; /* Rounded corners for a smoother look */
-    padding: 15px; 
-    margin: 10px auto; 
-    text-align: center; 
-    max-width: 300px; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
+    flex: 0 1 300px; /* Don't grow, can shrink, base width of 300px */
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 .contact-card img {
