@@ -248,6 +248,11 @@ body {
         width: auto; /* Allow images to retain their original width up to the max-width */
     }
 
+    .contact-card {
+        padding: 15px; /* Slightly less padding on smaller screens if needed */
+        margin: 10px; /* Add margin around the cards to prevent them from touching the screen edges */
+    }
+
     .contact-card img {
         max-width: 100%; /* Full width within the padded area of the card */
         height: auto; /* Maintain aspect ratio */
