@@ -249,17 +249,15 @@ body {
     }
 
     .contact-card {
-        padding: 15px; /* Slightly less padding on smaller screens if needed */
-        margin: 10px; /* Add margin around the cards to prevent them from touching the screen edges */
+        padding: 10px; /* Slightly less padding on smaller screens */
+        margin: 10px; /* Consistent margin on all sides */
+        max-width: 100%; /* Allows the card to fill the container if needed */
     }
 
     .contact-card img {
-        max-width: 100%; /* Full width within the padded area of the card */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Needed for center alignment */
-        margin-bottom: 10px; /* Space below the image */
+        width: 100%; /* Full width on smaller screens for better visibility */
     }
-
+    
 }
 
 
@@ -284,26 +282,31 @@ body {
 }
 
 .contact-card {
-    background-color: #f7f7f7; /* Light grey background */
-    border: 1px solid #ccc; /* Subtle border */
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow */
-    border-radius: 10px; /* Rounded corners */
-    padding: 5px; /* Padding inside each card */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for interactions */
+    background-color: #f7f7f7; 
+    border: 1px solid #ccc; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Rounded corners for a smoother look */
+    padding: 15px; 
+    margin: 10px auto; 
+    text-align: center; 
+    max-width: 300px; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
+
+.contact-card img {
+    width: 70%; /* Relative width to its parent, maintaining aspect ratio */
+    height: auto; /* Maintains aspect ratio */
+    margin-bottom: 10px; /* Space below the image */
+}
+
 
 .contact-card:hover {
     transform: translateY(-5px); /* Slightly raise the card on hover */
     box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
 }
 
-.contact-card img {
-    width: auto; /* Make image responsive within card */
-    max-width: 100%; /* Limit image size */
-    height: auto; /* Make image responsive within card */;
-    margin: 0 auto 5px; /* Center image and add space below */
-    display: block; /* Ensure it's a block to center properly */
-}
 
 .contact-card h2 {
     text-align: center; /* Center the title */
