@@ -287,6 +287,8 @@ body {
     padding: 15px;
     margin-bottom: 20px;
     text-align: center;
+    
+    max-width: 300px;
 }
 
 .contact-card img {
