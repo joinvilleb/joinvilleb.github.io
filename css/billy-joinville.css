@@ -309,7 +309,7 @@ body {
 /* styling for the image gallery */
 
 main img {
-    border-radius: 15px; /* Adjust this value to increase or decrease the roundness */
+    border-radius: 30px; /* Adjust this value to increase or decrease the roundness */
     transition: box-shadow 0.3s ease-in-out; /* Optional: Smooth transition for any hover effects */
 }
 
