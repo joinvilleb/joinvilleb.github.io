@@ -250,3 +250,10 @@ body {
 
 }
 
+/* image styling */
+
+#email, #linked-in, #instagram, #x-social {
+
+    margin-top: auto;
+    margin-bottom: auto; 
+}
