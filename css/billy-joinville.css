@@ -248,6 +248,13 @@ body {
         width: auto; /* Allow images to retain their original width up to the max-width */
     }
 
+    .contact-card img {
+        max-width: 100%; /* Full width within the padded area of the card */
+        height: auto; /* Maintain aspect ratio */
+        display: block; /* Needed for center alignment */
+        margin-bottom: 10px; /* Space below the image */
+    }
+
 }
 
 
