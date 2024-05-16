@@ -219,12 +219,13 @@ section {
     height: 70px;
 }
 
+
 #instagram, #linked-in, #x-social, #email {
+
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Create four columns of equal width */
     grid-gap: 10px;
     padding: 10px;
-
     margin-bottom: 0;
     margin-top: 0;
 }
