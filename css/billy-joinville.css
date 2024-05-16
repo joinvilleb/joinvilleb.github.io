@@ -247,7 +247,7 @@ body {
         max-width: 80%; /* Limit maximum width on larger screens to avoid overly large images */
         width: auto; /* Allow images to retain their original width up to the max-width */
     }
-    
+
 }
 
 
@@ -287,7 +287,7 @@ body {
 
 .contact-card img {
     width: auto; /* Make image responsive within card */
-    max-width: 70%; /* Limit image size */
+    max-width: 100%; /* Limit image size */
     height: auto; /* Make image responsive within card */;
     margin: 0 auto 5px; /* Center image and add space below */
     display: block; /* Ensure it's a block to center properly */
