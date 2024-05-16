@@ -220,17 +220,6 @@ section {
 }
 
 
-/* #instagram, #linked-in, #x-social, #email {
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Create four columns of equal width
-    grid-gap: 10px;
-    padding: 10px;
-    margin-bottom: 0;
-    margin-top: 0;
-} */
-
-
 
 /* edge to edge styling, ensuring there is no empty space between the content and the webpage */
 
@@ -263,7 +252,7 @@ body {
 
 
 
-
+/* styling for the contact cards */
 
 #instagram, #linked-in, #x-social, #email {
     display: grid;
@@ -279,7 +268,7 @@ body {
     border: 1px solid #ccc; /* Subtle border */
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow */
     border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside each card */
+    padding: 5px; /* Padding inside each card */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for interactions */
 }
 
@@ -290,7 +279,7 @@ body {
 
 .contact-card img {
     width: 100%; /* Make image responsive within card */
-    max-width: 80px; /* Limit image size */
+    max-width: 100%; /* Limit image size */
     margin: 0 auto 10px; /* Center image and add space below */
     display: block; /* Ensure it's a block to center properly */
 }
@@ -317,7 +306,7 @@ body {
 
 
 
-
+/* styling for the image gallery */
 
 main img {
     border-radius: 15px; /* Adjust this value to increase or decrease the roundness */
