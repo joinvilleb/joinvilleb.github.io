@@ -244,8 +244,8 @@ body {
 @media screen and (max-width: 768px) { /* this changes the layout and content for smaller screens */
 
     img {
-        max-width: 80%; /* Limit maximum width on larger screens to avoid overly large images */
-        width: auto; /* Allow images to retain their original width up to the max-width */
+        max-width: 80%;
+        width: auto; 
     }
 
     #instagram, #linked-in, #x-social, #email {
@@ -254,7 +254,7 @@ body {
     }
 
     .contact-card {
-        padding: 10px; /* Slightly less padding on smaller screens */
+        padding: 10px; 
         margin: 10px auto; /* Consistent margin on all sides */
         max-width: 100%; /* Allows the card to fill the container if needed */
     }
@@ -274,7 +274,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-around; /* Centers the cards within the container */
     gap: 20px; /* Adds space between the cards */
-    padding: 20px; /* Padding around the container for better spacing */
+    padding: 20px; 
 }
 
 
@@ -290,8 +290,8 @@ body {
 }
 
 .contact-card img {
-    width: 70%; /* Relative width to its parent, maintaining aspect ratio */
-    height: auto; /* Maintains aspect ratio */
+    width: 70%; 
+    height: auto; 
     margin-bottom: 10px; /* Space below the image */
 }
 
@@ -303,22 +303,22 @@ body {
 
 
 .contact-card h2 {
-    text-align: center; /* Center the title */
-    color: #333; /* Dark grey for text for better readability */
+    text-align: center; 
+    color: #333; 
 }
 
 .contact-card p {
-    text-align: center; /* Center the text */
-    color: #666; /* Medium grey for text */
+    text-align: center; 
+    color: #666; 
 }
 
 .contact-card a {
-    color: #0066cc; /* A nice blue for links */
+    color: #0066cc; 
     text-decoration: none; /* No underline */
 }
 
 .contact-card a:hover {
-    text-decoration: underline; /* Underline on hover for better interaction */
+    text-decoration: underline; 
 }
 
 
@@ -327,10 +327,10 @@ body {
 /* styling for the image gallery */
 
 main img {
-    border-radius: 30px; /* Adjust this value to increase or decrease the roundness */
-    transition: box-shadow 0.3s ease-in-out; /* Optional: Smooth transition for any hover effects */
+    border-radius: 30px; 
+    transition: box-shadow 0.3s ease-in-out; 
 }
 
 main img:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: Adds shadow on hover for a lifted effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow on hover for a lifted effect */
 }
