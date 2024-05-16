@@ -279,8 +279,8 @@ body {
 
 .contact-card img {
     width: 100%; /* Make image responsive within card */
-    max-width: 100%; /* Limit image size */
-    margin: 0 auto 10px; /* Center image and add space below */
+    max-width: 70%; /* Limit image size */
+    margin: 0 auto 5px; /* Center image and add space below */
     display: block; /* Ensure it's a block to center properly */
 }
 
