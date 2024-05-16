@@ -222,8 +222,11 @@ section {
 #instagram, #linked-in, #x-social, #email {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-    grid-gap: 40px;
-    padding: 40px;
+    grid-gap: 10px;
+    padding: 10px;
+
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 
@@ -251,9 +254,3 @@ body {
 }
 
 /* image styling */
-
-#email, #linked-in, #instagram, #x-social {
-
-    margin-top: auto;
-    margin-bottom: auto; 
-}
