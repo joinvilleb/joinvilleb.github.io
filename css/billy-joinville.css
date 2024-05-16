@@ -279,7 +279,7 @@ body {
 
 
 .contact-card {
-    flex: 0 1 300px; /* Don't grow, can shrink, base width of 300px */
+    flex: 1 1 300px; /* Don't grow, can shrink, base width of 300px */
     background-color: #f7f7f7;
     border: 1px solid #ccc;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
