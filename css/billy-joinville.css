@@ -313,3 +313,17 @@ body {
 .contact-card a:hover {
     text-decoration: underline; /* Underline on hover for better interaction */
 }
+
+
+
+
+
+
+main img {
+    border-radius: 15px; /* Adjust this value to increase or decrease the roundness */
+    transition: box-shadow 0.3s ease-in-out; /* Optional: Smooth transition for any hover effects */
+}
+
+main img:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Optional: Adds shadow on hover for a lifted effect */
+}
