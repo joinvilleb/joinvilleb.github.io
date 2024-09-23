@@ -1,352 +1,247 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* link styling */ 
+body {
+    font-family: "Arial", sans-serif;
+    background-color: aliceblue;
+    color: #444;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
 
+/* Link Styling */
 a {
-    text-decoration: none; 
-    font-family: Arial, sans-serif; 
-}
-
-a:link { 
-
+    text-decoration: none;
     color: #007BFF;
-
+    transition: color 0.3s ease;
 }
 
-a:visited { 
-
+a:visited {
     color: rgb(8, 112, 43);
-
 }
 
-a:hover { 
-
+a:hover {
     color: #66BFFF;
     text-decoration: underline;
 }
 
-a:active { 
-
+a:active {
     color: #004080;
-
 }
 
-/* text styling */
-
-body {
-
-    font-family: "Arial", "Halvetica", "sans-serif";
-    color: #444444;
-    line-height: 1.6;
-
+/* Header Styling */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    margin-top: 60px;
 }
 
-h1 {
-
-    font-size: 28px;
-    font-weight: bold;
+header h1 {
+    font-size: 36px;
     text-align: center;
-
 }
 
-h2 {
-
-    font-size: 24px;
-    font-weight: bold;
+header h2 {
+    font-size: 20px;
     text-align: center;
-
+    font-weight: normal;
+    max-width: 800px;
+    margin: 10px auto;
+    color: #666;
 }
 
-p {
-
-    font-size: 16px;
-    font-family: "Verdana", "sans-serif";
-    margin-bottom: 1em; /* this will add space below paragraphs */
-
-    text-align: justify;
-    line-height: 1.8;
-    margin-bottom: 1em;
-    
+.portrait {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
-p, h1, h2, h3, li {
-
-    max-width: 36em;
-    margin-left: auto; 
-    margin-right: auto;
-    text-align: left;
-    margin-bottom: 40px; 
-
-}
-
-/* navigation menu styling */
-
+/* Navigation Menu */
 nav {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: #007BFF;
     position: fixed;
-    top: 0; 
+    top: 0;
     width: 100%;
-    font-size: 15px;
+    padding: 10px;
     z-index: 1000;
 }
 
 .menu-option {
     padding: 10px 20px;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.4s; /* helps with hovering over menu option making it smooth */
-    line-break: auto;
-}
-
-
-
-.menu-option:hover {
-    background-color: #555; /* Hover effect */
-}
-
-.menu-option {
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
 
+.menu-option:hover {
+    background-color: #0056b3;
+}
 
-
+/* Main Layout - Section Styling */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 40px;
+}
 
 section {
-    background: white;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
 
-/* footer styling */
+h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
 
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Footer Styling */
 footer {
-    text-align: center;
     background-color: #20232a;
-    color: black;
-    margin-top: auto;
-    margin-bottom: 0;
-    
-    background-color: lightblue;
-    color: black;
-
-    width: 100%;
-    box-sizing: border-box;
-    bottom: 0;
-    padding: 10px 0; /* Adds padding inside the footer top to bottom */
-
-}
-
-/* header styling */
-
-.portrait {
-
-    width: 300px; 
-    height: 300px; 
-    border-radius: 50%;
-    margin-right: 30px; 
-    margin-left: 20px; 
-
-}
-
-
-header {
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    padding: 15px; 
-    margin-top: 60px; 
-}
-
-header h1 {
+    color: white;
     text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    width: 100%;
+    bottom: 0;
 }
 
-
-/* image styling */
-
+/* Image Styling */
 img {
-    width: 80%; 
-    margin: auto; 
-    padding: 20px; 
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
 }
 
-
-
-img {
-    max-width: 80%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto 20px; 
-}
-
-
-
-
-/* section styling */
-
-.section p {
-    font-size: 16px; 
-    line-height: 1.6;
-    max-width: 30em; /* this will help limit length to 6 characters */
-    margin: 0 auto;
-}
-
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
-    grid-gap: 20px;
-    padding: 20px;
-  }
-  
-section {
-    border: 1px solid #ccc;
-    padding: 20px;
-    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.20);
-}
-
-
-
-/* contact grid styling and organization */
-
-.contact-icon {
-    width: 70px; 
-    height: 70px;
-}
-
-
-
-/* edge to edge styling, ensuring there is no empty space between the content and the webpage */
-
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%; 
-    height: 100%; 
-    overflow-x: hidden; 
-}
-
-/* body styling to make the background a bit more colorful */
-
-
-body {
-    background-color: aliceblue;
-}
-
-
-
-
-@media screen and (max-width: 768px) { /* this changes the layout and content for smaller screens */
-
-    img {
-        max-width: 80%;
-        width: auto;
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
     }
 
-    #instagram, #linked-in, #x-social, #email {
+    nav {
         flex-direction: column;
-        align-items: center; /* Aligns cards centrally on smaller screens */
+    }
+
+    .menu-option {
+        margin: 5px 0;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 20px;
     }
 
     .contact-card {
-        padding: 10px; 
-        margin: 10px auto; /* Consistent margin on all sides */
-        max-width: 100%; /* Allows the card to fill the container if needed */
+        width: 100%;
     }
-
-    .contact-card img {
-        width: 100%; /* Full width on smaller screens for better visibility */
-    }
-
 }
 
-
-
-/* contact grid styling and organization */
-
+/* Contact Cards */
 .contact-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Centers the cards within the container */
-    gap: 20px; /* Adds space between the cards */
-    padding: 20px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
 }
-
 
 .contact-card {
-    flex: 1 1 300px; /* Don't grow, can shrink, base width of 300px */
     background-color: #f7f7f7;
     border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
     text-align: center;
-    width: 33.333%; /* 3 cards per row */
-    
-    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card img {
-    width: 70%; 
-    height: auto; 
-    margin-bottom: 10px; /* Space below the image */
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
 }
-
-
-.contact-card:hover {
-    transform: translateY(-5px); /* Slightly raise the card on hover */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Enhanced shadow on hover */
-}
-
 
 .contact-card h2 {
-    text-align: center; 
-    color: #333; 
+    font-size: 18px;
+    color: #333;
 }
 
 .contact-card p {
-    text-align: center; 
-    color: #666; 
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
 }
 
 .contact-card a {
-    color: #0066cc; 
-    text-decoration: none; /* No underline */
+    color: #0066cc;
+    text-decoration: none;
 }
 
 .contact-card a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-
-
-
-/* styling for the image gallery */
-
+/* Image Gallery */
 main img {
-    border-radius: 30px; 
-    transition: box-shadow 0.3s ease-in-out; 
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease-in-out;
 }
 
 main img:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow on hover for a lifted effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact Grid */
+.contact-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
 
-/* section styling */
-
-.section {
-
-    display: flex;
-    float: left; 
+/* Sticky Footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
     width: 100%;
-    padding: 10px;
-    height: 300px;
-    flex-wrap: wrap;
 }
