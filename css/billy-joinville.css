@@ -262,33 +262,71 @@ footer {
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 30%;
     position: relative;
+    max-width: 40%;
     margin: auto;
-    overflow: hidden;
   }
   
-  /* The slides */
-  .slide-fade {
-    position: absolute;
+  /* Slides */
+  .slide {
+    display: none;
     width: 100%;
-    animation: fade 1.5s ease-in-out; /* Fade animation */
   }
   
   /* Slideshow images */
   .slideshow-image {
-    width: 100%; /* Make the images fill the container */
+    width: 100%;
     height: auto;
+  }
+  
+  /* Previous and next buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+  
+  /* Positioning the "next" button */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* Positioning the "prev" button */
+  .prev {
+    left: 0;
+  }
+  
+  /* Hover effect */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
   }
   
   /* Fade animation */
   @keyframes fade {
     from { opacity: 0.4; }
     to { opacity: 1; }
-
   }
+  
+  /* Fading effect for slides */
+  .fade {
+    animation-name: fade;
+    animation: fade 1.5s;
+  }
+  
 
   /* Next & previous buttons */
+
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -302,6 +340,7 @@ footer {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    transform: translateY(-50%);
   }
   
   /* Position the "next" button to the right */
