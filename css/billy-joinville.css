@@ -34,7 +34,7 @@ a:active {
 
 body {
 
-    font-family: "Verdana", "Arial", "sans-serif";
+    font-family: "Arial", "Halvetica", "sans-serif";
     color: #444444;
     line-height: 1.6;
 
@@ -245,7 +245,7 @@ body {
 
     img {
         max-width: 80%;
-        width: auto; 
+        width: auto;
     }
 
     #instagram, #linked-in, #x-social, #email {
@@ -287,6 +287,7 @@ body {
     padding: 15px;
     margin-bottom: 20px;
     text-align: center;
+    width: 33.333%; /* 3 cards per row */
     
     max-width: 300px;
 }
@@ -335,4 +336,17 @@ main img {
 
 main img:hover {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds shadow on hover for a lifted effect */
+}
+
+
+/* section styling */
+
+.section {
+
+    display: flex;
+    float: left; 
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    flex-wrap: wrap;
 }
