@@ -167,7 +167,7 @@ img {
     }
 
     nav {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .menu-option {
