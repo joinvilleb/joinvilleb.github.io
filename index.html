@@ -8,8 +8,6 @@
     <title>Billy Joinville</title>
     <link href="css/billy-joinville.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/slideshow.css">
-
 
 </head>
 
@@ -38,6 +36,76 @@
 
    </div>
 
+
+   <div class="slideshow-container">
+
+    <div class="slide-fade">
+      <img src="images/billy-graduate.jpg" alt="Billy at high school graduation" class="slideshow-image">
+    </div>
+  
+    <div class="slide-fade">
+      <img src="images/firstday-at-u.jpg" alt="Billy and his family at the University of Miami" class="slideshow-image">
+    </div>
+
+
+    <div class="slide-fade">
+      <img src="images/nature-beach.jpg" alt="Billy exploring time at the beach" class="slideshow-image">
+    </div>
+  
+    <div class="slide-fade">
+      <img src="images/billy-emerge.jpg" alt="Billy at eMerge Americas" class="slideshow-image">
+    </div>
+
+    <div class="slide fade">
+      <img src="images/spotify-office-billy.jpg" alt="Billy at Spotify" class="slideshow-image">
+    </div>
+
+    <div class="slide-fade">
+      <img src="images/akpsi-induction.jpg" alt="Billy at AKPsi" class="slideshow-image">
+    </div>
+
+
+    <div class="slide-fade">
+      <img src="images/nature-flying.jpg" alt="Billy on a plane for school-related reason" class="slideshow-image">
+    </div>
+
+    <div class="slide-fade">
+      <img src="images/akpsi-induction.jpg" alt="Billy at AKPsi" class="slideshow-image">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Function to control the next/previous buttons
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) {
+        slideIndex = 1; // Loop back to the first slide
+      }
+      if (n < 1) {
+        slideIndex = slides.length; // Loop to the last slide
+      }
+      // Hide all slides
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      // Show the current slide
+      slides[slideIndex - 1].style.display = "block";  
+    }
+    </script>
+
+
       <nav class="menu">
         <a href="#header" class="menu-option">Welcome</a>
         <a href="projects-gallery.html" class="menu-option">My Journey</a>
@@ -45,6 +113,7 @@
       </nav>   
  
   </header>
+
 
 
 

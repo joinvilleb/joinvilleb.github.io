@@ -249,3 +249,31 @@ footer {
     width: 100%;
     background-color: white;
 }
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 30%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  /* The slides */
+  .slide-fade {
+    position: absolute;
+    width: 100%;
+    animation: fade 1.5s ease-in-out; /* Fade animation */
+  }
+  
+  /* Slideshow images */
+  .slideshow-image {
+    width: 100%; /* Make the images fill the container */
+    height: auto;
+  }
+  
+  /* Fade animation */
+  @keyframes fade {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+
+  }

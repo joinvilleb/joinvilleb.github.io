@@ -51,10 +51,39 @@
             <h2>On X (formerly Twitter)</h2>
             <p>Follow me on <a href="https://twitter.com/BillyJoinville" target="_blank">X</a> for tech-related insights, updates, and a little humor. Let's connect and keep the conversation going!</p>
         </section>
-        
+
         </div>
 
     </main>
+
+    <script>
+
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function showSlides(n) {
+          let slides = document.getElementsByClassName("slide");
+          
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          
+          slides[slideIndex-1].style.display = "block";
+        }
+        
+        </script>
 
     <footer>
 
