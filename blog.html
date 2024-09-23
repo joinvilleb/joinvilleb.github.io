@@ -17,6 +17,75 @@
       </nav> 
 </header>
 <body>
-    <p>Coming soon!</p>
+
+    <H1>COMING SOON - STAY TUNED </H1>
+
+    <main>
+        <section id="latest-posts">
+            <h2>Latest Posts</h2>
+
+            <article class="blog-post">
+                <h3>Learning to Balance Technology and Wellness</h3>
+                <p><em>Published on September 21, 2024</em></p>
+                <p>
+                    As I dive deeper into the tech industry, it's easy to get caught up in the fast pace of new developments. In this post, I reflect on how I've managed to balance my passion for technology with a focus on mental and physical wellness.
+                </p>
+                <a href="blog-post1.html">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>Why UX Research is Key in Today’s Market</h3>
+                <p><em>Published on August 15, 2024</em></p>
+                <p>
+                    User experience is often overlooked, but it's the heart of successful software. I share my experiences with UX research and testing, and why businesses should invest in it.
+                </p>
+                <a href="blog-post2.html">Read More</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>The Role of Leadership in Technology Teams</h3>
+                <p><em>Published on July 20, 2024</em></p>
+                <p>
+                    Working with tech teams has taught me a lot about leadership and collaboration. In this blog post, I delve into the lessons I’ve learned about leading technical projects.
+                </p>
+                <a href="blog-post3.html">Read More</a>
+            </article>
+        </section>
+
+        <section id="archive">
+            <h2>Blog Archive</h2>
+            <ul>
+                <li><a href="blog-post1.html">Learning to Balance Technology and Wellness - September 21, 2024</a></li>
+                <li><a href="blog-post2.html">Why UX Research is Key in Today’s Market - August 15, 2024</a></li>
+                <li><a href="blog-post3.html">The Role of Leadership in Technology Teams - July 20, 2024</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <a href="#" id="scroll-to-top">
+        &#8593; <!-- This is the arrow -->
+    </a>
+
+    <script>
+        window.onscroll = function() {
+            var scrollToTopButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.opacity = "1";
+                scrollToTopButton.style.visibility = "visible";
+            } else {
+                scrollToTopButton.style.opacity = "0";
+                scrollToTopButton.style.visibility = "hidden";
+            }
+        };
+    </script>
+    
+
 </body>
+
+    <footer>
+    <p>© 2024 Billy Joinville. All rights reserved.</p>
+    <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+    <p><a href="#latest-posts">Back to Top</a></p>
+    </footer>
+
 </html>

@@ -29,7 +29,7 @@
         <section id="email" class="contact-card">
             <img class="contact-icon" src="images/email-icon.jpeg" alt="An email icon">
             <h2>Email</h2>
-        <p>If you would like to discuss potential job opportunities, collaborations, or have have any inquiries, 
+        <p>If you would like to discuss potential job opportunities, collaborations, or have any inquiries, 
             feel free to email me and I'll get back to you within 24-48 hours.</p>
 
             <a href="mailto:joinvillebilly@gmail.com" class="contact-button">Send an email</a>
@@ -97,13 +97,32 @@
 
         </script>
 
-    <footer>
+<a href="#" id="scroll-to-top">
+    &#8593; <!-- This is the arrow -->
+</a>
 
-        <p>© 2024 Billy Joinville. All rights reserved.</p>
-        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
-        <p><a href="contact.html">Back to Top</a></p>
+<script>
+    window.onscroll = function() {
+        var scrollToTopButton = document.getElementById("scroll-to-top");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollToTopButton.style.opacity = "1";
+            scrollToTopButton.style.visibility = "visible";
+        } else {
+            scrollToTopButton.style.opacity = "0";
+            scrollToTopButton.style.visibility = "hidden";
+        }
+    };
+</script>
 
-    </footer>
+   
 
 </body>
+
+    <footer>
+
+    <p>© 2024 Billy Joinville. All rights reserved.</p>
+    <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+    <p><a href="contact.html">Back to Top</a></p>
+
+    </footer>
 </html>

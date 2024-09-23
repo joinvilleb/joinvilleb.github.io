@@ -13,7 +13,7 @@
 <body>
     <header>
         <h1>Projects & Accomplishments</h1>
-        <h2>Here, you will find a collection of the work and accomplishments I have recieved.</h2>
+        <h2>Here, you will find a collection of the work and accomplishments I have received.</h2>
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
@@ -27,7 +27,7 @@
             <h2>Internship at Delaware Elevator, Inc. </h2>
 
             <p>During my internships at Delaware Elevator in the summers of 2023 and 2024, 
-                I strengthened my collaboration and critical thinking by resolving conflicts and using a structured approach to overcome them and implment desired solutions. 
+                I strengthened my collaboration and critical thinking by resolving conflicts and using a structured approach to overcome them and implement desired solutions. 
 
                 <br><br>
             
@@ -137,7 +137,7 @@
             <h2>User Experience Research and Mobile Design</h2>
 
             <p>A crucial part of computing involves creating innovative software solutions that enhance the user experience. 
-                To that end, and knowing my passiobn for technology and software, I have started freelance website testing through <a href="https://www.usertesting.com">UserTesting, Inc.</a> providing my experience and feedback on various prototypes and mockups, to make websites better. 
+                To that end, and knowing my passion for technology and software, I have started freelance website testing through <a href="https://www.usertesting.com">UserTesting, Inc.</a> providing my experience and feedback on various prototypes and mockups, to make websites better. 
             </p>
 
                 <p>
@@ -151,11 +151,28 @@
 
     </main>
 
-    <footer>
-        <p>© 2024 Billy Joinville. All rights reserved.</p>
-        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
-        <p><a href="projects-gallery.html">Back to Top</a></p>
-    </footer>
+    <a href="#" id="scroll-to-top">
+        &#8593; <!-- This is the arrow -->
+    </a>
+    
+    <script>
+        window.onscroll = function() {
+            var scrollToTopButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.opacity = "1";
+                scrollToTopButton.style.visibility = "visible";
+            } else {
+                scrollToTopButton.style.opacity = "0";
+                scrollToTopButton.style.visibility = "hidden";
+            }
+        };
+    </script>
     
 </body>
+
+<footer>
+    <p>© 2024 Billy Joinville. All rights reserved.</p>
+    <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+    <p><a href="projects-gallery.html">Back to Top</a></p>
+</footer>
 </html>

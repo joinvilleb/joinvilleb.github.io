@@ -84,8 +84,8 @@ header h2 {
 }
 
 .portrait {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin-bottom: 15px;
 }
@@ -410,7 +410,7 @@ footer {
   }
   
   /* Fading effect for slides */
-  .fade {
+  .slide {
     animation-name: fade;
     animation: fade 1.5s;
   }
@@ -444,3 +444,25 @@ footer {
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
+
+
+  #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    text-decoration: none;
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Ensures it's completely invisible */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade */
+    z-index: 1000;
+}
+
+#scroll-to-top:hover {
+    background-color: #555;
+}
