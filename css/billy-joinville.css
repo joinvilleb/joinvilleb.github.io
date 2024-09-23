@@ -23,8 +23,31 @@ a {
     transition: color 0.3s ease;
 }
 
+footer a {
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: inherit;
+}
+
+.explore-button a:visited {
+    color: inherit; 
+}
+
+.contact-button a:visited {
+    color: inherit;
+}
+
+footer a:visited {
+    color: inherit;
+}
+footer a {
+    font-weight: bold;
+}
+
 a:visited {
-    color: rgb(8, 112, 43);
+    color: purple;
 }
 
 a:hover {
@@ -93,11 +116,13 @@ nav {
 
 /* Main Layout - Section Styling */
 main {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 40px;
+    
 }
 
 section {
@@ -159,6 +184,30 @@ header p {
 }
 
 .explore-button:hover {
+    background-color: #0056b3; /* button color on hover */
+    transform: scale(1.05); /* button scale on hover */
+}
+
+
+/* contact button styling */
+
+.contact-button {
+
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #003337;
+    background-color: transparent; /* button color */
+    border: 1px solid black; /* button border */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+
+}
+
+.contact-button:hover {
     background-color: #0056b3; /* button color on hover */
     transform: scale(1.05); /* button scale on hover */
 }
