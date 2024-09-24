@@ -83,6 +83,9 @@ header h2 {
     color: #666;
 }
 
+#header h2 {
+    font-size: 15px;
+}
 .portrait {
     width: 200px;
     height: 200px;
