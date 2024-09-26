@@ -74,6 +74,7 @@ header h1 {
     text-align: center;
 }
 
+
 header h2 {
     font-size: 20px;
     text-align: center;
@@ -104,6 +105,26 @@ nav {
     font-size: 15px;
     z-index: 1000;
     transition: top 0.1s ease-in-out;
+}
+
+/* Mobile-specific styles for nav */
+@media screen and (max-width: 768px) {
+    /* Simulate a swipe-up/down effect by changing opacity and top */
+    nav {
+        transition: opacity 0.3s ease, top 0.3s ease;
+    }
+
+    /* When the user scrolls down */
+    body.scrolled-down nav {
+        top: -100px; /* Move it out of view */
+        opacity: 0; /* Fade it out */
+    }
+
+    /* When the user scrolls up */
+    body.scrolled-up nav {
+        top: 0; /* Stick to the top */
+        opacity: 1; /* Fully visible */
+    }
 }
 
 
