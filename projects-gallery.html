@@ -171,15 +171,22 @@
     </script>
 
 
-    <script>
+<script>
     let lastScrollTop = 0;
+    const delta = 5; // Minimum scroll distance to trigger hide/show
     const navbar = document.querySelector('nav'); // Select the nav element
+    const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
 
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
+        // If the scroll difference is less than the delta, do nothing
+        if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+            return;
+        }
+
+        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+            // Scrolling down and past the navbar height
             navbar.style.top = '-100px'; // Hide the navbar
         } else {
             // Scrolling up
@@ -188,7 +195,8 @@
 
         lastScrollTop = scrollTop;
     });
-    </script>
+</script>
+
     
 </body>
 
