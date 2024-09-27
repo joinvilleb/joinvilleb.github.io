@@ -124,6 +124,8 @@ nav {
         opacity: 1; /* Fade it in */
     }
 
+}
+
 
 .menu-option {
     padding: 10px 20px;
@@ -486,7 +488,9 @@ footer {
 }
 
 #scroll-to-top:hover {
+
     background-color: #555;
+
 }
 
 
