@@ -231,6 +231,22 @@ header p {
 
 }
 
+#donate .explore-button {
+
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #003337;
+    background-color: transparent; /* button color */
+    border: 1px solid black; /* button border */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+   
+    
+}
+
 .contact-button:hover {
     background-color: #0056b3; /* button color on hover */
     transform: scale(1.05); /* button scale on hover */
