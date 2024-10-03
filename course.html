@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comprehensive Running & Nutrition Plan</title>
+    <link href="css/billy-joinville.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Comprehensive Running & Nutrition Plan</h1>
+        <h2>Take your running performance to the next level with expert training plans and nutrition guides.
+            As a token for your commitment, get lifetime access to all plans and updates, for a one-time payment of $--.
+        </h2>
+        <nav>
+            <a href="index.html" class="menu-option">Welcome</a>
+            <a href="projects-gallery.html" class="menu-option">Projects</a>
+            <a href="course.html" class="menu-option">Running Plan</a>
+            <a href="contact.html" class="menu-option">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="course-info">
+            <h2>What's Included in This Package</h2>
+            <ul>
+                <li>Customized running plans for 5K, 10K, half-marathon, and marathon</li>
+                <li>Weekly strength training and flexibility exercises</li>
+                <li>Personalized meal plans with calorie targets for peak performance</li>
+                <li>Race day preparation guide, recovery tips, and mental conditioning exercises</li>
+            </ul>
+        </section>
+
+        <section id="pricing">
+            <h3>One-Time Payment: $--</h3>
+            <p>Get lifetime access to all plans and updates.</p>
+            <button id="buy-now-btn">Buy Now</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Billy Joinville. All rights reserved.</p>
+        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+        <p><a href="#course-info">Back to Top</a></p>
+    </footer>
+
+    <!-- PayPal integration script (or any other payment method you prefer) -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '49.00'
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
+                    window.location.href = "download.html"; // Redirect to download page
+                });
+            }
+        }).render('#buy-now-btn'); // Render the PayPal button
+    </script>
+</body>
+
+</html>

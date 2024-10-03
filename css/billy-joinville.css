@@ -514,4 +514,31 @@ footer {
 
 /*******************//*******************//*******************//*******************/
 
+/* styling for the course page */
 
+#buy-now-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#buy-now-btn:hover {
+    background-color: #555;
+}
+
+.download-button {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-button:hover {
+    background-color: #218838;
+}
