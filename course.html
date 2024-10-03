@@ -28,13 +28,24 @@
 
     <!-- Password form -->
     <form id="password-form">
+
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+        <p id="success-message">Password correct! Loading the Comprehensive & Nutrition Plan page content...</p>
+
+
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
         <button type="submit">Submit</button>
 
         <!-- Error message container -->
-        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+
     </form>
+
+
+    <!-- Loading animation -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
 
     <!-- Main content hidden by default -->
     <main id="content" style="display:none;">
@@ -89,12 +100,24 @@
             e.preventDefault();
             var password = document.getElementById('password').value;
             var errorMessage = document.getElementById('error-message');
-            if (password === 'billyruns2024') { // Replace with your actual password
-                document.getElementById('content').style.display = 'block';
-                document.getElementById('password-form').style.display = 'none';
-            } else {
+            var successMessage = document.getElementById('success-message');
+            var loading = document.getElementById('loading');
 
+            if (password === 'billyruns2024') { // Check if password is correct
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'block'; // Show success message
+                loading.style.display = 'block'; // Show loading animation
+
+                // Simulate loading time before displaying content
+                setTimeout(function() {
+                    document.getElementById('content').style.display = 'block';
+                    document.getElementById('password-form').style.display = 'none';
+                    loading.style.display = 'none'; // Hide loading animation
+                }, 1500); // Adjust loading time (1.5 seconds)
+            } else {
                 errorMessage.style.display = 'block'; // Show error message if incorrect
+                successMessage.style.display = 'none'; // Hide success message
+                loading.style.display = 'none'; // Hide loading animation
             }
         });
     </script>

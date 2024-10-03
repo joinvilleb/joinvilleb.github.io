@@ -594,3 +594,37 @@ footer {
     font-size: 16px;
     color: red;
 }
+
+
+/* Success message styling */
+#success-message {
+    text-align: center;
+    font-size: 16px;
+    color: green;
+    display: none;
+}
+
+/* Loading animation */
+#loading {
+    display: none;
+    text-align: center;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #333;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
