@@ -14,6 +14,10 @@
         <h2>Take your running performance to the next level with expert training plans and nutrition guides.
             As a token for your commitment, get lifetime access to all plans and updates, for a one-time payment of $--.
         </h2>
+
+        <h2>This page is currrently under development. Only the site owner, and editors can view and make changes. 
+            Stay tuned as updates will be shared periodically with a timeline of when the product will be available for purchase. Thank you!
+        </h2>
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
@@ -22,7 +26,18 @@
         </nav>
     </header>
 
-    <main>
+    <!-- Password form -->
+    <form id="password-form">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+
+        <!-- Error message container -->
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+    </form>
+
+    <!-- Main content hidden by default -->
+    <main id="content" style="display:none;">
         <section id="course-info">
             <h2>What's Included in This Package</h2>
             <ul>
@@ -34,7 +49,7 @@
         </section>
 
         <section id="pricing">
-            <h3>One-Time Payment: $--</h3>
+            <h3>One-Time Payment: $49</h3>
             <p>Get lifetime access to all plans and updates.</p>
             <button id="buy-now-btn">Buy Now</button>
         </section>
@@ -46,7 +61,7 @@
         <p><a href="#course-info">Back to Top</a></p>
     </footer>
 
-    <!-- PayPal integration script (or any other payment method you prefer) -->
+    <!-- PayPal integration script -->
     <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
     <script>
         paypal.Buttons({
@@ -66,6 +81,21 @@
                 });
             }
         }).render('#buy-now-btn'); // Render the PayPal button
+    </script>
+
+    <!-- Password script -->
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var password = document.getElementById('password').value;
+            if (password === 'billyruns2024') { // Replace with your actual password
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('password-form').style.display = 'none';
+            } else {
+                
+                errorMessage.style.display = 'block'; // Show error message if incorrect
+            }
+        });
     </script>
 </body>
 
