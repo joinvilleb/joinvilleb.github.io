@@ -88,6 +88,7 @@
         document.getElementById('password-form').addEventListener('submit', function(e) {
             e.preventDefault();
             var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
             if (password === 'billyruns2024') { // Replace with your actual password
                 document.getElementById('content').style.display = 'block';
                 document.getElementById('password-form').style.display = 'none';
