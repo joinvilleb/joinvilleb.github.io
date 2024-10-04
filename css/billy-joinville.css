@@ -264,6 +264,7 @@ header p {
 
 /* Footer Styling */
 footer {
+
     background-color: #20232a;
     color: white;
     text-align: center;
@@ -272,6 +273,7 @@ footer {
     width: 100%;
     bottom: 0;
     line-height: 1.6;
+
 }
 
 footer p {
@@ -471,6 +473,7 @@ footer {
     border-radius: 0 3px 3px 0;
     user-select: none;
     transform: translateY(-50%);
+
   }
   
   /* Position the "next" button to the right */
@@ -627,5 +630,183 @@ footer {
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+/* Pricing section styling */
+.services-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.services-card {
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: calc(33.333% - 40px);
+    min-width: 280px;
+}
+
+.about-services-page {
+
+    width: auto;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    text-wrap: wrap;
+
+
+}
+
+.buy-now-btn {
+
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #003337;
+    background-color: transparent; /* button color */
+    border: 1px solid black; /* button border */
+    text-decoration: none;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+
+}
+
+
+.explore-button {
+
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #003337;
+    background-color: transparent; /* button color */
+    border: 2px solid black; /* button border */
+    text-decoration: none;
+    border-radius: 0px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+}
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+
+    section {
+
+        width: 100%;
+
+    }
+
+}
+
+
+#next-steps {
+
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Expands on desktop */
+    background-color: #e7ffde;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+ol {
+
+text-align: left;
+margin-left: 40px;
+margin-right: auto;
+padding-left: 0;
+
+}
+
+ol li {
+    list-style-type: numeric;
+    counter-reset: my-awesome-counter;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* Terms and Conditions Page Specific Styles */
+
+/* Container for the Terms and Conditions page */
+.terms-container {
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Expands on desktop */
+    padding: 30px;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 0;
+
+    
+}
+
+/* Headings Styling */
+.terms-container h2, .terms-container h3 {
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    
+    padding-bottom: 10px;
+}
+
+.terms-container h3 {
+    font-size: 20px;
+    color: #555;
+}
+
+/* Paragraph Styling */
+.terms-container p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* List Styling */
+.terms-container ul {
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.terms-container ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+/* Ensure everything stays responsive */
+@media screen and (max-width: 768px) {
+    .terms-container {
+        padding: 15px;
+    }
+
+    .terms-container h2, .terms-container h3 {
+        font-size: 20px;
+    }
+
+    .terms-container p, .terms-container ul li {
+        font-size: 14px;
     }
 }

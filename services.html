@@ -48,7 +48,10 @@
 
     <!-- Main content hidden by default -->
     <main id="content" style="display:none;">
-        <section id="about-services">
+
+
+        
+        <section id="about-services" class="about-services-page">
             <h2>How can I help you?</h2>
 
             <p>Hey! I'm Billy, and I'm passionate about helping people get started with their websites. My goal
@@ -61,8 +64,9 @@
                 I will make sure your site reflects your personality or business in the best way possible.
             </p>
 
-            </section>
+        </section>
 
+        <br>
         <br>
 
 
@@ -72,47 +76,54 @@
             <p>I can offer flexible options depending on how much help you need. When you process your payment,
                 you will receive an email shortly thereafter with a link to schedule your first session with me.
             </p>
+
+        <div class="services-cards-container">
+
+            <section id="basic-setup" class="services-card">
+                <h3>Basic Setup</h3>
+                <p>We will walk through everything together, from GitHub account setup, to publishing your first page.
+                    This will be great if you're new to GitHub and want to learn the basics.
+                </p>
+                <p>Price: <b>$29</b> + tax</p>
+                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
+            </section>
+
+            <section id="full-setup" class="services-card">
+                <h3>Full Setup</h3>
+                <p>I'll handle everything - from creating a repository to deploying your site. 
+                    You'll just provide the content, and I'll make sure it looks great!
+                </p>
+                <br>
+                <p>Price: <b>$199</b> + tax</p>
+                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
+            </section>
+
+
+            <section id="personalized-mentorship" class="services-card">
+                <h3>Personalized Mentorship</h3>
+                <p>If you want to learn and do it yourself, but need guidance along the way.
+                    I'll provide one-on-one sessions with you and support as you build your site. 
+                </p>
+                <br>
+                <p>Price: <b>$49</b> + tax</p>
+
+                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
+            </section>
+
+
+        </div>
+
+        <br>
         <br>
 
-        <section id="pricing">
+        <h1>Have any questions, comments, or concerns?</h1>
 
-                    <h3>Basic Setup</h3>
-                    <p>We will walk through everything together, from GitHub account setup, to publishing your first page.
-                        This will be great if you're new to GitHub and want to learn the basics.
-                    </p>
-                    <p>Price: <b>$29</b> + tax</p>
-                    <button id="buy-now-btn">Purchase</button>
+        <p>If you have any questions, comments, or concerns, please send me an email and I will get back to you within 24-48 hours (sometimes less, rarely morea)
+            Also, your purchase comes with a 30-day purchase protection, which means if something goes wrong - we will either fix it or refund you for any service rendered.
+        </p>
 
-        </section>
+        <a href="mailto:joinvillebilly@gmail.com" class="contact-button">Send an email</a>
 
-        <br>
-
-        <section id="pricing">
-
-
-                    <h3>Full Setup</h3>
-                    <p>I'll handle everything - from creating a repository to deploying your site. 
-                        You'll just provide the content, and I'll make sure it looks great!
-                    </p>
-
-                    <p>Price: <b>$199</b> + tax</p>
-                    <button id="buy-now-btn">Purchase</button>
-
-        </section>
-
-        <br>
-
-        <section id="pricing">
-
-  
-                    <h3>Personalized Mentorship</h3>
-                    <p>If you want to learn and do it yourself, but need guidance along the way.
-                        I'll provide one-on-one sessions with you and support as you build your site. 
-                    </p>
-
-                    <p>Price: <b>$49</b> + tax</p>
-
-                    <button id="buy-now-btn">Contact Me</button>
 
     </main>
 
@@ -123,7 +134,7 @@
     </footer>
 
     <!-- PayPal integration script -->
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+    <script src="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ"></script>
     <script>
         paypal.Buttons({
             createOrder: function (data, actions) {
