@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Personalized Web Setup - Billy</title>
+    <link href="css/billy-joinville.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <h1>Let's Build Your Website Together</h1>
+        <h2>I'm here to help you get your website up and running, step by step. Whether you're looking to start a personal blog (like me), or wanting to start building a professional site, we'll do it all through GitHub 
+            at no extra cost to you, with free hosting and version control. 
+        </h2>
+
+        <h2>This page is currrently under development. Only the site owner, and editors can view and make changes. 
+            Stay tuned as updates will be shared periodically with a timeline of when the product will be available for purchase. Thank you!
+        </h2>
+        <nav>
+            <a href="index.html" class="menu-option">Welcome</a>
+            <a href="projects-gallery.html" class="menu-option">Projects</a>
+            <a href="services.html" class="menu-option">Services</a>
+            <a href="contact.html" class="menu-option">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Password form -->
+    <form id="password-form">
+
+        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
+        <p id="success-message">Password correct! Loading the developer side </p>
+
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <!-- Loading animation -->
+    <div id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Main content hidden by default -->
+    <main id="content" style="display:none;">
+        <section id="about-services">
+            <h2>How can I help you?</h2>
+
+            <p>Hey! I'm Billy, and I'm passionate about helping people get started with their websites. My goal
+                is to make the process as simple and enjoyable as possible for you. I will be guiding you through the setup on GitHub,
+                so you'll have full control over your site without needing to pay additional for hosting.
+                
+            </p>
+
+            <p>Whether you're tech-savvy, or just starting out, 
+                I will make sure your site reflects your personality or business in the best way possible.
+            </p>
+
+            </section>
+
+        <br>
+
+
+
+
+            <h1>Website Setup Packages</h1>
+            <p>I can offer flexible options depending on how much help you need. When you process your payment,
+                you will receive an email shortly thereafter with a link to schedule your first session with me.
+            </p>
+        <br>
+
+        <section id="pricing">
+
+                    <h3>Basic Setup</h3>
+                    <p>We will walk through everything together, from GitHub account setup, to publishing your first page.
+                        This will be great if you're new to GitHub and want to learn the basics.
+                    </p>
+                    <p>Price: <b>$29</b> + tax</p>
+                    <button id="buy-now-btn">Purchase</button>
+
+        </section>
+
+        <br>
+
+        <section id="pricing">
+
+
+                    <h3>Full Setup</h3>
+                    <p>I'll handle everything - from creating a repository to deploying your site. 
+                        You'll just provide the content, and I'll make sure it looks great!
+                    </p>
+
+                    <p>Price: <b>$199</b> + tax</p>
+                    <button id="buy-now-btn">Purchase</button>
+
+        </section>
+
+        <br>
+
+        <section id="pricing">
+
+  
+                    <h3>Personalized Mentorship</h3>
+                    <p>If you want to learn and do it yourself, but need guidance along the way.
+                        I'll provide one-on-one sessions with you and support as you build your site. 
+                    </p>
+
+                    <p>Price: <b>$49</b> + tax</p>
+
+                    <button id="buy-now-btn">Contact Me</button>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Billy Joinville. All rights reserved.</p>
+        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+        <p><a href="#course-info">Back to Top</a></p>
+    </footer>
+
+    <!-- PayPal integration script -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=USD"></script>
+    <script>
+        paypal.Buttons({
+            createOrder: function (data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: ['29.00', '199.00', '49.00']
+                        }
+                    }]
+                });
+            },
+            onApprove: function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
+                    window.location.href = "download.html"; // Redirect to download page
+                });
+            }
+        }).render('#buy-now-btn'); // Render the PayPal button
+    </script>
+
+    <!-- Password script -->
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+            var successMessage = document.getElementById('success-message');
+            var loading = document.getElementById('loading');
+
+            if (password === 'billyruns2024') { // Check if password is correct
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'block'; // Show success message
+                loading.style.display = 'block'; // Show loading animation
+
+                // Simulate loading time before displaying content
+                setTimeout(function() {
+                    document.getElementById('content').style.display = 'block';
+                    document.getElementById('password-form').style.display = 'none';
+                    loading.style.display = 'none'; // Hide loading animation
+                }, 1500); // Adjust loading time (1.5 seconds)
+            } else {
+                errorMessage.style.display = 'block'; // Show error message if incorrect
+                successMessage.style.display = 'none'; // Hide success message
+                loading.style.display = 'none'; // Hide loading animation
+            }
+        });
+    </script>
+</body>
+
+</html>

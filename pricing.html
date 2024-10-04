@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Comprehensive Running & Nutrition Plan</title>
+    <title>Personalized Web Setup - Billy</title>
     <link href="css/billy-joinville.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
 </head>
 
 <body>
     <header>
-        <h1>Comprehensive Running & Nutrition Plan</h1>
-        <h2>Take your running performance to the next level with expert training plans and nutrition guides.
-            As a token for your commitment, get lifetime access to all plans and updates, for a one-time payment of $--.
+        <h1>Let's Build Your Website Together</h1>
+        <h2>I'm here to help you get your website up and running, step by step. Whether you're looking to start a personal blog (like me), or wanting to start building a professional site, we'll do it all through GitHub 
+            at no extra cost to you, with free hosting and version control. 
         </h2>
 
         <h2>This page is currrently under development. Only the site owner, and editors can view and make changes. 
@@ -21,24 +22,22 @@
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
-            <a href="course.html" class="menu-option">Running</a>
+            <a href="services.html" class="menu-option">Services</a>
             <a href="contact.html" class="menu-option">Contact</a>
         </nav>
+
     </header>
 
     <!-- Password form -->
     <form id="password-form">
 
         <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
-        <p id="success-message">Password correct! Loading the Comprehensive & Nutrition Plan page content...</p>
+        <p id="success-message">Password correct! Loading the developer side </p>
 
 
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
         <button type="submit">Submit</button>
-
-        <!-- Error message container -->
-
     </form>
 
 
@@ -49,21 +48,72 @@
 
     <!-- Main content hidden by default -->
     <main id="content" style="display:none;">
-        <section id="course-info">
-            <h2>What's Included in This Package</h2>
-            <ul>
-                <li>Customized running plans for 5K, 10K, half-marathon, and marathon</li>
-                <li>Weekly strength training and flexibility exercises</li>
-                <li>Personalized meal plans with calorie targets for peak performance</li>
-                <li>Race day preparation guide, recovery tips, and mental conditioning exercises</li>
-            </ul>
-        </section>
+        <section id="about-services">
+            <h2>How can I help you?</h2>
+
+            <p>Hey! I'm Billy, and I'm passionate about helping people get started with their websites. My goal
+                is to make the process as simple and enjoyable as possible for you. I will be guiding you through the setup on GitHub,
+                so you'll have full control over your site without needing to pay additional for hosting.
+                
+            </p>
+
+            <p>Whether you're tech-savvy, or just starting out, 
+                I will make sure your site reflects your personality or business in the best way possible.
+            </p>
+
+            </section>
+
+        <br>
+
+
+
+
+            <h1>Website Setup Packages</h1>
+            <p>I can offer flexible options depending on how much help you need. When you process your payment,
+                you will receive an email shortly thereafter with a link to schedule your first session with me.
+            </p>
+        <br>
 
         <section id="pricing">
-            <h3>One-Time Payment: $49</h3>
-            <p>Get lifetime access to all plans and updates.</p>
-            <button id="buy-now-btn">Buy Now</button>
+
+                    <h3>Basic Setup</h3>
+                    <p>We will walk through everything together, from GitHub account setup, to publishing your first page.
+                        This will be great if you're new to GitHub and want to learn the basics.
+                    </p>
+                    <p>Price: <b>$29</b> + tax</p>
+                    <button id="buy-now-btn">Purchase</button>
+
         </section>
+
+        <br>
+
+        <section id="pricing">
+
+
+                    <h3>Full Setup</h3>
+                    <p>I'll handle everything - from creating a repository to deploying your site. 
+                        You'll just provide the content, and I'll make sure it looks great!
+                    </p>
+
+                    <p>Price: <b>$199</b> + tax</p>
+                    <button id="buy-now-btn">Purchase</button>
+
+        </section>
+
+        <br>
+
+        <section id="pricing">
+
+  
+                    <h3>Personalized Mentorship</h3>
+                    <p>If you want to learn and do it yourself, but need guidance along the way.
+                        I'll provide one-on-one sessions with you and support as you build your site. 
+                    </p>
+
+                    <p>Price: <b>$49</b> + tax</p>
+
+                    <button id="buy-now-btn">Contact Me</button>
+
     </main>
 
     <footer>
@@ -80,7 +130,7 @@
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '49.00'
+                            value: ['29.00', '199.00', '49.00']
                         }
                     }]
                 });
