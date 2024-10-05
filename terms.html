@@ -93,7 +93,7 @@
                     <li>Request the deletion of your data once the Service is completed</li>
                 </ul>
             </p>
-            <p>To exercise any of these rights, please contact us at [your email address].</p>
+            <p>To exercise any of these rights, please contact us at <a href="mailto:joinvillebilly@gmail.com".>joinvillebilly@gmail.com</a>.</p>
 
             <h3>5. Cookies and Tracking</h3>
             <p>We may use cookies or similar technologies to enhance your experience on our website. Cookies help us understand how visitors use the site, but they do not collect personal information unless you provide it directly.</p>
@@ -108,9 +108,60 @@
 
     <footer>
         <p>© 2024 Billy Joinville. All rights reserved.</p>
-        <p>If you have any questions about the Terms of Service or Privacy Policy, please contact us at [your email address].</p>
+        <p>Created and designed by Billy Joinville, published on GitHub.</p>
+        <p>If you have any questions about the Terms of Service or Privacy Policy, please contact us via email <a href="mailto:joinvillebilly@gmail.com".>here</a>.</p>
         <p><a href="#terms-of-service">Back to Top</a></p>
     </footer>
+
+
+       <!-- Navbar hide/show script -->
+       <script>
+        let lastScrollTop = 0;
+        const delta = 5; // Minimum scroll distance to trigger hide/show
+        const navbar = document.querySelector('nav'); // Select the nav element
+        const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // If the scroll difference is less than the delta, do nothing
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                // Scrolling down and past the navbar height
+                navbar.style.top = '-100px'; // Hide the navbar
+            } else {
+                // Scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+
+    <a href="#" id="scroll-to-top">
+        &#8593; <!-- This is the arrow -->
+    </a>
+
+    <!-- Scroll arrow bottom-right -->
+
+    <script>
+        window.onscroll = function() {
+            var scrollToTopButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.opacity = "1";
+                scrollToTopButton.style.visibility = "visible";
+            } else {
+                scrollToTopButton.style.opacity = "0";
+                scrollToTopButton.style.visibility = "hidden";
+            }
+        };
+    </script>
+
 
 </body>
 

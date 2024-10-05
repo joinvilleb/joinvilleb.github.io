@@ -94,6 +94,7 @@
         /* FAQ Section Styling */
         .faq-section {
             background-color: transparent;
+            border-color: #20232a;
             width: auto;
             text-align: center;
             padding: 20px;
@@ -105,7 +106,7 @@
             justify-content: center;
             gap: 20px;
             padding: 40px;
-            text-wrap: wrap;
+            word-wrap: break-word;
         }
 
         .faq-item {
@@ -113,24 +114,41 @@
         }
 
         .faq-question {
-            font-size: 18px;
+            font-size: 16px;
             cursor: pointer;
             color: #4a90e2;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
         }
 
         .arrow {
             font-size: 18px;
-            float: right;
             transition: transform 0.3s;
         }
 
         .faq-answer {
-            display: none;
             padding: 10px;
             background-color: #f1f1f1;
             border-radius: 5px;
             margin-top: 10px;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
         }
+
+
+
+        .faq-question .arrow {
+        display: inline-block;
+        transition: transform 0.3s ease-in-out;
+        }
+
+        .arrow {
+            margin-left: 10px;
+        }
+
 
         .contact-button {
             display: inline-block;
@@ -152,6 +170,8 @@
             text-align: center;
             padding: 20px;
         }
+
+
     </style>
 
 </head>
@@ -223,7 +243,7 @@
             <p>I can offer flexible options depending on how much help you need. When you process your payment,
                 you will receive an email shortly thereafter with a link to schedule your first session with me.
                 <i>You will be redirected to PayPal's site to complete the purchase. You do not need to create an account,
-                    PayPal is just the secure payment provider that I use to ensure full proection for your purchase. 
+                    PayPal is just the secure payment provider that I use to ensure full protection for your purchase. 
                 </i>
             </p>
 
@@ -268,26 +288,62 @@
 
             <br>
             <br>
-            <br>
+
 
             <div class="faq-item">
-                <h3 class="faq-question">What is GitHub, and why do I need it? <span class="arrow">▼</span></h3>
-                <p class="faq-answer" style="display:none;">GitHub is a platform that allows you to host and manage your website for free. It's also great for keeping track of your changes, and making sure your website is safe and secure with version control.</p>
+                <h3 class="faq-question">What is GitHub? Why use it? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">GitHub is a platform that allows you to host and manage your website for free. It's also great for keeping track of your changes, and making sure your website is safe and secure with version control. 
+                    I use GitHub to help you build your site, and you'll have full control over it once it's set up. 
+                </p>
             </div>
 
-            <br>
+
 
             <div class="faq-item">
-                <h3 class="faq-question">Do I need to know how to code? <span class="arrow">▼</span></h3>
-                <p class="faq-answer" style="display:none;">No! I will guide you step by step. If you're just getting started, we will work together to ensure you understand how things work, even if you're a complete beginner.</p>
+                <h3 class="faq-question">Do I need to know how to code? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">No! I will guide you step by step. If you're just getting started, we will work together to ensure you understand how things work, even if you're a complete beginner.
+                    If you're more experienced, I can help you with more advanced features and customizations, but it's not required for me to help you.
+                </p>
             </div>
 
-            <br>
 
             <div class="faq-item">
-                <h3 class="faq-question">Can I update my website after it's built?<span class="arrow">▼</span></h3>
-                <p class="faq-answer" style="display:none;">Absolutely! With GitHub, you'll have complete control over your website and be able to update it whenever you like.</p>
+                <h3 class="faq-question">Can I update my website after it's built?<span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">Absolutely! With GitHub, you'll have complete control over your website and be able to update it whenever you like.
+                    I'll show you how to make changes, add new pages, and keep your site up to date. Once you feel comfortable and do not need my help, you can continue to manage your site on your own
+                    at anytime, and you're always welcome to contact me if you have further questions. 
+                </p>
             </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How does payment work?<span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">When you click the "Purchase" button, you'll be redirected to PayPal to complete your payment. You can pay with a credit/debit card, Venmo or PayPal account. 
+                    Once your payment is processed, you'll be redirected to a Thank You page that explains the next steps. You'll also receive an email with a link to schedule your first session with me. 
+                    If you have any questions or issues with payment, feel free to reach out contact me using the button below.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Are there refunds?<span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">The <a href="terms.html" target="blank">Terms of Service</a> specifies that there are no refunds unless the service was not delivered as described.
+                    I want to make sure you're happy with the service you receive. If you're not satisfied with the service, please reach out to me and I'll do everything I can to make it right for you. 
+                    If you're still not satisfied, I can discuss refund options for you within 30 days of your purchase. 
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">How long does this service cover me for?<span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">The service covers you for one website setup. If you need additional help or support after the initial setup, you can purchase additional sessions or support as needed. 
+                    I'm here to help you with any questions or issues you may have, and I want to make sure you're comfortable managing your site on your own. Even after the initial setup, <b>you can reach out to me for help at any time</b>.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What if I have a question that's not listed here?<span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">
+                    If you have any questions that aren't answered here, feel free to reach out to me using the button below. I'm here to help you with any questions or concerns you may have, and I want to make sure you're comfortable with the service you receive. 
+                    I'm always open to feedback and suggestions. I will not be satisifed with the service until you are.
+                </p>
         
         </section>
 
@@ -296,8 +352,10 @@
 
         <h1>Have any questions, comments, or concerns?</h1>
 
-        <p>If you have any questions, comments, or concerns, please send me an email and I will get back to you within 24-48 hours (sometimes less, rarely more)
-            Also, your purchase comes with a 30-day purchase protection, which means if something goes wrong - we will either fix it or refund you for any service rendered.
+        <p>If you have any questions, comments, or concerns about any of the Services offered and rendered, 
+            you can always reach out to me via email using the button below. I will respond to your inquiry within 24 hours.
+            My goal is to ensure every customer is satisifed with the service provided, to get the site of their dreams up and running. 
+            However, if I fall short of that experience, I will do everything in my power to make it right for you. 
         </p>
 
         <a href="mailto:joinvillebilly@gmail.com" class="contact-button">Send an email</a>
@@ -333,6 +391,7 @@
         }).render('#buy-now-btn'); // Render the PayPal button
     </script>
 
+    <!-- FAQ script -->
 <script>
     const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -341,11 +400,23 @@
             const answer = this.nextElementSibling;
             const arrow = this.querySelector('.arrow');
             
-            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-            arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼'; // Toggle arrow direction
+            // Toggle answer visibility
+            if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
+                answer.style.maxHeight = "0px";
+                answer.style.opacity = "0";
+            } else {
+                answer.style.maxHeight = "1000px"; // Set a larger max-height
+                answer.style.opacity = "1";
+            }
+
+            // Rotate arrow
+            arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0)' : 'rotate(180deg)';
         });
     });
 </script>
+
+
+
 
     <!-- Password script -->
     <script>
@@ -374,6 +445,58 @@
             }
         });
     </script>
+
+    <!-- Navbar hide/show script -->
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; // Minimum scroll distance to trigger hide/show
+        const navbar = document.querySelector('nav'); // Select the nav element
+        const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // If the scroll difference is less than the delta, do nothing
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                // Scrolling down and past the navbar height
+                navbar.style.top = '-100px'; // Hide the navbar
+            } else {
+                // Scrolling up
+                navbar.style.top = '0'; // Show the navbar
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+
+    <a href="#" id="scroll-to-top">
+        &#8593; <!-- This is the arrow -->
+    </a>
+
+    <!-- Scroll arrow bottom-right -->
+
+    <script>
+        window.onscroll = function() {
+            var scrollToTopButton = document.getElementById("scroll-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopButton.style.opacity = "1";
+                scrollToTopButton.style.visibility = "visible";
+            } else {
+                scrollToTopButton.style.opacity = "0";
+                scrollToTopButton.style.visibility = "hidden";
+            }
+        };
+    </script>
+
+
+
+
 </body>
 
 </html>
