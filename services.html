@@ -7,6 +7,153 @@
     <title>Personalized Web Setup - Billy</title>
     <link href="css/billy-joinville.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+
+
+    <!--Custom CSS styling just for this page-->
+
+    <style>
+        body.page-website-setup {
+            background-color: #f5f7fa;
+            color: #444;
+        }
+
+        header.page-website-setup-header {
+            background-color: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header.page-website-setup-header h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        header.page-website-setup-header h2 {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        main.page-website-setup-main {
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 40px 20px;
+        }
+
+        section.about-services-page {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .services-cards-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+            width: auto;
+            text-align: center;
+            padding: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            text-wrap: wrap;
+        }
+
+        
+
+
+
+        .services-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .buy-now-btn {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #218838;
+        }
+
+        /* FAQ Section Styling */
+        .faq-section {
+            background-color: transparent;
+            width: auto;
+            text-align: center;
+            padding: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            text-wrap: wrap;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .faq-question {
+            font-size: 18px;
+            cursor: pointer;
+            color: #4a90e2;
+        }
+
+        .arrow {
+            font-size: 18px;
+            float: right;
+            transition: transform 0.3s;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+
+        footer.page-website-setup-footer {
+            background-color: #20232a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -75,6 +222,9 @@
             <h1>Website Setup Packages</h1>
             <p>I can offer flexible options depending on how much help you need. When you process your payment,
                 you will receive an email shortly thereafter with a link to schedule your first session with me.
+                <i>You will be redirected to PayPal's site to complete the purchase. You do not need to create an account,
+                    PayPal is just the secure payment provider that I use to ensure full proection for your purchase. 
+                </i>
             </p>
 
         <div class="services-cards-container">
@@ -112,6 +262,34 @@
 
 
         </div>
+
+        <section id="faq" class="faq-section">
+            <h1>Frequently Asked Questions</h1>
+
+            <br>
+            <br>
+            <br>
+
+            <div class="faq-item">
+                <h3 class="faq-question">What is GitHub, and why do I need it? <span class="arrow">▼</span></h3>
+                <p class="faq-answer" style="display:none;">GitHub is a platform that allows you to host and manage your website for free. It's also great for keeping track of your changes, and making sure your website is safe and secure with version control.</p>
+            </div>
+
+            <br>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need to know how to code? <span class="arrow">▼</span></h3>
+                <p class="faq-answer" style="display:none;">No! I will guide you step by step. If you're just getting started, we will work together to ensure you understand how things work, even if you're a complete beginner.</p>
+            </div>
+
+            <br>
+
+            <div class="faq-item">
+                <h3 class="faq-question">Can I update my website after it's built?<span class="arrow">▼</span></h3>
+                <p class="faq-answer" style="display:none;">Absolutely! With GitHub, you'll have complete control over your website and be able to update it whenever you like.</p>
+            </div>
+        
+        </section>
 
         <br>
         <br>
@@ -154,6 +332,20 @@
             }
         }).render('#buy-now-btn'); // Render the PayPal button
     </script>
+
+<script>
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function () {
+            const answer = this.nextElementSibling;
+            const arrow = this.querySelector('.arrow');
+            
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼'; // Toggle arrow direction
+        });
+    });
+</script>
 
     <!-- Password script -->
     <script>
