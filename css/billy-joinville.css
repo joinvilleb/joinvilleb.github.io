@@ -870,9 +870,14 @@ body.page-website-setup li {
     color: white; /* Set text color to white */
 }
 
-#intro-services-html{
+#intro-services-html {
 
     color: white;
+}
+
+.faq-section h1, .faq-section h1 span {
+    
+        color: black !important;
 }
 
 
@@ -899,18 +904,4 @@ body.page-website-setup {
     padding: 0;
     color: white; /* Ensure text stays white */
 }
-
-/* Add a semi-transparent overlay over the background image */
-body.page-website-setup::before {
-
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(104, 104, 104, 0.3); /* Adjust transparency here (50%) */
-    z-index: 0; /* Keep this behind the content */
-    pointer-events: none; /* Prevent overlay from blocking clicks */
-}
-
 
