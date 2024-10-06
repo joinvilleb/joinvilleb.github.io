@@ -816,3 +816,40 @@ ol li {
     }
 }
 
+
+ 
+/* For the specific page */
+body.page-website-setup {
+    background-image: url('../images/web-back.jpg'); /* Add your background image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-attachment: fixed; /* Makes the image stay in place on scroll */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+header.page-website-setup-header {
+    background-color: transparent; /* Make the header transparent so the image shows */
+    color: white; /* Ensure text remains readable */
+    text-align: center;
+    padding: 50px 20px;
+}
+
+main.page-website-setup-main {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds slight transparency to main content for readability */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+    border-radius: 10px; /* Adds a soft border */
+}
+
+footer.page-website-setup-footer {
+    background-color: transparent; /* Makes footer transparent */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
