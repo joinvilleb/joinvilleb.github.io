@@ -522,7 +522,7 @@ footer {
 
 /*******************//*******************//*******************//*******************/
 
-/* styling for the course page */
+/* styling for the payment buttons */
 
 #buy-now-btn {
     background-color: #333;
@@ -819,37 +819,98 @@ ol li {
 
  
 /* For the specific page */
+/* Body Styling */
 body.page-website-setup {
-    background-image: url(); /* Add your background image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Makes the image stay in place on scroll */
+    background-image: url('https://billyjoinville.me/images/web-back.jpeg'); /* Ensure this image path is correct */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    min-height: 100vh;
     margin: 0;
     padding: 0;
+    color: #333; /* Adjust text color for better contrast */
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust background transparency (50%) */
 }
 
+/* Main Content Styling */
+main.page-website-setup-main {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box-shadow for depth */
+}
+
+/* Header Styling */
 header.page-website-setup-header {
-    background-color: transparent; /* Make the header transparent so the image shows */
-    color: white; /* Ensure text remains readable */
+    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    color: white; /* Ensure text is readable */
     text-align: center;
     padding: 50px 20px;
 }
 
-main.page-website-setup-main {
-    background-color: rgba(255, 255, 255, 0.8); /* Optional: Adds slight transparency to main content for readability */
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 40px 20px;
-    border-radius: 10px; /* Adds a soft border */
+/* Section Styling */
+section.about-services-page,
+section.services-cards-container {
+    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    text-align: center;
+    color: white;
 }
 
+body.page-website-setup, 
+body.page-website-setup h1, 
+body.page-website-setup li {
+
+    color: white; /* Set text color to white */
+}
+
+#intro-services-html{
+
+    color: white;
+}
+
+
+
+/* Footer Styling */
 footer.page-website-setup-footer {
-    background-color: transparent; /* Makes footer transparent */
+    background-color: rgba(32, 35, 42, 0.9); /* Darker footer */
     color: white;
     text-align: center;
     padding: 20px;
 }
+
+/* Apply the background image with an overlay */
+body.page-website-setup {
+    position: relative;
+    background-image: url('https://billyjoinville.me/images/web-back.jpeg'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white; /* Ensure text stays white */
+}
+
+/* Add a semi-transparent overlay over the background image */
+body.page-website-setup::before {
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(104, 104, 104, 0.3); /* Adjust transparency here (50%) */
+    z-index: 0; /* Keep this behind the content */
+    pointer-events: none; /* Prevent overlay from blocking clicks */
+}
+
+
