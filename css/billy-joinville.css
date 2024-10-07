@@ -817,45 +817,12 @@ ol li {
 }
 
 
- 
-/* For the specific page */
-/* Body Styling */
-body.page-website-setup {
-    background-image: url('https://billyjoinville.me/images/web-back.jpeg'); /* Ensure this image path is correct */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Adjust text color for better contrast */
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust background transparency (50%) */
-}
 
-/* Main Content Styling */
-main.page-website-setup-main {
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box-shadow for depth */
-}
-
-/* Header Styling */
-header.page-website-setup-header {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-    color: white; /* Ensure text is readable */
-    text-align: center;
-    padding: 50px 20px;
-}
 
 /* Section Styling */
 section.about-services-page,
 section.services-cards-container {
-    background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
@@ -875,6 +842,43 @@ body.page-website-setup li {
     color: white;
 }
 
+/* Style for Website Setup Packages heading */
+#setup-packages-heading {
+    font-size: 28px; /* Adjust size */
+    text-align: center; /* Center the heading */
+    margin-top: 40px; /* Add some spacing above */
+    margin-bottom: 20px;
+    color: #ffffff; /* You can adjust the color */
+}
+
+/* Style for Have any questions, comments, or concerns? heading */
+#questions-heading {
+    font-size: 28px !important; /* Adjust size */
+    text-align: center !important; /* Center the heading */
+    margin-top: 50px !important; /* Add some spacing above */
+    margin-bottom: 30px !important;
+    color: #fffafa;
+}
+
+@media screen and (min-width: 1185px) {
+    #setup-packages-heading,
+    #questions-heading {
+        font-size: 28px; /* Adjust size */
+        text-align: center; /* Center the heading */
+        margin-top: 50px; /* Adjust spacing */
+        margin-bottom: 30px; /* Adjust bottom margin */
+    }
+
+    .services-cards-container, /* Adjusting containers on larger screens */
+    .about-services-page {
+        max-width: 1200px; /* Set a max width */
+        margin: 0 auto; /* Center horizontally */
+        text-align: center;
+    }
+}
+
+
+
 .faq-section h1, .faq-section h1 span {
     
         color: black !important;
@@ -889,19 +893,3 @@ footer.page-website-setup-footer {
     text-align: center;
     padding: 20px;
 }
-
-/* Apply the background image with an overlay */
-body.page-website-setup {
-    position: relative;
-    background-image: url('https://billyjoinville.me/images/web-back.jpeg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    width: 100%;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    color: white; /* Ensure text stays white */
-}
-

@@ -15,13 +15,25 @@
 
         
         body.page-website-setup {
-    
-            color: #444;
+
+            position: relative;
+            background-image: url('https://billyjoinville.me/images/web-back.jpeg'); /* Ensure this image path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #333; /* Adjust text color for better contrast */
+            background-color: rgba(240, 248, 255, 0.5); /* Adjust background transparency (50%) */
         }
 
         header.page-website-setup-header {
 
-            color: white;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            color: white; /* Ensure text is readable */
             text-align: center;
             padding: 50px 20px;
         }
@@ -40,9 +52,12 @@
 
         main.page-website-setup-main {
             margin: 0 auto;
-            max-width: 1200px;
             padding: 40px 20px;
-        }
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional box-shadow for depth */
+}
+
 
         section.about-services-page {
             background-color: #ffffff;
@@ -54,25 +69,15 @@
 
         .services-cards-container {
             display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            padding: 20px;
-            width: auto;
-            text-align: center;
-            padding: 20px;
-            max-width: 700px;
-            margin: 0 auto;
-
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 20px;
             padding: 40px;
-            text-wrap: wrap;
+            width: auto;
+            text-align: center;
+            margin: 0 auto;
+
+            flex-wrap: wrap;
+            justify-content: center;
         }
-
-        
-
 
 
         .services-card:hover {
@@ -196,26 +201,10 @@
 
     </header>
 
-    <!-- Password form -->
-    <form id="password-form">
 
-        <p id="error-message" style="color: red; display: none;">Incorrect password. Please try again.</p>
-        <p id="success-message">Password correct! Loading the developer side </p>
-
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <button type="submit">Submit</button>
-    </form>
-
-
-    <!-- Loading animation -->
-    <div id="loading">
-        <div class="spinner"></div>
-    </div>
 
     <!-- Main content hidden by default -->
-    <main id="content" style="display:none;">
+    <main id="content">
 
 
         
@@ -240,13 +229,14 @@
 
 
 
-            <h1>Website Setup Packages</h1>
-            <p id="intro-services-html">I can offer flexible options depending on how much help you need. When you process your payment,
+            <h1 id="setup-packages-heading">Website Setup Packages</h1>
+            <p id="intro-services-html">I can offer flexible options depending on how much help you need. When you process your payment*,
                 you will receive an email shortly thereafter with a link to schedule your first session with me.
-                <i>You will be redirected to PayPal's site to complete the purchase. You do not need to create an account,
-                    PayPal is just the secure payment provider that I use to ensure full protection for your purchase. 
-                </i>
             </p>
+
+            <p></p><i>*You will be redirected to PayPal's site to complete the purchase. You do not need to create an account,
+                PayPal is just the secure payment provider that I use to ensure full protection for your purchase. 
+            </i>
 
         <div class="services-cards-container">
 
@@ -351,7 +341,7 @@
         <br>
         <br>
 
-        <h1>Have any questions, comments, or concerns?</h1>
+        <h1 id="questions-heading">Have any questions, comments, or concerns?</h1>
 
         <p id="intro-services-html">If you have any questions, comments, or concerns about any of the Services offered and rendered, 
             you can always reach out to me via email using the button below. I will respond to your inquiry within 24 hours.
@@ -417,35 +407,6 @@
 </script>
 
 
-
-
-    <!-- Password script -->
-    <script>
-        document.getElementById('password-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            var password = document.getElementById('password').value;
-            var errorMessage = document.getElementById('error-message');
-            var successMessage = document.getElementById('success-message');
-            var loading = document.getElementById('loading');
-
-            if (password === 'billyruns2024') { // Check if password is correct
-                errorMessage.style.display = 'none';
-                successMessage.style.display = 'block'; // Show success message
-                loading.style.display = 'block'; // Show loading animation
-
-                // Simulate loading time before displaying content
-                setTimeout(function() {
-                    document.getElementById('content').style.display = 'block';
-                    document.getElementById('password-form').style.display = 'none';
-                    loading.style.display = 'none'; // Hide loading animation
-                }, 1500); // Adjust loading time (1.5 seconds)
-            } else {
-                errorMessage.style.display = 'block'; // Show error message if incorrect
-                successMessage.style.display = 'none'; // Hide success message
-                loading.style.display = 'none'; // Hide loading animation
-            }
-        });
-    </script>
 
     <!-- Navbar hide/show script -->
     <script>
