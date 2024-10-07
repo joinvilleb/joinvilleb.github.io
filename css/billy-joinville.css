@@ -837,7 +837,7 @@ body.page-website-setup li {
     color: white; /* Set text color to white */
 }
 
-#intro-services-html {
+#intro-services-html, #intro-services-html-next {
 
     color: white;
 }
