@@ -893,3 +893,45 @@ footer.page-website-setup-footer {
     text-align: center;
     padding: 20px;
 }
+
+
+@media screen and (max-width: 768px) {
+    body, main, section, .services-cards-container, .faq-section {
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+    }
+
+    h1, h2, p {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .services-cards-container {
+        display: block;
+    }
+
+    .services-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .buy-now-btn, .contact-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .contact-button {
+        background-color: #007BFF;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-button:hover {
+        background-color: #0056b3;
+    }
+}
