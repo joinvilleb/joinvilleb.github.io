@@ -813,6 +813,13 @@ body.page-website-setup li {
 #intro-services-html, #intro-services-html-next {
 
     color: white;
+    
+}
+#intro-services-html-next a{
+
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    
 }
 
 /* Style for Website Setup Packages heading */
