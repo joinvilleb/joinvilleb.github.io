@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: aliceblue;
@@ -538,18 +538,6 @@ footer {
     background-color: #555;
 }
 
-.download-button {
-    display: inline-block;
-    background-color: #28a745;
-    color: #fff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.download-button:hover {
-    background-color: #218838;
-}
 
 
 /* styling for the passoword paypall */
@@ -848,7 +836,7 @@ body.page-website-setup li {
     text-align: center; /* Center the heading */
     margin-top: 40px; /* Add some spacing above */
     margin-bottom: 20px;
-    color: #ffffff; /* You can adjust the color */
+    color: #ffffff;
 }
 
 /* Style for Have any questions, comments, or concerns? heading */
@@ -898,7 +886,7 @@ footer.page-website-setup-footer {
 @media screen and (max-width: 768px) {
     body, main, section, .services-cards-container, .faq-section {
         width: 100%;
-        padding: 10px;
+        padding: 20px;
         margin: 0 auto;
     }
 
@@ -924,7 +912,7 @@ footer.page-website-setup-footer {
     }
 
     .contact-button {
-        background-color: #007BFF;
+        background-color: none;
         color: white;
         border-radius: 5px;
         text-align: center;
@@ -934,4 +922,14 @@ footer.page-website-setup-footer {
     .contact-button:hover {
         background-color: #0056b3;
     }
+
+    .about-services-page, .services-cards-container {
+
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    
 }
+
+
