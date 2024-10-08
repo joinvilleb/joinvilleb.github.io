@@ -523,22 +523,6 @@ footer {
 
 /*******************//*******************//*******************//*******************/
 
-/* styling for the payment buttons */
-
-#buy-now-btn {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#buy-now-btn:hover {
-    background-color: #555;
-}
-
 
 
 /* styling for the passoword paypall */
@@ -933,4 +917,37 @@ footer.page-website-setup-footer {
     
 }
 
+
+
+
+/* testing the new styles for the website setup page */
+
+@media screen and (max-width: 768px) {
+    section.about-services-page {
+        width: 100%; /* Ensure the section uses full width */
+        padding: 20px; /* Adjust padding */
+    }
+
+    main.page-website-setup-main {
+        padding: 20px;
+    }
+
+    .services-cards-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 10px;
+    }
+
+    .services-card {
+        width: 100%; /* Full width for cards on mobile */
+    }
+
+    h1, h2, p {
+        font-size: 4.5vw;
+        text-align: center;
+    }
+
+    .buy-now-btn {
+        width: 100%; /* Full width on mobile */
+    }
+}
 
