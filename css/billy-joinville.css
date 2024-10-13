@@ -237,6 +237,33 @@ header p {
 
 }
 
+
+/* Mother's Tribute Styling */
+
+#donate {
+    border: 5px solid white;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    background-image: url('../images/dove-pattern.png'); /* Your image URL here */
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+
+}
+
+#donate h3 {
+    color: black;
+}
+
+#donate p {
+        color: black;
+}
+
+
+
 #donate .explore-button {
 
     display: inline-block;
