@@ -208,6 +208,16 @@
             padding: 20px;
         }
 
+        #about-services-page-h2, h2, i {
+
+            color: white !important;
+        }
+
+        #about-services-page-p {
+
+            color: white !important;
+        }
+
 
         /* For screens smaller than 768px, including mobile, ensuring it is centered */
         @media screen and (max-width: 768px) {
@@ -246,16 +256,6 @@
             text-align: center; /* Ensure text centers */
             width: 100%;
             margin: 0 auto;
-        }
-
-        #about-services-page-h2, h2, i {
-
-            color: white;
-        }
-
-        #about-services-page-p {
-
-            color: white !important;
         }
 
         .faq-section {
@@ -570,29 +570,7 @@
         </p>
         <p><a href="#top">Back to Top</a></p>
     </footer>
-
-
-    <!-- PayPal -->
-    <script src="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ"></script>
-    <script>
-        paypal.Buttons({
-            createOrder: function (data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: ['29.00', '199.00', '49.00']
-                        }
-                    }]
-                });
-            },
-            onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                    alert('Thank you for your purchase, ' + details.payer.name.given_name + '!');
-                    window.location.href = "download.html"; // Redirect to download page
-                });
-            }
-        }).render('#buy-now-btn'); // Render the PayPal button
-    </script>
+  
 
     <!-- FAQ -->
 <script>
