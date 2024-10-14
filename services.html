@@ -77,9 +77,10 @@
             align-items: center;     /* -- centers the content */
             text-align: center;      /* Centers the text */
             padding: 40px;
-            background-color: #ffffff;
+            background-color: transparent;
+
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 8px rgb(255, 255, 255);
             width: 100%;             
             margin: 0 auto;          
         }
@@ -237,6 +238,11 @@
             margin: 0 auto;
         }
 
+        #about-services-page-h2, #about-services-page-p {
+
+            color: white !important;
+        }
+
         .faq-section {
             width: 100%;
             padding: 20px;
@@ -309,6 +315,13 @@
             font-size: 20px;
         }
 
+        nav {
+
+            background-color: transparent;
+            color: white;
+
+        }
+
 
 
     </style>
@@ -353,19 +366,19 @@
 
         
         <section id="about-services" class="about-services-page">
-            <h2>How can I help <i>you?</i></h2>
+            <h2 id="about-services-page-h2">How can I help <i>you?</i></h2>
 
-            <p>My name is Billy, and I'm passionate about helping people get started with their websites. My goal
+            <p id="about-services-page-p">My name is Billy, and I'm passionate about helping people get started with their websites. My goal
                 is to make the site setup experience as simple and enjoyable for you as possible. 
                 
             </p>
 
-            <p>
+            <p id="about-services-page-p">For those looking to build their first website, I'll guide you through the process of setting up your site. For those with an existing site, I'll help you improve and maintain it.
                 For those looking to build their first website, I'll guide you through the process of setting up your site. For those with an existing site, I'll help you improve and maintain it.
                 We'll do it all through GitHub, at no extra cost to you, in addition to free<a href="#footnote1" class="footnote-link">*</a> hosting and version control. 
             </p>
 
-            <p>
+            <p id="about-services-page-p">
                 No matter your experience level, I will make sure your site reflects your personality or business in the best way possible.
             </p>
 
@@ -426,6 +439,9 @@
 
                 <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
             </section>
+
+            <br>
+            <br>
 
 
         </div>
