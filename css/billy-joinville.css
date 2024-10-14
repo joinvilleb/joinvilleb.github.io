@@ -840,7 +840,9 @@ body.page-website-setup li {
 #intro-services-html, #intro-services-html-next {
 
     color: white;
-    
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
 }
 #intro-services-html-next a{
 
