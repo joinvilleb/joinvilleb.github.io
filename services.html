@@ -245,6 +245,48 @@
             max-width: 100%;
             margin: 0 auto;
         }
+
+        }
+
+        #title-of-service {
+            font-size: 40px !important;
+        }
+
+        /* Portfolio Images Styling */
+
+
+        .portfolio-images-services {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            gap: 10px;
+            margin: 20px auto; 
+            width: 100%;
+        }
+
+        .portfolio-img {
+            width: 90px; 
+            height: 90px; 
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media screen and (max-width: 768px) {
+            .portfolio-images-services {
+                flex-direction: column; /* Stack images vertically on smaller screens */
+                gap: 10px; /* Reduce the gap between images on mobile */
+            }
+
+            .portfolio-img {
+                width: 100px; /* Reduce the size of the images on mobile */
+                height: 100px;
+                margin: 0 auto; /* Center the images */
+            }
         }
 
 
@@ -255,13 +297,21 @@
 
 <body class="page-website-setup">
     <header>
-        <h1>Let's Build Your Website Together</h1>
+        <h1 id="title-of-service">Let's Build Your Website Together!</h1>
 
-        <h2 id="intro-services-html">Creating your own website for the first time? Need help with your existing website? 
+        <h2 id="intro-services-html">Creating your own website for the first time? Need help with your existing website? Or, need general tech support? 
+            You're in the right place! 
         </h2>
-        <h2 id="intro-services-html">I'm here to help you get your website up and running, step by step. Whether you're looking to start a personal blog (like me), or wanting to start building a professional site, we'll do it all through GitHub 
-            at no extra cost to you, with free hosting and version control. 
-        </h2>
+
+
+        <div class="portfolio-images-services">
+            <img src="images/coding-header.png" alt="Dev Icon" class="portfolio-img">
+            <img src="images/tech-header.png" alt="Tech Support Icon" class="portfolio-img">
+            <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
+        </div>
+
+
+
 
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
@@ -278,16 +328,12 @@
 
         
         <section id="about-services" class="about-services-page">
-            <h2>How can I help you?</h2>
+            <h2>How can I help <i>you?</i></h2>
 
-            <p>Hey! I'm Billy, and I'm passionate about helping people get started with their websites. My goal
-                is to make the process as simple and enjoyable as possible for you. I will be guiding you through the setup on GitHub,
-                so you'll have full control over your site without needing to pay additional for hosting.
+            <p>My name is Billy, and I'm passionate about helping people get started with their websites. My goal
+                is to make the site setup experience as simple and enjoyable for you as possible. Whether you're looking to start a personal site (like me), or wanting to start building a professional site, we'll do it all through GitHub 
+                at no extra cost to you, with free hosting and version control. No matter your experience level, I will make sure your site reflects your personality or business in the best way possible.
                 
-            </p>
-
-            <p>Whether you're tech-savvy, or just starting out, 
-                I will make sure your site reflects your personality or business in the best way possible.
             </p>
 
         </section>
