@@ -121,9 +121,7 @@
 
         /* FAQ Section Styling */
         .faq-section {
-            background-color: white;
-            opacity: 0.69;
-            border-color: #20232a;
+            background-color: transparent;
             width: auto;
             max-width: 700px;
             margin: 60px;
@@ -289,6 +287,28 @@
             }
         }
 
+        #footnotes{
+
+            padding: 20px;
+            margin: 0 auto;
+            width: 100%;
+
+        }
+
+        #footnote1, #footnote2 {
+            font-size: 10px;
+            margin: 0 auto;
+            padding: 10px;
+            text-align: left;
+            color: rgb(144, 143, 143);
+        }
+
+        #frequently-asked-questions-title {
+
+            color: white !important;
+            font-size: 20px;
+        }
+
 
 
     </style>
@@ -297,11 +317,16 @@
 
 <body class="page-website-setup">
     <header>
+        <br>
+        <br>
         <h1 id="title-of-service">Let's Build Your Website Together!</h1>
 
         <h2 id="intro-services-html">Creating your own website for the first time? Need help with your existing website? Or, need general tech support? 
             You're in the right place! 
         </h2>
+
+        <br>
+        <br>
 
 
         <div class="portfolio-images-services">
@@ -310,8 +335,8 @@
             <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
         </div>
 
-
-
+        <br>
+        <br>
 
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
@@ -331,9 +356,17 @@
             <h2>How can I help <i>you?</i></h2>
 
             <p>My name is Billy, and I'm passionate about helping people get started with their websites. My goal
-                is to make the site setup experience as simple and enjoyable for you as possible. Whether you're looking to start a personal site (like me), or wanting to start building a professional site, we'll do it all through GitHub 
-                at no extra cost to you, with free hosting and version control. No matter your experience level, I will make sure your site reflects your personality or business in the best way possible.
+                is to make the site setup experience as simple and enjoyable for you as possible. 
                 
+            </p>
+
+            <p>
+                For those looking to build their first website, I'll guide you through the process of setting up your site. For those with an existing site, I'll help you improve and maintain it.
+                We'll do it all through GitHub, at no extra cost to you, in addition to free<a href="#footnote1" class="footnote-link">*</a> hosting and version control. 
+            </p>
+
+            <p>
+                No matter your experience level, I will make sure your site reflects your personality or business in the best way possible.
             </p>
 
         </section>
@@ -345,11 +378,13 @@
 
 
             <h1 id="setup-packages-heading">Website Setup Packages</h1>
-            <p id="intro-services-html-next">I offer flexible options depending on how much help you need. 
-                Choose the package that best fits your needs, and we'll get started on building your site together. 
-                When processing your payment, you'll be redirected to PayPal to complete your purchase (we accept credit/debit cards, Venmo, and PayPal accounts).
-                After your payment is processed, you'll receive an email with a link to schedule your first session with me.
-            </p>
+
+            
+            <p id="intro-services-html-next">
+                Choose the package that best fits your needs. 
+                When processing your payment, you'll be redirected to PayPal to complete your purchase.
+                After your purchase, you'll be redirected to a Thank You page with the next steps, with an email to schedule your first session. 
+            </p> 
 
             <p id="intro-services-html-next">
                 By selecting "Purchase", you're agreeing to the <a href="terms.html">Terms of Service</a>.
@@ -381,12 +416,11 @@
 
             <section id="personalized-mentorship" class="services-card">
                 <h3>Personalized Mentorship & Other Tech Help </h3>
-                <p>This service is for those who want to <b>learn and build</b> their website with <b>guidance</b>*.
-                    I'll provide <b>one-on-one sessions</b> as you create or improve your site. If you need any <b>technical support</b> with your devices (outside of website setup),
+                <p>This service is for those who want to <b>learn and build</b> their website with <b>guidance</b><a href="#footnote2" class="footnote-link">**</a>.
+                    I'll provide <b>one-on-one sessions</b> as you create or improve your site. If you need any <b>technical support</b><a href="#footnote2" class="footnote-link">**</a> with your devices (outside of website setup),
                     this service is for you. I'm happy to help through Zoom, email, or phone.
                 </p>
                 <br>
-                <p><i>*Available only if you have an existing website, public or private</i></p>
                 <br>
                 <p>Price: <b>$49</b> + tax</p>
 
@@ -397,8 +431,8 @@
         </div>
 
         <section id="faq" class="faq-section">
-            <h1>Frequently Asked Questions</h1>
-
+            <h1 id="frequently-asked-questions-title">Frequently Asked Questions</h1>
+            <br>
             <br>
             <br>
 
@@ -476,12 +510,26 @@
 
     </main>
 
+    <div id="footnotes">
+        <p id="footnote1">
+            <strong>*</strong> Free hosting and version control are provided through GitHub. Additional cost may apply for certain domain registration features and other services.
+            By using my services, you also agree to the <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" target="blank">GitHub Terms of Service</a>. 
+        </p>
+    
+        <p id="footnote2">
+            <strong>**</strong> Personalized mentorship is only available for those who have an existing website, public or private. Technical supoort is not available for all devices and software. Technical support is allowed for two devices per customer; you must purchase additional services for more devices.
+            If your device is not compatible with my services, you will receive a full refund. Any support provided is not a guarantee of a solution, device repair or replacement.
+    </div>
+
     <footer>
         <p>© 2024 Billy Joinville. All rights reserved.</p>
         <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+
+        <br>
         <p>
             <a href="terms.html">Terms of Service & Privacy Policy</a>
-        <p><a href="services.html">Back to Top</a></p>
+        </p>
+        <p><a href="#top">Back to Top</a></p>
     </footer>
 
 
@@ -580,8 +628,6 @@
             }
         };
     </script>
-
-
 
 
 </body>
