@@ -200,6 +200,56 @@
         }
 
 
+        /* For screens smaller than 768px, including mobile */
+        @media screen and (max-width: 768px) {
+
+        /* Services Cards Container */
+        .services-cards-container {
+            flex-direction: column; /* Stack cards vertically */
+            gap: 20px;
+            width: 100%; /* Full width */
+            margin: 0 auto; /* Center the container */
+            padding: 20px 1px;
+        }
+
+        /* Ensure services cards take full width */
+        .services-card {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* General Text & Headings adjustments */
+        h1, h2, p {
+            font-size: 4.5vw; /* Relative font-size scaling */
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        /* Adjust buttons */
+        .buy-now-btn {
+            width: 100%; /* Full width on mobile */
+        }
+
+        /* Adjust about-services-page section */
+        .about-services-page {
+            padding: 20px;
+            text-align: center; /* Ensure text centers */
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Adjust FAQ section to take full width on mobile */
+        .faq-section {
+            width: 100%;
+            padding: 20px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        }
+
+
+
     </style>
 
 </head>
@@ -284,9 +334,10 @@
 
 
             <section id="personalized-mentorship" class="services-card">
-                <h3>Personalized Mentorship</h3>
+                <h3>Personalized Mentorship & Other Tech Help </h3>
                 <p>This service is for those who want to <b>learn and build</b> their website with <b>guidance</b>*.
-                    I'll provide <b>one-on-one sessions</b> as you create or improve your site. 
+                    I'll provide <b>one-on-one sessions</b> as you create or improve your site. You can also use this service if you have basic technical support with your devices,
+                    or need help with other tech-related questions. I will be there every step of the way and I can't help, I'll find the best resource for you.
                 </p>
                 <p><i>*Available only if you have an existing website, public or private</i></p>
                 <br>
