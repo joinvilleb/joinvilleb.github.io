@@ -32,14 +32,14 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            color: #333; /* Adjust text color for better contrast */
-            background-color: rgba(240, 248, 255, 0.5); /* Adjust background transparency (50%) */
+            color: #333;
+            background-color: rgba(240, 248, 255, 0.5); 
         }
 
         header.page-website-setup-header {
 
-            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
-            color: white; /* Ensure text is readable */
+            background-color: rgba(0, 0, 0, 0.7); 
+            color: white; 
             text-align: center;
             padding: 50px 20px;
         }
@@ -59,29 +59,29 @@
         main.page-website-setup-main {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Horizontally centers content */
-            justify-content: center; /* Vertically centers content */
+            align-items: center;
+            justify-content: center; 
             padding: 40px 20px;
             background-color: rgba(255, 255, 255, 0.85); 
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             width: 100%;
-            margin: 0 auto; /* Ensure the content is centered horizontally */
+            margin: 0 auto; /* Ensure the content is centered -- */
 }
 
 
         section.about-services-page {
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically centers content */
-            align-items: center;     /* Horizontally centers content */
-            text-align: center;      /* Centers text */
+            justify-content: center; /* | centers the content */
+            align-items: center;     /* -- centers the content */
+            text-align: center;      /* Centers the text */
             padding: 40px;
             background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;             /* Make sure section uses the full width */
-            margin: 0 auto;          /* Centers horizontally */
+            width: 100%;             
+            margin: 0 auto;          
         }
 
         .services-cards-container {
@@ -200,38 +200,38 @@
         }
 
 
-        /* For screens smaller than 768px, including mobile */
+        /* For screens smaller than 768px, including mobile, ensuring it is centered */
         @media screen and (max-width: 768px) {
 
-        /* Services Cards Container */
+
         .services-cards-container {
-            flex-direction: column; /* Stack cards vertically */
+            flex-direction: column;
             gap: 20px;
             width: 100%; /* Full width */
-            margin: 0 auto; /* Center the container */
+            margin: 0 auto; 
             padding: 20px 1px;
         }
 
-        /* Ensure services cards take full width */
+
         .services-card {
             width: 100%;
             margin: 0 auto;
             padding: 20px;
         }
 
-        /* General Text & Headings adjustments */
+
         h1, h2, p {
             font-size: 4.5vw; /* Relative font-size scaling */
             text-align: center;
             margin: 0 auto;
         }
 
-        /* Adjust buttons */
+
         .buy-now-btn {
             width: 100%; /* Full width on mobile */
         }
 
-        /* Adjust about-services-page section */
+
         .about-services-page {
             padding: 20px;
             text-align: center; /* Ensure text centers */
@@ -239,7 +239,6 @@
             margin: 0 auto;
         }
 
-        /* Adjust FAQ section to take full width on mobile */
         .faq-section {
             width: 100%;
             padding: 20px;
