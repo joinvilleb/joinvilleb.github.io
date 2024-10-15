@@ -720,6 +720,18 @@ footer {
 
     }
 
+    .slideshow-container {
+        position: relative;
+        max-width: 90%;
+        margin: auto;
+      }
+
+    #donate-text {
+        font-size: 14px;
+    }
+
+    
+
 }
 
 
