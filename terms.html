@@ -17,6 +17,65 @@
         h3 {
             margin-top: 30px;
         }
+
+
+        main {
+            display: flex;
+            flex-direction: column; 
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px; 
+        }
+
+        main section {
+            width: 100%;  
+            margin-bottom: 40px; 
+            padding: 20px;
+            box-sizing: border-box; 
+        }
+
+
+        main h2, main h3 {
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #tos-title, #pp-title {
+            text-align: center;
+        }
+
+        main p, main ul, main ol {
+            text-align: left;
+            margin-left: 0;
+        }
+
+
+        main ul, main ol {
+            padding-left: 20px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            main {
+                padding: 10px; /* Reduce padding for mobile */
+            }
+            
+            main section {
+                margin-bottom: 20px; /* Smaller spacing between sections */
+            }
+            
+            main h2, main h3 {
+                font-size: 24px; /* Adjust heading sizes for mobile */
+            }
+            
+            main p, main ul, main ol {
+                font-size: 16px; /* Adjust text sizes for mobile */
+            }
+        }
+
     </style>
 </head>
 
@@ -37,7 +96,7 @@
     <main>
         <!-- Terms of Service Section -->
         <section id="terms-of-service">
-            <h2>Terms of Service</h2>
+            <h2 id="tos-title">Terms of Service</h2>
             <p>By accessing and using the services offered by Billy Joinville ("the Service"), you agree to comply with and be bound by the following terms and conditions ("Terms"). If you do not agree to these Terms, please refrain from using the Service.</p>
 
             <h3>1. Acceptance of Terms</h3>
@@ -88,7 +147,7 @@
 
         <!-- Privacy Policy Section -->
         <section id="privacy-policy">
-            <h2>Privacy Policy</h2>
+            <h2 id="pp-title">Privacy Policy</h2>
             <p>Your privacy is important to us. This privacy policy outlines how we collect, use, and protect your personal data.</p>
 
             <h3>1. Information We Collect</h3>
