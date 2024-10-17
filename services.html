@@ -284,10 +284,17 @@
         .portfolio-images-services {
             display: flex;
             justify-content: center; 
-            align-items: center;
-            gap: 10px;
-            margin: 20px auto; 
+            align-items: flex-start; 
+            gap: 200px; 
+            margin: 0 auto; 
             width: 100%;
+        }
+
+        .portfolio-item {
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center; 
         }
 
         .portfolio-img {
@@ -301,33 +308,42 @@
             transform: scale(1.05); 
         }
 
+        .caption {
+            font-size: 16px; 
+            color: white; 
+            margin-top: 5px; 
+        }
+
         /* Media Query for Mobile Devices */
         @media screen and (max-width: 768px) {
-            .portfolio-images-services {
-                flex-direction: column; 
-                gap: 10px; 
-            }
 
-            .portfolio-img {
-                width: 100px; 
-                height: 100px;
-                margin: 0 auto; 
-            }
+        .portfolio-images-services {
+            flex-direction: column; 
+            gap: 70px; 
+            align-items: center;
+        }
 
-            nav a {
+        .portfolio-img {
+            width: 100px; 
+            height: 100px;
+            margin: 0 auto; 
+        }
+
+
+        nav a {
                 background-color: transparent;
                 color: white !important;
 
-            }
-
-            footer p {
-
-                line-height: 2;
-            }
-
         }
 
-        #footnotes{
+        footer p {
+
+                line-height: 2;
+        }
+
+    }
+
+        #footnotes {
 
             padding: 20px;
             margin: 0 auto;
@@ -358,6 +374,7 @@
 
 
 
+
     </style>
 
 </head>
@@ -375,12 +392,24 @@
         <br>
         <br>
 
-
         <div class="portfolio-images-services">
-            <img src="images/coding-header.png" alt="Dev Icon" class="portfolio-img">
-            <img src="images/tech-header.png" alt="Tech Support Icon" class="portfolio-img">
-            <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
+            <div class="portfolio-item">
+                <img src="images/coding-header.png" alt="Dev Icon" class="portfolio-img">
+                <p class="caption">Your site, your way</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/tech-header.png" alt="Tech Support Icon" class="portfolio-img">
+                <p class="caption">Support 24/7/365</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
+                <p class="caption">Here for you, every step</p>
+            </div>
         </div>
+        
+
+
+
 
         <br>
         <br>
