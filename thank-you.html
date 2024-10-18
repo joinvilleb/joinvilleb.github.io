@@ -49,6 +49,14 @@
             background-color: transparent;
         }
 
+        nav {
+            background-color: transparent;
+        }
+
+        nav a {
+            color: white !important;
+        }
+
     </style>
 
 </head>
@@ -62,7 +70,7 @@
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
-            <a href="services.html" class="menu-option">Services</a>
+            <a href="services.html" class="menu-option">Solutions</a>
             <a href="contact.html" class="menu-option">Contact</a>
         </nav>
     </header>
@@ -70,7 +78,7 @@
     <main>
         <section id="next-steps">
             <h2>What Happens Next?</h2>
-            <p>Thank you again for your purchase! Here's what you can expect next:</p>
+            <p>Here's what you can expect within the next 24 hours:</p>
 
             <br>
 
@@ -79,13 +87,13 @@
                 We will send you an email with a link for us to schedule the first session shortly. If you do not receive it within the hour, please check your spam/junk folders.</li>
                 <br>
                 <li><strong>Scheduling your session:</strong> All meetings are done virtually, through Zoom. <u>At this time, I do not offer services in person.</u> After you schedule your session, if there is a time
-                conflict, please let me know at least 24 hours in advance. 
+                conflict, please let me know at least 24 hours in advance. If you purchased Other Tech Support, please provide a brief description of the issue you are experiencing so I can better assist you.
         </li>
             <br>
                 <li><strong>Communication:</strong> After the first session, we will coordinate a session schedule, depending on the plan that you choose. If you wish to upgrade your package,
                 you will be charged a prorated amount to cover the price differences between each package.  </li>
                 <br>
-                <li><strong>Support:</strong> I am here for you! You can reach out me through any of these <a href="contact.html">contact channels</a>. I will respond to any inquiries within 24-48 hours. 
+                <li><strong>Support:</strong> I am here for you! You can reach out me <a href="contact-form.html">here</a>. I will respond to any inquiries within 24-48 hours. 
                 Your satisfaction is the only way I'll be happy with the services that I provide. </li>
             </ol>
         
@@ -100,6 +108,33 @@
         </p>
         <p><a href="#top">Back to Top</a></p>
     </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; 
+        const navbar = document.querySelector('nav'); 
+        const navbarHeight = navbar.offsetHeight; 
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                
+                navbar.style.top = '-100px'; 
+            } else {
+
+                navbar.style.top = '0'; 
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+    </script>
 
 </body>
 
