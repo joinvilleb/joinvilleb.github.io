@@ -120,14 +120,14 @@ nav {
 
     /* When the user scrolls down */
     body.scrolled-down nav {
-        top: -100px; /* Hide the navbar */
-        opacity: 0; /* Fade it out */
+        top: -100px; 
+        opacity: 0; 
     }
 
     /* When the user scrolls up */
     body.scrolled-up nav {
-        top: 0; /* Show the navbar */
-        opacity: 1; /* Fade it in */
+        top: 0; 
+        opacity: 1; 
     }
 
 }
@@ -205,8 +205,8 @@ header p {
     font-size: 18px;
     font-weight: bold;
     color: #003337;
-    background-color: transparent; /* button color */
-    border: 2px solid black; /* button border */
+    background-color: transparent; 
+    border: 2px solid black; 
     text-decoration: none;
     border-radius: 0px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -214,8 +214,8 @@ header p {
 }
 
 .explore-button:hover {
-    background-color: #0056b3; /* button color on hover */
-    transform: scale(1.05); /* button scale on hover */
+    background-color: #0056b3; 
+    transform: scale(1.05); 
 }
 
 
@@ -228,8 +228,8 @@ header p {
     font-size: 13px;
     font-weight: bold;
     color: #003337;
-    background-color: transparent; /* button color */
-    border: 1px solid black; /* button border */
+    background-color: transparent; 
+    border: 1px solid black; 
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -247,7 +247,7 @@ header p {
     border-radius: 10px;
     width: 80%;
     margin: 20px auto;
-    background-image: url('../images/dove-pattern.png'); /* Your image URL here */
+    background-image: url('../images/dove-pattern.png'); 
     background-attachment: scroll;
     background-size: cover;
     background-position: center;
@@ -271,8 +271,8 @@ header p {
     font-size: 13px;
     font-weight: bold;
     color: #003337;
-    background-color: transparent; /* button color */
-    border: 1px solid black; /* button border */
+    background-color: transparent; 
+    border: 1px solid black;
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -280,8 +280,8 @@ header p {
 }
 
 .contact-button:hover {
-    background-color: #0056b3; /* button color on hover */
-    transform: scale(1.05); /* button scale on hover */
+    background-color: #0056b3; 
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 768px) {
@@ -452,7 +452,7 @@ main img:hover {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5);
   }
   
   /* Positioning the "next" button */
@@ -526,8 +526,8 @@ main img:hover {
     font-size: 24px;
     text-align: center;
     text-decoration: none;
-    opacity: 0; /* Initially hidden */
-    visibility: hidden; /* Ensures it's completely invisible */
+    opacity: 0;
+    visibility: hidden; 
     transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade */
     z-index: 1000;
 }
@@ -678,8 +678,8 @@ main img:hover {
     font-size: 13px;
     font-weight: bold;
     color: #003337;
-    background-color: transparent; /* button color */
-    border: 1px solid black; /* button border */
+    background-color: transparent;
+    border: 1px solid black; 
     text-decoration: none;
     border-radius: 3px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -695,8 +695,8 @@ main img:hover {
     font-size: 18px;
     font-weight: bold;
     color: #003337;
-    background-color: transparent; /* button color */
-    border: 2px solid black; /* button border */
+    background-color: transparent; 
+    border: 2px solid black; 
     text-decoration: none;
     border-radius: 0px;
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -729,8 +729,8 @@ main img:hover {
 
 #next-steps {
 
-    width: 90%; /* Responsive width */
-    max-width: 800px; /* Expands on desktop */
+    width: 90%; 
+    max-width: 800px; 
     background-color: transparent;
     padding: 30px;
     border-radius: 10px;
@@ -759,8 +759,8 @@ ol li {
 
 /* Container for the Terms and Conditions page */
 .terms-container {
-    width: 90%; /* Responsive width */
-    max-width: 800px; /* Expands on desktop */
+    width: 90%; 
+    max-width: 800px; 
     padding: 30px;
     border-radius: 10px;
     display: block;
@@ -829,7 +829,7 @@ section.services-cards-container {
 
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     text-align: center;
     color: white;
 }
@@ -838,7 +838,7 @@ body.page-website-setup,
 body.page-website-setup h1, 
 body.page-website-setup li {
 
-    color: white; /* Set text color to white */
+    color: white; 
 }
 
 #intro-services-html, #intro-services-html-next {
@@ -870,18 +870,18 @@ body.page-website-setup li {
 
 /* Style for Website Setup Packages heading */
 #setup-packages-heading {
-    font-size: 28px; /* Adjust size */
-    text-align: center; /* Center the heading */
-    margin-top: 40px; /* Add some spacing above */
+    font-size: 28px; 
+    text-align: center;
+    margin-top: 40px; 
     margin-bottom: 20px;
     color: #ffffff;
 }
 
 /* Style for Have any questions, comments, or concerns? heading */
 .contact-services {
-    font-size: 20px !important; /* Adjust size */
-    text-align: center !important; /* Center the heading */
-    margin-top: 50px !important; /* Add some spacing above */
+    font-size: 20px !important; 
+    text-align: center !important; 
+    margin-top: 50px !important; 
     margin-bottom: 30px !important;
     color: #fffafa;
     display: block;
@@ -894,16 +894,16 @@ body.page-website-setup li {
 @media screen and (min-width: 1185px) {
     #setup-packages-heading,
     .contact-services {
-        font-size: 28px; /* Adjust size */
-        text-align: center; /* Center the heading */
-        margin-top: 50px; /* Adjust spacing */
-        margin-bottom: 30px; /* Adjust bottom margin */
+        font-size: 28px; 
+        text-align: center; 
+        margin-top: 50px; 
+        margin-bottom: 30px; 
     }
 
     .services-cards-container, /* Adjusting containers on larger screens */
     .about-services-page {
-        max-width: 1200px; /* Set a max width */
-        margin: 0 auto; /* Center horizontally */
+        max-width: 1200px; 
+        margin: 0 auto; 
         text-align: center;
     }
 }
@@ -986,12 +986,12 @@ footer.page-website-setup-footer {
 
 
 
-/* testing the new styles for the website setup page */
+/* Responsive adjustments for mobile side of Services page */
 
 @media screen and (max-width: 768px) {
     section.about-services-page {
-        width: 100%; /* Ensure the section uses full width */
-        padding: 20px; /* Adjust padding */
+        width: 100%; 
+        padding: 20px; 
     }
 
     main.page-website-setup-main {
@@ -999,12 +999,12 @@ footer.page-website-setup-footer {
     }
 
     .services-cards-container {
-        flex-direction: column; /* Stack cards vertically */
+        flex-direction: column; 
         gap: 10px;
     }
 
     .services-card {
-        width: 100%; /* Full width for cards on mobile */
+        width: 100%; 
     }
 
     h1, h2, p {
@@ -1013,7 +1013,7 @@ footer.page-website-setup-footer {
     }
 
     .buy-now-btn {
-        width: 100%; /* Full width on mobile */
+        width: 100%; 
     }
 }
 
