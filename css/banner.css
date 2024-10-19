@@ -1,6 +1,6 @@
 .banner {
-    padding: 5px 20px; /* Consistent padding */
-    background-color: rgb(233, 122, 122);
+    padding: 5px 20px; 
+    background-color: rgb(172, 233, 122);
     top: 0;
     width: 100%;
     z-index: 1001; 
