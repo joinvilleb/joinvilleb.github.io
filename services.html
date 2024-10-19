@@ -618,7 +618,7 @@
 
         </p>
 
-        <a href="contact-form.html" class="contact-button">Get In Touch</a>
+        <a href="#" id="dynamicLink" class="contact-button">Get In Touch</a>
 
     </div>
 
@@ -721,6 +721,21 @@
             }
         };
     </script>
+
+    <script>
+        const link = document.getElementById('dynamicLink');
+        
+        function isMobile() {
+            return /Mobi|Android/i.test(navigator.userAgent);
+        }
+
+        if (isMobile()) {
+            link.href = "https://forms.gle/7yTd3fZSrLE8sikH8";
+        } else {
+            link.href = "https://billyjoinville.me/contact-form.html";
+        }
+    </script>
+
 
 
 </body>
