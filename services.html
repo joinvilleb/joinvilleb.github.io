@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Billy - Web Setup</title>
     <link href="css/billy-joinville.css" rel="stylesheet">
-    <link rel="shortcut icon" href="images/website-services-logo.jpg" type="image/png">
+    <link rel="shortcut icon" href="images/website-services-logo.jpg" type="image/jpg">
+
+    <meta property="og:title" content="Billy Joinville Web Services">
+    <meta property="og:description" content="Quality Websites Without Breaking the Bank">
+    <meta property="og:image" content="images/website-services-logo.jpg">
+    <meta property="og:url" content="https://billyjoinville.me/services">
 
 
     <!--Custom CSS styling just for this page-->
 
     <style>
-
-        /* Center content */
 
         main {
             display: block;
@@ -22,7 +25,6 @@
 
         html {
             scroll-behavior: smooth;
-            
              
         }
 
@@ -73,7 +75,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
             width: 100%;
-            margin: 0 auto; /* Ensure the content is centered -- */
+            margin: 0 auto;
 }
 
 
@@ -82,7 +84,7 @@
             flex-direction: column;
             justify-content: center; /* | centers the content */
             align-items: center;     /* -- centers the content */
-            text-align: center;      /* Centers the text */
+            text-align: center;     
             padding: 40px;
             background-color: transparent;
 
@@ -237,7 +239,6 @@
 
 
 
-        /* For screens smaller than 768px, including mobile, ensuring it is centered */
         @media screen and (max-width: 768px) {
 
 
@@ -665,7 +666,7 @@
                 answer.style.maxHeight = "0px";
                 answer.style.opacity = "0";
             } else {
-                answer.style.maxHeight = "1000px"; // Set a larger max-height
+                answer.style.maxHeight = "1000px"; 
                 answer.style.opacity = "1";
             }
 
@@ -709,8 +710,6 @@
     <a href="#" id="scroll-to-top">
         &#8593; <!-- Arrow  -->
     </a>
-
-    <!-- Scroll arrow bottom-right -->
 
     <script>
         window.onscroll = function() {
