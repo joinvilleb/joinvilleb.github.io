@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Billy - Schedule Session</title>
+    <link href="css/billy-joinville.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+
+
+    <style>
+
+        .schedule-session {
+            background-image: url('https://billyjoinville.me/images/web-back.jpeg');
+            background-size: cover;
+        }
+
+        #schedule {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 2em;
+        }
+
+        h2 {
+            color: white !important;
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2em;
+            margin-top: 1em;
+        }
+
+        ol {
+
+            color: white;
+            font-size: 15px;
+            margin-top: 1em;
+
+        }
+
+        p {
+            color: white;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        footer {
+            background-color: transparent;
+        }
+
+        nav {
+            background-color: transparent;
+        }
+
+        nav a {
+            color: white !important;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .calendly-inline-widget {
+                min-width: 320px;
+                height: 700px;
+                padding-right: 20px;
+            }
+
+
+            #schedule {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+            ol {
+                font-size: 12px;
+            }
+
+            footer p {
+                font-size: 12px;
+            }
+
+            footer {
+                background-color: transparent;
+            }
+
+            nav {
+                background-color: transparent;
+            }
+
+            nav a {
+                color: white !important;
+            }
+            
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="schedule-session">
+    <header>
+        <h1 id="schedule">Schedule Your Session</h1>
+        <h2>You are able to schedule a session below. You must submit proof of purchase before your session, or it will be automatically canceled. 
+            If you have not purchased a Web Setup Package, check out the <a href="https://billyjoinville.me/services.html#setup-packages-heading">affordable packages</a> starting at $99.
+        </h2>
+        <nav>
+            <a href="index.html" class="menu-option">Welcome</a>
+            <a href="projects-gallery.html" class="menu-option">Projects</a>
+            <a href="services.html" class="menu-option">Solutions</a>
+            <a href="contact.html" class="menu-option">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="next-steps">
+
+            <div class="calendly-inline-widget" data-url="https://calendly.com/joinvillebilly/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            
+        </section>
+
+        <br>
+        <br>
+
+        <section id="next-steps">
+
+            <div class="calendly-inline-widget" data-url="https://calendly.com/joinvillebilly/session-full-setups?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        
+        </section>
+
+        <br>
+        <br>
+            
+    </main>
+
+    <footer>
+        <p>© 2024 Billy Joinville. All rights reserved.</p>
+        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+        <p>
+            <a href="terms.html">Terms of Service & Privacy Policy</a>
+        </p>
+        <p><a href="site-map.html">Site Map</a></p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; 
+        const navbar = document.querySelector('nav'); 
+        const navbarHeight = navbar.offsetHeight; 
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                
+                navbar.style.top = '-100px'; 
+            } else {
+
+                navbar.style.top = '0'; 
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+</body>
+
+</html>

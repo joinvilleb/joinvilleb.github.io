@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Site Map</title>
+    <link href="css/billy-joinville.css" rel="stylesheet">
+    <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+
+
+    <style>
+
+        .site-map-background {
+            background-image: url('https://billyjoinville.me/images/web-back.jpeg');
+            background-size: cover;
+        }
+
+        #site-map {
+            color: white;
+            text-align: center;
+            font-size: 2.5em;
+            margin-top: 2em;
+        }
+
+        h2 {
+            color: white !important;
+            text-align: center;
+            font-size: 1.5em;
+            margin-top: 1em;
+        }
+
+        p {
+            color: white;
+            font-size: 1.2em;
+            margin-top: 1em;
+        }
+
+        ol {
+            color: white;
+            font-size: 15px;
+            margin-top: 1em;
+        }
+
+        p {
+            color: white;
+        }
+
+        footer p {
+            color: white;
+        }
+
+        footer {
+            background-color: transparent;
+        }
+
+        nav {
+            background-color: transparent;
+        }
+
+        nav a {
+            color: white !important;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body class="site-map-background">
+    <header>
+        <h1 id="site-map">Site Map</h1>
+        <h2>All of the links related to <strong>billyjoinville.me</strong>. If you are redirected to another site that does not contain any of our links below, do not click on it and report it to us <a href="contact-form.html">here</a>.</h2>
+        <nav>
+            <a href="index.html" class="menu-option">Welcome</a>
+            <a href="projects-gallery.html" class="menu-option">Projects</a>
+            <a href="services.html" class="menu-option">Solutions</a>
+            <a href="contact.html" class="menu-option">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <ol>
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="projects-gallery.html">Projects</a></li>
+            <li><a href="services.html">Solutions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms of Service & Privacy Policy</a></li>
+            <li><a href="schedule-session.html">Schedule Your Session</a></li>
+            <li><a href="thank-you.html">Thank You for Your Purchase!</a></li>
+            <li><a href="contact-form.html">Contact Form</a></li>
+            
+            <li><a href="site-map.html">Site Map</a></li>
+
+        </ol>
+
+
+
+    </main>
+
+    <footer>
+        <p>© 2024 Billy Joinville. All rights reserved.</p>
+        <p>This website is published through GitHub, created and designed by Billy Joinville. </p>
+        <p>
+            <a href="terms.html">Terms of Service & Privacy Policy</a>
+        </p>
+        <p><a href="site-map.html">Site Map</a></p>
+        <p><a href="#top">Back to Top</a></p>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; 
+        const navbar = document.querySelector('nav'); 
+        const navbarHeight = navbar.offsetHeight; 
+
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
+
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+                
+                navbar.style.top = '-100px'; 
+            } else {
+
+                navbar.style.top = '0'; 
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+    </script>
+
+</body>
+
+</html>
