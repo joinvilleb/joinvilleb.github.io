@@ -65,13 +65,59 @@
             color: white !important;
         }
 
+        a {
+            color: white;
+            font-weight: bold;
+        }
+
+        #basic-setup-schedule, #full-setup-schedule {
+
+            padding-right: 0px;
+            padding-left: 0px;
+            margin: 0 auto;
+            border: transparent !important;
+            align-items: center;
+            width: 90%;
+
+        }
+
+        .calendly-inline-widget {
+            width: 100%;
+            margin: 0 auto;
+            border: transparent !important;
+            align-items: center;
+            padding: 0px;
+            margin: 0 auto;
+            max-width: 1200px;
+            min-width: 280px;
+            height: 100%;
+        }
+        
+
+
+
         @media screen and (max-width: 768px) {
 
-            .calendly-inline-widget {
-                min-width: 320px;
-                height: 700px;
-                padding-right: 20px;
+            #basic-setup-schedule, #full-setup-schedule, .calendly-inline-widget.calendly-mobile {
+                width: 100% !important;
+                min-width: 120px;
+                align-items: center;
+                min-height: 600px;
+                padding: 0;
+                margin: 0 auto;
+
             }
+
+            .calendly-inline-widget {
+
+                height: 100%;
+                min-height: 1000px;
+                width: 100% !important;
+                margin: 0 auto;
+                align-items: center;
+            }
+
+
 
 
             #schedule {
@@ -102,10 +148,6 @@
                 background-color: transparent;
             }
 
-            nav a {
-                color: white !important;
-            }
-            
         }
 
     </style>
@@ -130,9 +172,9 @@
 
     <main>
 
-        <section id="next-steps">
+        <section id="basic-setup-schedule">
 
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/30min?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/30min?hide_gdpr_banner=1" style="min-width:320px; height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             
         </section>
@@ -140,9 +182,9 @@
         <br>
         <br>
 
-        <section id="next-steps">
+        <section id="full-setup-schedule">
 
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-full-setups?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-full-setups?hide_gdpr_banner=1" style="min-width:320px; height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         
         </section>
