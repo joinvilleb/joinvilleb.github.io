@@ -261,6 +261,19 @@
             padding: 20px 1px;
         }
 
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            transition: top 0.3s ease; 
+            z-index: 10; 
+        }
+
+        body {
+            padding-top: 60px;
+        }
+
+
 
         .services-card {
             width: 100%;
@@ -351,10 +364,9 @@
             margin: 0 auto; 
         }
 
-        body.page-website-setup {
+        .page-website-setup {
         
             background-color: transparent;
-            background-image: url('https://billyjoinville.me/images/web-back-mobile.webp');
 
             background-size: cover; 
             background-position: center; 
@@ -377,17 +389,14 @@
                 line-height: 2;
         }
 
-        .body.page-website-setup {
-        background-size: contain; 
-        background-attachment: scroll; 
-        background-repeat: no-repeat;
-        background-position: center; 
-        }
-
         #intro-services-html-next1 {
 
         margin-top: 60px;
 
+        }
+
+        body.page-website-setup {
+            overflow: auto; 
         }
 
     }
