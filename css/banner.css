@@ -1,14 +1,23 @@
 .banner {
-    padding: 5px 20px; 
+    padding: 5px 20px;
     background-color: rgb(172, 233, 122);
-    top: 0;
-    width: 100%;
-    z-index: 1001; 
-    line-height: 1.5; 
-    margin: 0;
-    position: fixed;
-    height: auto;
+
 }
+
+body {
+    background-color: aliceblue;
+}
+
+/* past incidents */
+
+.banner-past-oct18 {
+    padding: 5px 20px; 
+    background-color: lightgrey;
+
+}
+
+
+
 
 p {
     text-align: center;
@@ -19,6 +28,7 @@ p {
 }
 
 h5 {
+    color: black;
     margin-top: 90px;
     font-size: 20px;
     font-weight: bold;
@@ -29,8 +39,7 @@ h5 {
 .banner-past-oct18 {
     color: rgb(0, 0, 0);
     padding: 5px 20px; 
-    background-color: lightgrey;
-
+    background-color: rgb(238, 168, 168);
 
 }
 
