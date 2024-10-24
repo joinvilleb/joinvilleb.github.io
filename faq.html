@@ -14,7 +14,6 @@
     <meta property="og:url" content="https://billyjoinville.me/services">
 
 
-    <!--Custom CSS styling just for this page-->
 
     <style>
 
@@ -577,7 +576,7 @@
     </footer>
   
 
-    <!-- FAQ -->
+
 <script>
     const faqQuestions = document.querySelectorAll('.faq-question');
 
@@ -595,7 +594,6 @@
                 answer.style.opacity = "1";
             }
 
-            // Rotate arrow
             arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0)' : 'rotate(180deg)';
         });
     });
@@ -603,7 +601,6 @@
 
 
 
-    <!-- Navbar hide/show  -->
     <script>
         let lastScrollTop = 0;
         const delta = 5; 
@@ -629,24 +626,6 @@
             lastScrollTop = scrollTop;
         });
 
-    </script>
-
-
-    <a href="#" id="scroll-to-top">
-        &#8593; <!-- Arrow  -->
-    </a>
-
-    <script>
-        window.onscroll = function() {
-            var scrollToTopButton = document.getElementById("scroll-to-top");
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollToTopButton.style.opacity = "1";
-                scrollToTopButton.style.visibility = "visible";
-            } else {
-                scrollToTopButton.style.opacity = "0";
-                scrollToTopButton.style.visibility = "hidden";
-            }
-        };
     </script>
 
     <script>

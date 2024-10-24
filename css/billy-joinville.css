@@ -1,4 +1,4 @@
-/* General Reset and Body Styling */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,7 +18,6 @@ html, body {
 }
 
 
-/* Link Styling */
 a {
     text-decoration: none;
     color: #007BFF;
@@ -114,18 +113,17 @@ nav {
     backdrop-filter: blur(10px); 
 }
 @media screen and (max-width: 768px) {
-    /* Improved smooth scrolling effect */
+
     nav {
         transition: top 0.4s ease-in-out, opacity 0.4s ease-in-out;
     }
 
-    /* When the user scrolls down */
+
     body.scrolled-down nav {
         top: -100px; 
         opacity: 0; 
     }
 
-    /* When the user scrolls up */
     body.scrolled-up nav {
         top: 0; 
         opacity: 1; 
@@ -145,7 +143,7 @@ nav {
     background-color: #0056b3;
 }
 
-/* Main Layout - Section Styling */
+
 main {
 
     display: flex;
@@ -197,7 +195,6 @@ header p {
     max-width: 600px;
 }
 
-/* Action Button Styling */
 
 .explore-button {
 
@@ -220,7 +217,7 @@ header p {
 }
 
 
-/* contact button styling */
+
 
 .contact-button {
 
@@ -238,8 +235,6 @@ header p {
 
 }
 
-
-/* Mother's Tribute Styling */
 
 #donate {
     border: 5px solid white;
@@ -317,7 +312,7 @@ footer p {
     text-align: center;
 }
 
-/* Image Styling */
+
 img {
     max-width: 100%;
     height: auto;
@@ -326,7 +321,6 @@ img {
     border-radius: 8px;
 }
 
-/* Responsive Layout */
 @media screen and (max-width: 768px) {
     header h1 {
         font-size: 24px;
@@ -420,26 +414,25 @@ main img:hover {
 
 
 
-/* Slideshow container */
+
 .slideshow-container {
     position: relative;
     max-width: 50%;
     margin: auto;
   }
-  
-  /* Slides */
+
   .slide {
     display: none;
     width: 100%;
   }
   
-  /* Slideshow images */
+
   .slideshow-image {
     width: 100%;
     height: auto;
   }
   
-  /* Previous and next buttons */
+
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -456,18 +449,18 @@ main img:hover {
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-  /* Positioning the "next" button */
+
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
   
-  /* Positioning the "prev" button */
+
   .prev {
     left: 0;
   }
   
-  /* Hover effect */
+
   .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
@@ -478,14 +471,14 @@ main img:hover {
     to { opacity: 1; }
   }
   
-  /* Fading effect for slides */
+
   .slide {
     animation-name: fade;
     animation: fade 1.5s;
   }
   
 
-  /* Next & previous buttons */
+
 
 .prev, .next {
     cursor: pointer;
@@ -504,13 +497,12 @@ main img:hover {
 
   }
   
-  /* Position the "next" button to the right */
+
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
-  /* Hover effect */
+
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
@@ -529,7 +521,7 @@ main img:hover {
     text-decoration: none;
     opacity: 0;
     visibility: hidden; 
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* Smooth fade */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     z-index: 1000;
 }
 
@@ -547,7 +539,7 @@ main img:hover {
 
 
 
-/* styling for the passoword paywall */
+/* styling for the password paywall */
 
 
 
@@ -869,7 +861,6 @@ body.page-website-setup li {
     
 }
 
-/* Style for Website Setup Packages heading */
 #setup-packages-heading {
     font-size: 28px; 
     text-align: center;
@@ -878,7 +869,7 @@ body.page-website-setup li {
     color: #ffffff;
 }
 
-/* Style for Have any questions, comments, or concerns? heading */
+
 .contact-services {
     font-size: 20px !important; 
     text-align: center !important; 
@@ -901,7 +892,7 @@ body.page-website-setup li {
         margin-bottom: 30px; 
     }
 
-    .services-cards-container, /* Adjusting containers on larger screens */
+    .services-cards-container, 
     .about-services-page {
         max-width: 1200px; 
         margin: 0 auto; 
@@ -918,9 +909,9 @@ body.page-website-setup li {
 
 
 
-/* Footer Styling */
+
 footer.page-website-setup-footer {
-    background-color: rgba(32, 35, 42, 0.9); /* Darker footer */
+    background-color: rgba(32, 35, 42, 0.9); 
     color: white;
     text-align: center;
     padding: 20px;
@@ -987,7 +978,6 @@ footer.page-website-setup-footer {
 
 
 
-/* Responsive adjustments for mobile side of Services page */
 
 @media screen and (max-width: 768px) {
     section.about-services-page {

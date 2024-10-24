@@ -12,9 +12,23 @@
 
     <style>
 
+
         .schedule-session {
-            background-image: url('https://billyjoinville.me/images/web-back.jpeg');
+
+            position: relative;
+            background-image: url('https://billyjoinville.me/images/web-back.jpeg'); 
             background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: rgba(240, 248, 255, 0.5); 
+
+
         }
 
         #schedule {
@@ -68,10 +82,15 @@
 
         a {
             color: white;
+
+        }
+
+        #disclaimer a {
+            color: white;
             font-weight: bold;
         }
 
-        #basic-setup-schedule, #full-setup-schedule {
+        #basic-setup-schedule, #full-setup-schedule, #personalized-mentorship-schedule {
 
             padding-right: 0px;
             padding-left: 0px;
@@ -79,6 +98,9 @@
             border: transparent !important;
             align-items: center;
             width: 90%;
+            background-color: transparent;
+
+
 
         }
 
@@ -93,13 +115,21 @@
             min-width: 280px;
             height: 100%;
         }
+
+        #names {
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
         
 
 
 
         @media screen and (max-width: 768px) {
 
-            #basic-setup-schedule, #full-setup-schedule, .calendly-inline-widget.calendly-mobile {
+            #basic-setup-schedule, #full-setup-schedule, #personalized-mentorship-schedule, .calendly-inline-widget.calendly-mobile {
                 width: 100% !important;
                 min-width: 120px;
                 align-items: center;
@@ -118,6 +148,13 @@
                 margin: 0 auto;
                 align-items: center;
             }
+
+            #names a {
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            font-weight: bold;
+        }
 
 
 
@@ -161,9 +198,24 @@
 <body class="schedule-session">
     <header>
         <h1 id="schedule">Schedule Your Session</h1>
-        <h2>You are able to schedule a session below. You must submit proof of purchase before your session, or it will be automatically canceled. 
-            If you have not purchased a Web Setup Package, check out the <a href="https://billyjoinville.me/services.html#setup-packages-heading">affordable packages</a> starting at $99.
+        <h2 id="disclaimer"> You're able to schedule a session for a Web Setup Package that you have purchased. If we suspect any fraudulent activity, we reserve the right to cancel your session.
+            <br>
+            <br>
+            If you have not purchased a Web Setup Package, check out the <a href="https://billyjoinville.me/services.html#setup-packages-heading">affordable packages</a> starting at $99 offering two years of maintenance and unlimited support.
         </h2>
+
+        <br>
+        <br>
+        <br>
+
+        <a href="schedule-session.html#basic-setup-schedule" id="names">Basic Setup Package</a>
+        <a href="schedule-session.html#full-setup-schedule" id="names">Full Setup Package</a>
+        <a href="schedule-session.html#personalized-mentorship-schedule" id="names">Personalized Mentorship</a>
+
+        <br>
+        <br>
+        <br>
+
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
@@ -176,20 +228,29 @@
 
         <section id="basic-setup-schedule">
 
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/30min?hide_gdpr_banner=1" style="min-width:320px; height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/30min?background_color=ffc107" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
             
         </section>
 
-        <br>
-        <br>
+
 
         <section id="full-setup-schedule">
 
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-full-setups?hide_gdpr_banner=1" style="min-width:320px; height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-full-setups?background_color=ff7043" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+
+
+
+
         
         </section>
+
+        <section id="personalized-mentorship-schedule">
+
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-personalized-mentorship-other-tech-help?background_color=FFAB91" style="min-width:320px;height:700px;"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
         <br>
         <br>
