@@ -88,7 +88,8 @@
 
     <header>
         <h1>Terms of Service & Privacy Policy</h1>
-        <p>Published: October 1, 2024 | Last Revised: October 25, 2024</p>
+        <p>Published: October 1, 2024 | Last Revised: <span id="lastUpdated"></span></p>
+
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
             <a href="projects-gallery.html" class="menu-option">Projects</a>
@@ -311,6 +312,13 @@
         } else {
             link.href = "https://billyjoinville.me/contact-form.html";
         }
+    </script>
+
+
+    <script>
+        const date = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, options);
     </script>
 
 

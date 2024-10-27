@@ -60,7 +60,7 @@ a:active {
     color: #004080;
 }
 
-/* Header Styling */
+
 header {
     display: flex;
     flex-direction: column;
@@ -99,7 +99,7 @@ header h2 {
     margin-bottom: 15px;
 }
 
-/* Navigation Menu */
+
 nav {
     display: flex;
     justify-content: center;

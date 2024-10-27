@@ -3,16 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ongoing Issues</title>
+    <title>Status</title>
     <link rel="stylesheet" href="css/banner.css">
     <link rel="shortcut icon" href="images/website-services-logo.jpg" type="image/jpg">
 </head>
-<body>
-
-    <h5>Current status of billyjoinville.me:</h5>
 
 
-<div class="banner">
+
+<header>
+    <nav>
+        <a href="index.html" class="menu-option">Welcome</a>
+        <a href="projects-gallery.html" class="menu-option">Projects</a>
+        <a href="services.html" class="menu-option">Solutions</a>
+        <a href="contact.html" class="menu-option">Contact</a>
+    </nav>
+
+</header>
+<body id="banners-section">
+
+    <h5>Current status of billyjoinville.me as of <span id="lastUpdated"></span>, <span id="currentTime"></span>:</h5>
+
+
+<div class="banner-current">
 
     
     <p>billyjoinville.me is operating normally. If you encounter any issues, <a href="contact-form.html" target="_blank"> contact us</a>.</p>
@@ -28,8 +40,29 @@
 
 <div class="banner-past-oct18">
     <p>
-        <strong>October 18-19, 2024</strong> - billyjoinville.me experienced a brief outage with payments. The issue was resolved overnight and systems were back up and running on October 19th at 9:38AM Eastern Time.
+        <strong>October 18-19, 2024, 10:00PM - 9:38AM Eastern Time</strong> - billyjoinville.me experienced a brief outage with payments. Clients may have experienced issues with purchasing services. The issue has been resolved on October 19, 2024, at 9:38AM Eastern Time.
     </p>
+
+</div>
+
+<script>
+    function updateDateTime() {
+        const date = new Date();
+        
+
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, dateOptions);
+        
+
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        document.getElementById("currentTime").textContent = date.toLocaleTimeString(undefined, timeOptions);
+    }
+    
+
+    updateDateTime();
+    
+    setInterval(updateDateTime, 1000);
+</script>
 
     
 </body>
