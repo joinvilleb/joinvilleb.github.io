@@ -28,16 +28,46 @@
 
     <style>
 
+    html, body, main, header, footer, section {
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        overflow-x: hidden; 
+        box-sizing: border-box;
+    }
+
+    header, .about-services-page, .testimonials-section, .faq-section, .footnotes {
+        width: 100vw !important; /* Ensure each section spans the viewport width */
+        padding: 60px 0; /* Adjust padding to center content while spanning full width */
+    }
+
+    .about-services-page, .testimonials-section, .faq-section {
+        padding: 40px 20px; /* Internal padding for readability */
+        box-sizing: border-box; /* Ensures padding doesn’t increase width */
+    }
+
+    .contact-services {
+        background-color: black;
+    }
+
+    
+
+
+
+
+
         main {
             display: block;
             align-items: center;
         }
-
+ 
         
         body.page-website-setup {
 
+            background-color: rgb(18, 30, 33) !important;
+
             position: relative;
-            background-image: url('https://billyjoinville.me/images/web-back.jpeg'); 
+            background-image: none; 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -91,13 +121,12 @@
             align-items: center;     /* -- centers the content */
             text-align: center;     
             padding: 40px;
-            background-color: transparent;
-
-            border-radius: 10px;
-            box-shadow: 0 8px 8px rgb(255, 255, 255);
-            width: 100%;             
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;       
             margin: 0 auto;          
         }
+
 
         .services-cards-container {
             display: flex;
@@ -146,9 +175,8 @@
         }
 
         .faq-section {
-            background-color: transparent;
             width: 100%;
-            max-width: 700px;
+            max-width: 900px;
             margin: 0 auto;
 
 
@@ -159,6 +187,7 @@
             padding: 40px;
             word-wrap: break-word;
             align-items: center;
+            background-color: transparent;
         }
 
         .faq-item {
@@ -258,6 +287,13 @@
             color: white !important;
             font-size: 16px;
             text-align: center;
+            font-weight: bold;
+        }
+
+        footer, #footnotes, #footnote1, #footnote2 {
+
+            background-color: black !important;
+            
         }
 
 
@@ -283,6 +319,12 @@
             margin: 0 auto; 
             padding: 20px 1px;
         }
+
+        .background-video {
+        height: 100%; /* Ensures full vertical coverage on mobile */
+        width: 50%; /* Adjusts width to maintain aspect ratio */
+    }
+
 
 
 
@@ -316,19 +358,16 @@
             text-align: center; 
             width: 100%;
             margin: 0 auto;
+
         }
 
-        .faq-section {
-            width: 100%;
-            padding: 20px;
-            max-width: 100%;
-            margin: 0 auto;
-        }
 
         }
 
         #title-of-service {
-            font-size: 40px !important;
+            font-weight: bold !important;
+            margin-top: 40px;
+
         }
 
 
@@ -339,6 +378,7 @@
             gap: 220px; 
             margin: 0; 
             width: 100%;
+            padding: 20px;
         }
 
         .portfolio-item {
@@ -363,6 +403,7 @@
             font-size: 16px; 
             color: white; 
             margin-top: 5px; 
+            text-wrap: wrap;
         }
 
         @media screen and (max-width: 768px) {
@@ -425,8 +466,6 @@
 
     }
 
- 
-
     
         #footnotes {
 
@@ -476,16 +515,12 @@
         }
 
         .testimonials-section {
-        background-color: transparent;
+        background-color: black !important;
         padding: 40px 20px;
         text-align: center;
         margin: 0px auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 100%;
-
-        
-    }
+        }
 
     .testimonials-section h1 {
         color: white;
@@ -508,8 +543,7 @@
         background-color: transparent;
         padding: 20px;
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
+
     }
 
     .testimonial p {
@@ -542,9 +576,71 @@
         .testimonials-section h1 {
             font-size: 22px;
         }
+
+        .video-background-section {
+        width: 90%; /* Shrinks the container slightly on mobile */
+        max-height: 200px; /* Adjusts height to fit smaller screens */
+        }
+
+        .background-video {
+            max-width: 100%; /* Ensures video scales with container */
+            height: auto; /* Maintains aspect ratio */
+        }
+
+        /* Adjust control buttons for mobile */
+        .video-background-section div {
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+
+    #header-services {
+
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 40px 20px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+        
+    .video-background-section {
+        position: relative;
+        width: 100vw;
+        height: 100vh; 
+        overflow: hidden;
+        margin: 0; 
+        padding: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white; 
     }
 
 
+    .background-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100vw;
+        height: auto; 
+        min-width: 100%; 
+        min-height: 100%; 
+        transform: translate(-50%, -50%); 
+        object-fit: cover; 
+        z-index: 1; 
+    }
+
+   
+    .video-background-section .content {
+        position: relative;
+        z-index: 2; 
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5); 
+        border-radius: 8px; 
+    }
 
 
 
@@ -554,15 +650,20 @@
 
 <body class="page-website-setup">
 
-    <header>
+    
 
-        <br>
-        <br>
-        <h1 id="title-of-service">Let's Build Your Website Together!</h1>
+    <header id="header-services">
+
+        <img src="images/logo-transparent-2.png" alt="Website Services Logo" class="header-image">
 
 
-        <h2 id="intro-services-html-next1">Creating your own website for the first time? Need help with your existing website? Or, need general tech support? 
-            You're in the right place! 
+        <h1 id="title-of-service">Your Portfolio, Your Business</h1>
+
+
+        <h2 id="intro-services-html-next1">Quality Websites Without Breaking the Bank.
+            As they say, 'A trusted guide makes the journey easier.' I've got you covered!</h2> 
+
+        </h2> 
         </h2>
 
 
@@ -572,15 +673,17 @@
         <div class="portfolio-images-services">
             <div class="portfolio-item">
                 <img src="images/coding-header.png" alt="Dev Icon" class="portfolio-img">
-                <p class="caption">Your site, your way</p>
+                <p class="caption">Suitable for portfolios, and small-business sites</p>
             </div>
             <div class="portfolio-item">
                 <img src="images/tech-header.png" alt="Tech Support Icon" class="portfolio-img">
-                <p class="caption">2 years w/ unlimited support</p>
+                <p class="caption">18 months w/ unlimited support, starting at $99</p>
             </div>
             <div class="portfolio-item">
                 <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
-                <p class="caption">Affordable, starting at $99</p>
+                <p class="caption">I listen, build, and support. No gimmicks, just results</p>
+
+                </p>
             </div>
         </div>
         
@@ -610,33 +713,23 @@
 
 
         
-        <section id="about-services" class="about-services-page">
-            <h2 id="about-services-page-h2">How can I help <i>you</i>?</h2>
+        <div class="video-background-section">
 
-            <img src="images/website-services-logo.png" alt="Dev Icon" class="header-image">
+            <video id="introVideo" controls class="background-video">
+                <source src="images/intro-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
 
-            <p id="about-services-page-p"><a href="index.html" class="back-to-index">My name is Billy</a>, and I'm passionate about helping people get started with their websites. My goal
-                is to make the site setup experience as simple and enjoyable for you as possible. 
-                
-            </p>
-
-            <p id="about-services-page-p">For those looking to build their first website, I'll guide you through the process of setting up your site. For those with an existing site, I'll help you improve and maintain it. 
-                We'll do it all through GitHub, at no extra cost to you, in addition to free<a href="#footnote1" class="footnote-link">*</a> hosting and version control. 
-            </p>
-
-            <p id="about-services-page-p">
-                No matter your experience level, I will make sure your site reflects your personality or business in the best way possible.
-            </p>
-
-        </section>
-
-        <br>
-        <br>
-        <br>
-        <br>
+            <div style="text-align: center; margin-top: 10px;">
+                <button onclick="playVideo()">Play</button>
+                <button onclick="stopVideo()">Stop</button>
+                <button onclick="reverseVideo()">Reverse</button>
+            </div>
+    
+        </div>
 
 
-        <section id="testimonials" class="testimonials-section">
+        <div id="testimonials" class="testimonials-section">
 
             <br>
             <br>
@@ -663,8 +756,14 @@
 
             </div>
 
+            <br>
+            <br>
+
             <a href="https://qualtricsxm52c6mjnyw.qualtrics.com/jfe/form/SV_cXWDvL8TD3KUHIy" class="contact-button" target="_blank">Leave A Review</a>
-        </section>
+            <br>
+            <br>
+            <a href="compare.html" class="contact-button">Compare Portfolio vs. Business Sites</a>
+        </div>
 
         <br>
         <br>
@@ -736,6 +835,10 @@
                 <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
             </section>
 
+
+            <br>
+            <br>
+            <br>
             <br>
             <br>
             <br>
@@ -750,36 +853,37 @@
 
 
             <div class="faq-item">
-                <h3 class="faq-question">What is GitHub? Why use it? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">GitHub is a platform that allows you to host and manage your website for free. It's also great for keeping track of your changes, and making sure your website is safe and secure with version control. 
-                    I use GitHub to help you build your site, and you'll have full control over it once it's set up. 
+                <h3 class="faq-question">Do I need to have any coding knowledge to use these services? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">No! The Basic Setup package is made to guide you through the setup process, even if you're a beginner. With Full Setup, I handle everything for you, so you can focus on your business or portfolio. 
+                </p>
+
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What is included in the Full Website Setup package? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">The Full Setup package includes everything in the Basic Setup package, plus full website setup handled by me. It includes repository creation, complete customization, deployment, and custom domain setup (up to $30 USD in domain registration fees covered). It also includes ongoing support to ensure your site works perfectly.
                 </p>
             </div>
 
 
 
             <div class="faq-item">
-                <h3 class="faq-question">Do I need to know how to code? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">No! I will guide you step by step. If you're just getting started, we will work together to ensure you understand how things work, even if you're a complete beginner.
-                    If you're more experienced, I can help you with more advanced features and customizations, but it's not required for me to help you.
+                <h3 class="faq-question">What types of websites are these packages suitable for? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">These packages are ideal for portfolios, personal blogs, and small business websites. They are made for professionals, freelancers, and small businesses looking to establish an online presence without breaking the bank.
                 </p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">How much time will it take to set up my site? <span class="arrow"> ▼ </span></h3>
+                <h3 class="faq-question">Will my website by mobile-friendly? <span class="arrow"> ▼ </span></h3>
 
-                <p class="faq-answer">For Full Setup, it usually takes a week to set up your site, depending on the complexity of your site.  
-                    Turnarond time is an area where I excel, and I'll make sure your site is up and running as soon as possible.
+                <p class="faq-answer">Yes, both Basic and Full Web Setup packages include a mobile-friendly site. I'll make sure your site looks great on all devices, including smartphones, tablets, and desktops.
 
                 </p>
             </div>
 
 
             <div class="faq-item">
-                <h3 class="faq-question">How does the domain and hosting process work? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">When you purchase a service and after we've set up your site, you'll have the option to purchase a domain name or hosting plan. We cover up to $30 USD in domain registration fees, per domain.
-                    You can use a cheap domain registrar like Namecheap or GoDaddy to purchase a domain name, and you can use GitHub to host your site for free. Or, you can use a paid hosting service like Bluehost or SiteGround. Either way, 
-                    I'll help you set up your domain and hosting, and make sure it's live on the web. 
+                <h3 class="faq-question">How secure will my website be once it's live? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">Security is a priority. I ensure every setup follows basic security practices, and I can offer advice on keeping your website secure over time.
                 </p>
             </div>
 
@@ -789,31 +893,26 @@
         
         </section>
 
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
+    <div id="footnotes">
 
         <div class="contact-services">
 
-        <h1 id="questions-heading">Need Support?</h1>
-
-        <p id="intro-services-html">If you have any questions, comments, or concerns, please contact me using the button below and I will respond to your inquiry within 24 hours.
-
-        </p>
-
-        <a href="#" id="dynamicLink" class="contact-button" target="_blank">Get In Touch</a>
-
-    </div>
-
+            <h1 id="questions-heading">Need Support?</h1>
     
+            <p id="intro-services-html">If you have any questions, comments, or concerns, please contact me using the button below and I will respond to your inquiry within 24 hours.
+    
+            </p>
+    
+            <a href="#" id="dynamicLink" class="contact-button" target="_blank">Get In Touch</a>
+    
+        </div>
 
-
-    </main>
-
-    <div id="footnotes">
+        <br>
+        <br>
+        <br>
+        <br>
+        
         <p id="footnote1">
             <strong>*</strong> Free hosting and version control are provided through GitHub. Additional cost may apply for certain domain registration features and other services. We cover up to $30 USD in domain registration fees, per domain. 
             By using my services, you also agree to the <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" target="blank">GitHub Terms of Service</a>. 
@@ -830,9 +929,16 @@
         <p>
             <a href="terms.html">Terms of Service & Privacy Policy</a>
         </p>
+        <p>
+            <a href="refund-policy.html">Refund Policy</a>
+        </p>
         <p><a href="site-map.html">Site Map</a></p>
         <p><a href="services.html">Back to Top</a></p>
     </footer>
+
+</main>
+
+
   
 
     <!-- FAQ -->

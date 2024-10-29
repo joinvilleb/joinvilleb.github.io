@@ -149,12 +149,10 @@
     <main>
         <section id="next-steps">
             <h2>What Happens Next?</h2>
-            <p>Here's what you can expect within the next 24 hours:</p>
             <br>
 
             <ol>
-                <li><strong>Check Your Email:</strong> You have received a receipt from PayPal confirming your purchase. 
-                We will send you an email with a link for us to schedule the first session shortly. If you do not receive it within the hour, please check your spam/junk folders.</li>
+                <li><strong>Check Your Email:</strong> You will receive an email with a receipt and a link to schedule your first session. </li>
                 <br>
                 <li><strong>Scheduling your session:</strong> All meetings are done virtually, through Zoom. <u>At this time, I do not offer services in person</u>. </li>
 
@@ -230,6 +228,11 @@
         <p>
             <a href="terms.html">Terms of Service & Privacy Policy</a>
         </p>
+
+        <p>
+            <a href="refund-policy.html">Refund Policy</a>
+        </p>
+        
         <p><a href="site-map.html">Site Map</a></p>
         <p><a href="#top">Back to Top</a></p>
     </footer>
@@ -259,6 +262,36 @@
             lastScrollTop = scrollTop;
         });
 
+    </script>
+
+    <script>
+        const video = document.getElementById("introVideo");
+        let reverseInterval;
+
+        function playVideo() {
+            clearInterval(reverseInterval); // Stop reversing if active
+            video.play();
+        }
+
+        function stopVideo() {
+            video.pause();
+            video.currentTime = 0; // Reset to the beginning
+        }
+
+        function reverseVideo() {
+            clearInterval(reverseInterval);
+            video.pause();
+            
+            // Play video backward by reducing time at intervals
+            reverseInterval = setInterval(() => {
+                if (video.currentTime <= 0) {
+                    clearInterval(reverseInterval);
+                    video.pause();
+                } else {
+                    video.currentTime -= 0.1; // Adjust reverse speed as needed
+                }
+            }, 100);
+        }
     </script>
 
 </body>
