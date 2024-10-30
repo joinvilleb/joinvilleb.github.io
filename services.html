@@ -712,9 +712,8 @@
 
 
 
-    </style>
+</style>
 
-</head>
 
 <body class="page-website-setup">
 
@@ -983,52 +982,52 @@
   
 
     <!-- FAQ -->
-<script>
-    const faqQuestions = document.querySelectorAll('.faq-question');
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
 
-    faqQuestions.forEach(question => {
-        question.addEventListener('click', function () {
-            const answer = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
-            
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', function () {
+                const answer = this.nextElementSibling;
+                const arrow = this.querySelector('.arrow');
+                
 
-            if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
-                answer.style.maxHeight = "0px";
-                answer.style.opacity = "0";
-            } else {
-                answer.style.maxHeight = "1000px"; 
-                answer.style.opacity = "1";
-            }
-            arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0)' : 'rotate(180deg)';
+                if (answer.style.maxHeight && answer.style.maxHeight !== "0px") {
+                    answer.style.maxHeight = "0px";
+                    answer.style.opacity = "0";
+                } else {
+                    answer.style.maxHeight = "1000px"; 
+                    answer.style.opacity = "1";
+                }
+                arrow.style.transform = arrow.style.transform === 'rotate(180deg)' ? 'rotate(0)' : 'rotate(180deg)';
+            });
         });
-    });
-</script>
+    </script>
 
-<script>
-    let lastScrollTop = 0;
-    const delta = 5; 
-    const navbar = document.querySelector('nav'); 
-    const navbarHeight = navbar.offsetHeight;
+    <script>
+        let lastScrollTop = 0;
+        const delta = 5; 
+        const navbar = document.querySelector('nav'); 
+        const navbarHeight = navbar.offsetHeight;
 
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 
-        if (Math.abs(scrollTop - lastScrollTop) <= delta) {
-            return;
-        }
+            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
+                return;
+            }
 
-        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
 
-            navbar.style.top = '-100px'; 
-        } else {
+                navbar.style.top = '-100px'; 
+            } else {
 
-            navbar.style.top = '0';
-        }
+                navbar.style.top = '0';
+            }
 
-        lastScrollTop = scrollTop;
-    });
-</script>
+            lastScrollTop = scrollTop;
+        });
+    </script>
 
 
 
