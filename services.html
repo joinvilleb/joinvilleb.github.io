@@ -16,7 +16,7 @@
 
     <meta name="twitter:card" content="images/website-services-logo.jpg">
     <meta name="twitter:title" content="Affordable Website Setup Services - Billy Joinville">
-    <meta name="twitter:description" content="Get personalized web setup and tech support services tailored to your needs. Affordable, reliable, and designed to help you succeed online.">
+    <meta name="twitter:description" content="Get personalized web setup tailored to your needs. Affordable, reliable, and designed to help you succeed online.">
     <meta name="twitter:image" content="images/website-services-logo.jpg">
 
 
@@ -64,7 +64,7 @@
         
         body.page-website-setup {
 
-            background-color: rgba(23, 46, 116, 0.769) !important;
+            background-color: white !important;
 
             position: relative;
             background-image: none; 
@@ -141,6 +141,30 @@
             width: 100%;
         }
 
+        #plan-features-free-consultation {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #free-consultation, #full-setup {
+
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 0 auto;
+            width: 100%;
+            margin-bottom: 20px;
+
+        }
+
+        #price {
+            font-size: 16px;
+            color: black;
+            text-align: center; 
+        }
+
 
         .services-card:hover {
             transform: translateY(-5px);
@@ -157,6 +181,7 @@
             font-size: 16px;
             margin: 0 auto;
             display: inline-block;
+            margin-top: 20px;
         }
 
         .buy-now-btn a::before {
@@ -185,7 +210,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 10px;
             padding: 40px;
             word-wrap: break-word;
             align-items: center;
@@ -199,7 +224,7 @@
         .faq-question {
             font-size: 16px;
             cursor: pointer;
-            color: #f3f3f3;
+            color: black;
             display: flex;
             justify-content: space-between; 
             align-items: center; 
@@ -307,6 +332,29 @@
             text-align: center;
             margin-top: 30px;
             margin-bottom: 30px;
+        }
+
+        #intro-services-html-next2 {
+
+            font-size: 16px;
+            color: black;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            text-align: center !important;
+            width: 100%;
+        }
+
+        #view-more-faq {
+
+            background-color: transparent;
+            color: black !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border-color: black;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+            display: inline-block;
         }
 
 
@@ -443,11 +491,7 @@
                 line-height: 2;
         }
 
-        #intro-services-html-next1 {
 
-        margin-top: 60px;
-
-        }
 
         body.page-website-setup {
             overflow: auto; 
@@ -561,6 +605,11 @@
         text-align: right;
     }
 
+    #setup-packages-heading {
+        color: black;
+
+    }
+
     @media screen and (max-width: 768px) {
         .testimonial-container {
             flex-direction: column;
@@ -652,7 +701,7 @@
 
     #faq-title {
 
-        color: white;
+        color: black;
         text-align: center;
 
         margin-top: 40px;
@@ -670,14 +719,20 @@
 
     <header id="header-services">
 
+
+        <iframe src="status-snippet.html" style="width: 100%; border: none; height: auto; display: block; padding: 0; margin: 0; margin-top: 20px;" onload="this.style.height=this.contentWindow.document.body.scrollHeight + 'px';"></iframe>
+
+
         <img src="images/logo-transparent-2.png" alt="Website Services Logo" class="header-image">
 
 
-        <h1 id="title-of-service">Your Portfolio, Your Business</h1>
+        <h1 id="title-of-service">
+            Showcase Your Vision Online
+        </h1>
 
 
-        <h2 id="intro-services-html-next1">Quality Websites Without Breaking the Bank.
-            As they say, 'A trusted guide makes the journey easier.' I've got you covered!</h2> 
+        <h2 id="intro-services-html-next1">
+            Solo entrepreneurs, photographers, artists, nature enthusiasts, or [your own sector/site] - I'm here to help you build a website that works for you.
 
         </h2> 
 
@@ -688,15 +743,15 @@
         <div class="portfolio-images-services">
             <div class="portfolio-item">
                 <img src="images/coding-header.png" alt="Dev Icon" class="portfolio-img">
-                <p class="caption">Suitable for portfolios, and small-business sites</p>
+                <p class="caption">Showcase your work, stress-free</p>
             </div>
             <div class="portfolio-item">
                 <img src="images/tech-header.png" alt="Tech Support Icon" class="portfolio-img">
-                <p class="caption">18 months w/ unlimited support, starting at $99</p>
+                <p class="caption">SEO-optimized for growth potential</p>
             </div>
             <div class="portfolio-item">
                 <img src="images/wireframe-header.png" alt="Business Icon" class="portfolio-img">
-                <p class="caption">I listen, build, and support. No gimmicks, just results</p>
+                <p class="caption">Flat-rate pricing, ensuring no hidden fees</p>
 
                 </p>
             </div>
@@ -738,6 +793,60 @@
     
         </div>
 
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+            <h1 id="setup-packages-heading">Ready to get started? </h1>
+            <p id="intro-services-html-next2">
+                Checkout my offerings and schedule a free consultation if you aren't sure where to start, or have questions.
+        
+            </p>
+
+        <div class="services-cards-container">
+
+            
+
+            <section id="full-setup" class="services-card">
+                <h3>Full Website Setup</h3>
+
+                <p>
+                    <ul id="plan-features">
+                        <li>Custom Designs & Layouts tailored to your brand or personality</li>
+                        <li>Mobile-Responsive Design for easy accessibility</li>
+                        <li>SEO Optimization to help the site rank better in search engines</li>
+                        <li>Domain and Hosting services included at no extra cost<a href="#footnote1"><strong>*</strong></a>
+                        </li>
+                        <li>Basic Security Setup for data protection (https://)</li>
+                        <li>18-month unlimited support for troubleshooting or updates</li>
+                    </ul>
+                </p>
+                <br> 
+                <p id=price>Price: <b><s>$599 (one-time payment)</s></b></p>
+                <p id=price>Promo: <strong>$449</strong> (one-time payment)</p>
+                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
+            </section>
+
+
+            <section id="free-consultation" class="services-card">
+                <h3>Free Consultation </h3>
+
+                <p id="plan-features-free-consultation">Not sure what you're looking for? Need some more information? Schedule a free 15-minute consultation where we'll work to decide what will work best for you. </p>
+                <br>
+                <br>
+                <p id=price>Price: <strong>Free</strong></p>
+
+                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule a Free Consultation</a> <!-- Direct PayPal link -->
+            </section>
+
+            <br>
+
+        </div>
 
         <div id="testimonials" class="testimonials-section">
 
@@ -769,93 +878,6 @@
             <br>
             <br>
 
-            <a href="https://qualtricsxm52c6mjnyw.qualtrics.com/jfe/form/SV_cXWDvL8TD3KUHIy" class="contact-button" target="_blank">Leave A Review</a>
-            <br>
-            <br>
-            <a href="compare.html" class="contact-button">Compare Portfolio vs. Business Sites</a>
-
-            <br>
-            <br>
-            <br>
-
-        </div>
-
-        <br>
-        <br>
-        <br>
-        <br>
-
-
-
-
-
-            <h1 id="setup-packages-heading">Website Setup Packages</h1>
-
-            <p id="intro-services-html-next1">
-                Choose the package that best fits your needs. Need help deciding? No problem - <a href="https://calendly.com/billyjoinville/free-consultation" class="tos-link-services"><strong>Schedule a free consultation</strong></a>.</p>
-        
-        
-            </p>
-
-        <div class="services-cards-container">
-
-            <section id="basic-setup" class="services-card">
-                <h3>Basic Setup</h3>
-                    <ul id="plan-features">
-            
-                            <li><strong>Step-by-step guidance</strong> to set up your GitHub repository and deploy your site</li>
-                            </li>
-                            <li><strong>Personalize</strong> your site with your own content and design
-                            </li>
-                            <li><strong>One-on-one support</strong> to help you get started and understand the process</li>
-                    </ul>
-                <br>
-                <p>Price: <b><s>$129</s></b></p>
-                <p>Special offer: <b>$99</b></p>
-                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
-            </section>
-
-            <section id="full-setup" class="services-card">
-                <h3>Full Setup</h3>
-
-                <p>
-                    <ul id="plan-features">
-                        <li><strong>Everything in the Basic Setup</strong> package, plus:</li>
-                        <li>I'll handle the <strong>entire setup</strong>, by creating your repository, customizing, and fully deploying your site</li>
-                        <li><strong>Custom domain</strong> setup for your site (up to $30 USD in domain registration fees covered)</li>
-                        <li><strong>Ongoing support</strong> to make sure everything works perfectly, with minimal effort from you</li>
-                    </ul>
-                </p>
-                <br> 
-                <p>Price: <b>$299</b></p>
-                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
-            </section>
-
-
-            <section id="personalized-mentorship" class="services-card">
-                <h3>Personalized Mentorship & Other Tech Help </h3>
-                <p>
-                    <ul id="plan-features">
-                        <li><strong>One-on-one guidance</strong> for those with an <u>existing website</u><a href="#footnote2" class="footnote-link">**</a> who want to learn how to improve it or expand it</li>
-                        <li><strong>Tailored advice</strong> for enhancing  your current site's funtionality and design, or making updates as needed</li>
-                        <li><strong>Unrelated tech support</strong> available for other devices or technical issues beyond website setup (up to 2 devices)</li>
-                    </ul>
-                </p>
-                <br>
-                <br>
-                <p>Price: <b><s>$99</s></b></p>
-                <p>Special offer: <b>$79</b></p>
-
-                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
-            </section>
-
-
-            <br>
-            <br>
-            <br>
-            <br>
-
-
         </div>
 
         <h1 id="faq-title">Frequently Asked Questions</h1>
@@ -868,42 +890,35 @@
 
 
             <div class="faq-item">
-                <h3 class="faq-question">Do I need to have any coding knowledge to use these services? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">No! The Basic Setup package is made to guide you through the setup process, even if you're a beginner. With Full Setup, I handle everything for you, so you can focus on your business or portfolio. 
+                <h3 class="faq-question">Do I need any technical skills to work with you? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">No technical skills required! My offering is designed to be user-friendly and accessible to everyone. I handle the entire setup for you, so you can focus on what you do best.
                 </p>
 
             </div>
             <div class="faq-item">
-                <h3 class="faq-question">What is included in the Full Website Setup package? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">The Full Setup package includes everything in the Basic Setup package, plus full website setup handled by me. It includes repository creation, complete customization, deployment, and custom domain setup (up to $30 USD in domain registration fees covered). It also includes ongoing support to ensure your site works perfectly.
+                <h3 class="faq-question">How long does it take for my site to be live? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">The process generally takes between 1-2 weeks, depending on the complexity of the site. I'll keep you updated on the progress and make sure you're satisfied with the final product.
                 </p>
             </div>
 
 
 
             <div class="faq-item">
-                <h3 class="faq-question">What types of websites are these packages suitable for? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">These packages are ideal for portfolios, personal blogs, and small business websites. They are made for professionals, freelancers, and small businesses looking to establish an online presence without breaking the bank.
+                <h3 class="faq-question">Can I request updates or changes to my website after it goes live? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">Yes, I provide 18 months of unlimited support for updates, changes, or troubleshooting. I'm here to help you succeed online, even after the site is live.
                 </p>
             </div>
 
             <div class="faq-item">
-                <h3 class="faq-question">Will my website by mobile-friendly? <span class="arrow"> ▼ </span></h3>
+                <h3 class="faq-question">Will the website be optimized for mobile and SEO <span class="arrow"> ▼ </span></h3>
 
-                <p class="faq-answer">Yes, both Basic and Full Web Setup packages include a mobile-friendly site. I'll make sure your site looks great on all devices, including smartphones, tablets, and desktops.
+                <p class="faq-answer">Absolutely! Every website I create is optimized for mobile devices and search engines. This ensures your site is accessible to everyone and has the potential to rank higher in search results, which is great for your online presence.
 
                 </p>
             </div>
 
 
-            <div class="faq-item">
-                <h3 class="faq-question">How secure will my website be once it's live? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">Security is a priority. I ensure every setup follows basic security practices, and I can offer advice on keeping your website secure over time.
-                </p>
-            </div>
-
-
-            <a href="faq.html" class="contact-button" target="_blank">View all Frequently Asked Questions</a>
+            <a href="faq.html" id="view-more-faq" class="contact-button" target="_blank">View all Frequently Asked Questions</a>
 
             
         
@@ -930,17 +945,15 @@
 
         
         <p id="footnote1">
-            <strong>*</strong> Free hosting and version control are provided through GitHub. Additional costs may apply for certain domain registration features and other services. We cover up to $30 USD in domain registration fees with purchase of the Full Website Setup package. 
+            <strong>*</strong> Only available with GitHub Pages, a hosting service from GitHub. Domain and registration fees are covered up to 50% of the original purchase price for the Full Website Setup package. 
             By using my services, you also agree to the <a href="https://docs.github.com/en/github/site-policy/github-terms-of-service" target="blank">GitHub Terms of Service</a>. 
         </p>
     
-        <p id="footnote2">
-            <strong>**</strong> Personalized mentorship is only available for those who have an existing website, public or private. Technical support is not available for all devices and software. Technical support is allowed for two devices per customer; you must purchase additional services for more devices.
-            If your device is not compatible with my services, you will receive a full refund. Any support provided is not a guarantee of a solution, device repair or replacement.
     </div>
 
     <footer>
 
+        <br>
         <br>
         <br>
         <p>© 2024 Billy Joinville. All rights reserved.</p>
@@ -954,7 +967,6 @@
         <p><a href="site-map.html">Site Map</a></p>
         <p><a href="services.html">Back to Top</a></p>
 
-        <br>
         <br>
         <br>
         <br>
