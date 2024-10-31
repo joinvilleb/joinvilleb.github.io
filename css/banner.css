@@ -69,12 +69,12 @@ header {
 }
 
 .banner-current {
-    background-color: rgb(255, 255, 91); /* #e0f7e9 indicates good */
+    background-color: #e0f7e9; /* #e0f7e9 indicates good */
     padding: 15px;
     border-radius: 5px;
 }
 
-.banner-past-oct18 {
+.banner-past-oct18, .banner-past-oct30 {
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 5px;
