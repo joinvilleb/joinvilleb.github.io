@@ -345,7 +345,7 @@ img {
     }
 }
 
-/* Contact Cards */
+
 .contact-cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -397,7 +397,7 @@ img {
     text-decoration: underline;
 }
 
-/* Image Gallery */
+
 main img {
     border-radius: 8px;
     transition: box-shadow 0.3s ease-in-out;
@@ -536,68 +536,11 @@ main img:hover {
 
 
 
-/* styling for the password paywall */
 
 
 
-/* Form styling for a more modern look */
-#password-form {
-    margin: 20px auto;
-    max-width: 400px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#password-form label {
-    display: block;
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-#password-form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-#password-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-}
-
-#password-form button:hover {
-    background-color: #555;
-}
-
-/* Error message styling */
-#error-message {
-    text-align: center;
-    font-size: 16px;
-    color: red;
-}
 
 
-/* Success message styling */
-#success-message {
-    text-align: center;
-    font-size: 16px;
-    color: green;
-    display: none;
-}
-
-/* Loading animation */
 #loading {
     display: none;
     text-align: center;
@@ -622,7 +565,7 @@ main img:hover {
     }
 }
 
-/* Pricing section styling */
+
 .services-cards-container {
     display: flex;
     flex-wrap: wrap;
@@ -695,7 +638,7 @@ main img:hover {
 
 
 
-/* Responsive adjustments */
+
 @media screen and (max-width: 768px) {
 
     section {
@@ -745,9 +688,9 @@ ol li {
 }
 
 
-/* Terms and Conditions Page Specific Styles */
 
-/* Container for the Terms and Conditions page */
+
+
 .terms-container {
     width: 90%; 
     max-width: 800px; 
@@ -760,7 +703,6 @@ ol li {
     
 }
 
-/* Headings Styling */
 .terms-container h2, .terms-container h3 {
     font-family: 'Lato', sans-serif;
     font-size: 24px;
@@ -775,7 +717,7 @@ ol li {
     color: #555;
 }
 
-/* Paragraph Styling */
+
 .terms-container p {
     font-size: 16px;
     color: #444;
@@ -783,7 +725,7 @@ ol li {
     margin-bottom: 15px;
 }
 
-/* List Styling */
+
 .terms-container ul {
     margin-left: 40px;
     margin-bottom: 20px;
@@ -795,7 +737,7 @@ ol li {
     color: #444;
 }
 
-/* Ensure everything stays responsive */
+
 @media screen and (max-width: 768px) {
     .terms-container {
         padding: 15px;
@@ -813,7 +755,7 @@ ol li {
 
 
 
-/* Section Styling */
+
 section.about-services-page,
 section.services-cards-container {
 
