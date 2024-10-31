@@ -648,13 +648,17 @@
         }
 
         .video-background-section {
-
-            background-image: url("images/video-thumbnail.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             height: 200px;
             width: 100%;
+        }
+
+        .video-section {
+            padding: 20px;
+            background-color: black;
+
         }
 
     }
@@ -669,19 +673,20 @@
         margin: 0 auto;
     }
 
-        
-    .video-background-section {
-        position: relative;
-        width: 100vw;
-        height: 100vh; 
-        overflow: hidden;
-        margin: 0; 
-        padding: 0; 
+    .video-section {
+            padding: 20px;
+            background-color: black;
+            align-items: center;
+
+        }
+
+    iframe {
+        border: none;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white; 
+        margin: 0 auto;
     }
+
+    
 
 
     .background-video {
@@ -785,20 +790,16 @@
 
 
         
-        <div class="video-background-section">
+        <div class="video-section">
 
-            <!-- <video id="introVideo" controls class="background-video">
-                <source src="" type="video/mp4">
-                Your browser does not support the video tag.
-            </video> -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kVnHdVpB8pI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     
         </div>
 
         <br>
         <br>
-        <br>
-        <br>
+
 
 
 
