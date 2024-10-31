@@ -20,14 +20,9 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background-color: rgba(240, 248, 255, 0.5); 
+            background-color: black !important; 
 
 
-            background-image: url("images/web-back.jpeg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center;
 
             margin: 0;
             padding: 0;
@@ -95,7 +90,7 @@
             font-weight: bold;
         }
 
-        #basic-setup-schedule, #full-setup-schedule, #personalized-mentorship-schedule {
+        #basic-setup-schedule, #full-setup-schedule, #free-consultation-schedule {
 
             padding-right: 0px;
             padding-left: 0px;
@@ -134,7 +129,7 @@
 
         @media screen and (max-width: 768px) {
 
-            #basic-setup-schedule, #full-setup-schedule, #personalized-mentorship-schedule, .calendly-inline-widget.calendly-mobile {
+            #full-setup-schedule, #free-consultation-schedule, .calendly-inline-widget.calendly-mobile {
                 width: 100% !important;
                 min-width: 120px;
                 align-items: center;
@@ -203,24 +198,17 @@
 <body class="schedule-session">
     <header>
         <h1 id="schedule">Schedule Your Session</h1>
-        <h2 id="disclaimer"> You're able to schedule a session for a Web Setup Package that you have purchased. If we suspect any fraudulent activity, we reserve the right to cancel your session.
+        <h2 id="disclaimer"> You're able to schedule a session with me here. You will receive an email confirmation and reminders leading up to the session. 
             <br>
             <br>
-            If you have not purchased a Web Setup Package, check out the <a href="https://billyjoinville.me/services.html#setup-packages-heading">affordable packages</a> starting at $99 offering two years of maintenance and unlimited support.
+            
         </h2>
 
         <br>
         <br>
         <br>
 
-        <a href="schedule-session.html#basic-setup-schedule" id="names">Basic Setup Package</a>
-        <a href="schedule-session.html#full-setup-schedule" id="names">Full Setup Package</a>
-        <a href="schedule-session.html#personalized-mentorship-schedule" id="names">Personalized Mentorship</a>
-
-        <br>
-        <br>
-        <br>
-        <br>
+        <a href="schedule-session.html#full-setup-schedule" id="names">Full Website Setup - Intro and Ongoing<a href="schedule-session.html#free-consultation-schedule" id="names">Free Consultation - 15 minutes</a></a>
 
         <nav>
             <a href="index.html" class="menu-option">Welcome</a>
@@ -232,12 +220,6 @@
 
     <main>
 
-        <section id="basic-setup-schedule">
-
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/30min?background_color=ffc107" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            
-        </section>
 
 
 
@@ -253,9 +235,9 @@
         
         </section>
 
-        <section id="personalized-mentorship-schedule">
+        <section id="free-consultation-schedule">
 
-            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/session-personalized-mentorship-other-tech-help?background_color=FFAB91" style="min-width:320px;height:700px;"></div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/billyjoinville/free-consultation?background_color=FFAB91" style="min-width:320px;height:700px;"></div>
             <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
         <br>
