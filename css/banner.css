@@ -69,7 +69,7 @@ header {
 }
 
 .banner-current {
-    background-color: #e0f7e9; /* #e0f7e9 indicates good */
+    background-color: #e0f7e9 !important; /* #e0f7e9 indicates good */
     padding: 15px;
     border-radius: 5px;
 }
