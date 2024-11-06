@@ -800,7 +800,7 @@
                 <br>
                 <p id=price>Price: <strong>Free</strong></p>
 
-                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule a Free Consultation</a> <!-- Direct PayPal link -->
+                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule a Free Consultation</a>
             </section>
 
             
@@ -821,11 +821,25 @@
                 </p>
                 <br> 
                 <p id=price><s>Price: <b>$599</b> (one-time payment)</s></p>
-                <p id=price>Price: <strong>$449</strong> (one-time payment), or <strong>$112.25</strong> for 4 months</p>
-                <a href="https://www.paypal.com/ncp/payment/9CECST8U3U9AQ" class="buy-now-btn">Purchase</a> <!-- Direct PayPal link -->
+                <p id=price>Price: <strong>$449</strong>, or <strong>$112.25</strong> for 4 months</p>
 
-                <a href="https://www.paypal.com/webapps/billing/plans/subscribe?plan_id=P-20E77184V06294914M4TZ6RY" class="buy-now-btn">
-                    Pay Later</a> <!-- Direct PayPal link -->
+                <br>
+
+
+            
+            <stripe-buy-button
+              buy-button-id="buy_btn_1QHy3YC23hYItUA5pcVuzES1"
+              publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
+            >
+            </stripe-buy-button>
+
+
+              
+                <stripe-buy-button
+                buy-button-id="buy_btn_1QHybDC23hYItUA57soFlEfr"
+                publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
+                >
+                </stripe-buy-button>
 
 
             </section>
@@ -1012,6 +1026,16 @@
             lastScrollTop = scrollTop;
         });
     </script>
+
+
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
+    <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+    </script>
+
 
 
 
