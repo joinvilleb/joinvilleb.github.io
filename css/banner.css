@@ -1,18 +1,4 @@
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    font-size: 15px;
-    z-index: 1000;
-    transition: top 0.1s ease-in-out;
-    backdrop-filter: blur(10px);
-    margin-top: 10px;
-}
 
 
 
