@@ -2,6 +2,13 @@
 <html lang="en" class="page-website-setup-main">
 
 <head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Affordable Website Setup Services</title>
@@ -340,6 +347,7 @@
             text-align: center;
             margin-top: 30px;
             margin-bottom: 0px;
+            line-height: 1.5;
         }
 
         #intro-services-html-next2 {
@@ -381,7 +389,7 @@
         .background-video {
         height: 100%; 
         width: 50%; 
-    }
+        }
 
 
         #footnote1 {
@@ -485,12 +493,6 @@
         }
 
 
-        nav a {
-                background-color: transparent;
-                color: white !important;
-
-        }
-
         footer p {
 
                 line-height: 2;
@@ -500,19 +502,6 @@
 
         body.page-website-setup {
             overflow: auto; 
-        }
-
-        nav {
-
-            backdrop-filter: blur(12px); 
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            position: fixed;
-            transform: translateY(0);
-            transition: transform 0.3s ease-in-out;
-
         }
 
     }
@@ -538,13 +527,6 @@
 
             color: white !important;
             font-size: 20px;
-        }
-
-        nav {
-
-            background-color: transparent;
-            color: white;
-
         }
 
 
@@ -727,9 +709,108 @@
         text-align: center;
 
         margin-top: 40px;
+
     }
 
+    body {
+        padding-top: 60px;
+    }
 
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .custom-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px; /* Reduced padding to decrease height */
+        backdrop-filter: blur(10px); /* Adds blur effect */
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+        color: white;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Brand styling */
+    .navbar-brand {
+        font-size: 1.3rem;
+        font-weight: bold;
+        margin-right: 10px; /* Closer spacing to the menu */
+        margin-left: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* Desktop menu */
+    .navbar-menu {
+        display: flex;
+        gap: 15px; /* Reduced gap between links */
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    .navbar-menu li a {
+
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
+        padding: 20px 30px; 
+        margin-top: 5px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+
+    }
+
+    .navbar-menu li a:hover {
+        color: #ddd;
+    }
+
+    /* Mobile menu toggle button */
+    .menu-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 3px 0; /* Adjusted spacing for toggle button */
+        transition: all 0.3s ease;
+        margin-right: 20px;
+    }
+
+    /* Mobile view adjustments */
+    @media (max-width: 1000px) {
+        .navbar-menu {
+            position: fixed;
+            top: 50px;
+            right: 0;
+            width: 100%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: rgb(0, 0, 0); /* Darker background for mobile menu */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar-menu.open {
+            transform: translateX(0);
+        }
+
+        .menu-toggle {
+            display: flex;
+            
+        }
+    }
 
 </style>
 
@@ -754,24 +835,27 @@
 
 
         <h1 id="title-of-service">
-            Showcase Your Vision Online
+            Building Websites For Success
         </h1>
 
         <h2 id="intro-services-html-next1">
-            I'm here to build a quality webiste that will build your online presence!</h2>
-
-
-        <h2 id="intro-services-html-next1">
-            Suitable for solo entrepreneurs, photographers, artists, nature enthusiasts, and more. </h2>
+            Suitable for solo entrepreneurs, photographers, artists, nature enthusiasts, and more.
 
         </h2> 
-        
 
-        <nav>
-            <a href="index.html" class="menu-option">Welcome</a>
-            <a href="projects-gallery.html" class="menu-option">Projects</a>
-            <a href="services.html" class="menu-option">Solutions</a>
-            <a href="contact.html" class="menu-option">Contact</a>
+        <nav class="custom-navbar">
+            <div class="navbar-brand">Billy Joinville Web Services</div>
+            <ul class="navbar-menu">
+                <li><a href="index.html">Welcome</a></li>
+                <li><a href="projects-gallery.html">Projects</a></li>
+                <li><a href="services.html">Solutions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
 
     </header>
@@ -869,6 +953,15 @@
             <h1>What People Are Saying About My Services</h1>
         
             <div class="testimonial-container">
+
+
+                <div class="testimonial">
+                    <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines. I've already seen an increase in traffic and sales. Thank you!"
+                        </p>
+                    <h4>- Sarah M., Bakery Shop Owner</h4>
+                
+                </div>
+
                 <div class="testimonial">
                     <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out exactly how I envisioned. Highly recommend!"
 
@@ -882,7 +975,7 @@
                     <p>"Thank YOU! I'm so happy with my new site. Billy was patient and answered all my questions. He made sure my site was secure and helped me understand how to update it. Let the photograhy bookings begin!"
                         </p>
                     <h4>- Daniel K., Photographer</h4>
-                </div>
+                    </div>
 
                 
 
@@ -1067,6 +1160,15 @@
         } else {
             link.href = "https://billyjoinville.me/contact-form.html";
         }
+    </script>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navbarMenu = document.querySelector('.navbar-menu');
+
+        menuToggle.addEventListener('click', () => {
+            navbarMenu.classList.toggle('open');
+        });
     </script>
 
 
