@@ -191,7 +191,7 @@
 
         .buy-now-btn {
             background-color: black;
-            color: white;
+            color: white !important;
             padding: 10px 20px;
             border-radius: 5px;
             border-color: transparent !important;
@@ -204,15 +204,20 @@
             margin-top: 20px
         }
 
+        .buy-now-btn a {
+            color: white !important;
+        }
+
         .buy-now-btn a::before {
 
-            color: black !important;
+            color: white !important;
 
         }
 
         .buy-now-btn {
 
             font-weight: normal;
+            color: white !important;
         }
 
         .buy-now-btn:visited { 
@@ -428,6 +433,14 @@
         }
 
 
+        .contact-button {
+
+            font-size: 10px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+
 
 
     
@@ -628,6 +641,15 @@
     #setup-packages-heading {
         color: white;
 
+    }
+
+    .contact-button-tempted {
+            display: inline-block;
+            background-color: rgb(65, 40, 104) !important;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
     }
 
     @media screen and (max-width: 768px) {
@@ -986,14 +1008,14 @@
 
 
                 <div class="testimonial">
-                    <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines. I've already seen an increase in traffic and sales. Thank you!"
+                    <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines."
                         </p>
                     <h4>- Sarah M., Bakery Shop Owner</h4>
                 
                 </div>
 
                 <div class="testimonial">
-                    <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out exactly how I envisioned. Highly recommend!"
+                    <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out right. Highly recommend!"
 
                     </p>
 
@@ -1067,13 +1089,15 @@
 
         <div class="contact-services">
 
-            <h1 id="questions-heading">Need Support?</h1>
+            <h1 id="questions-heading">Tempted?</h1>
     
-            <p id="intro-services-html">If you have any questions, comments, or concerns, please contact me using the button below and I will respond to your inquiry within 24 hours.
+            <p id="intro-services-html">
+
+                As of <span id="lastUpdated"></span>, <span id="currentTime"></span>, I have successfully completed and lauched a total of 16 websites since our business launch in October 2024. 
     
             </p>
     
-            <a href="#" id="dynamicLink" class="contact-button" target="_blank">Get In Touch</a>
+            <a href="#setup-packages-heading" class="contact-button-tempted">Get Started Today</a>
     
         </div>
 
@@ -1174,24 +1198,6 @@
     </script>
 
 
-
-
-
-
-    <script>
-        const link = document.getElementById('dynamicLink');
-        
-        function isMobile() {
-            return /Mobi|Android/i.test(navigator.userAgent);
-        }
-
-        if (isMobile()) {
-            link.href = "https://forms.gle/7yTd3fZSrLE8sikH8";
-        } else {
-            link.href = "https://billyjoinville.me/contact-form.html";
-        }
-    </script>
-
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
         const navbarMenu = document.querySelector('.navbar-menu');
@@ -1200,6 +1206,26 @@
             navbarMenu.classList.toggle('open');
         });
     </script>
+
+<script>
+    function updateDateTime() {
+        const date = new Date();
+
+        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, dateOptions);
+        
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        document.getElementById("currentTime").textContent = date.toLocaleTimeString(undefined, timeOptions);
+    }
+    
+
+    updateDateTime();
+    
+    setInterval(updateDateTime, 1000);
+</script>
+
+
+    
 
 
 </body>
