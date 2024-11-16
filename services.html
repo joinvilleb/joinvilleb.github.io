@@ -190,22 +190,23 @@
         }
 
         .buy-now-btn {
-            background-color: black;
+            background-color: black !important;
             color: white !important;
             padding: 10px 20px;
             border-radius: 5px;
-            border-color: transparent !important;
             border: 1px solid;
+            border-color: transparent;
             cursor: pointer;
-            text-decoration: none;
             font-size: 16px;
             margin: 0 auto;
             display: inline-block;
-            margin-top: 20px
+            margin-top: 20px;
         }
 
-        .buy-now-btn a {
+        a.buy-now-btn {
+
             color: white !important;
+
         }
 
         .buy-now-btn a::before {
@@ -222,7 +223,7 @@
 
         .buy-now-btn:visited { 
 
-            color: black !important;
+            color: white !important;
         }
 
         .buy-now-btn:hover {
@@ -263,6 +264,10 @@
         .arrow {
             font-size: 18px;
             transition: transform 0.3s;
+        }
+
+        a {
+            color: white !important;
         }
 
         .faq-answer {
@@ -946,7 +951,7 @@
 
                 <p id="plan-features-free-consultation">Not sure what you're looking for? Need some more information? Schedule a free 15-minute consultation where we'll work to decide what will work best for you.  No obligations, no pressure! </p>
                 <br>
-                <p id=price>Price: <strong>Free</strong></p>
+                <p id="price">Price: <strong>Free</strong></p>
 
                 <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule a Free Consultation</a>
             </section>
@@ -1093,7 +1098,7 @@
     
             <p id="intro-services-html">
 
-                As of <span id="lastUpdated"></span>, <span id="currentTime"></span>, I have successfully completed and lauched a total of 16 websites since our business launch in October 2024. 
+                As of <span id="lastUpdated"></span>, <span id="currentTime"></span>, I have successfully completed and lauched a total of <strong><u>16 websites</u></strong> since the business launch in October 2024. 
     
             </p>
     
