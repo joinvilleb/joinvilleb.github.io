@@ -723,6 +723,16 @@
             
         }
 
+        #buy-now-button-section {
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            width: 80%;
+            max-width: 70px;
+            margin: auto;
+        }
+
     }
 
     #header-services {
@@ -985,23 +995,24 @@
 
                 <br>
 
+            <div id="buy-now-button-section">
 
-            
+                <stripe-buy-button
+                buy-button-id="buy_btn_1QHy3YC23hYItUA5pcVuzES1"
+                publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
+              >
+              </stripe-buy-button>
+
+                        
             <stripe-buy-button
-              buy-button-id="buy_btn_1QHy3YC23hYItUA5pcVuzES1"
-              publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
+            buy-button-id="buy_btn_1QHybDC23hYItUA57soFlEfr"
+            publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
             >
             </stripe-buy-button>
 
+            </div>
 
-
-          
-          <stripe-buy-button
-            buy-button-id="buy_btn_1QHybDC23hYItUA57soFlEfr"
-            publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
-          >
-          </stripe-buy-button>
-
+    
 
             </section>
 
