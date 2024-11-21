@@ -651,7 +651,53 @@
 
     #setup-packages-heading {
         color: white;
+    }
 
+        .testimonial-container {
+        position: relative;
+        max-width: 600px; 
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden; 
+        padding: 20px; 
+    }
+
+    .testimonial {
+        display: none; 
+    }
+
+    .testimonial:first-child {
+        display: block; 
+    }
+
+    
+    a.prev, a.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(0, 0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 10px;
+        border-radius: 50%;
+        user-select: none;
+        z-index: 10; 
+    }
+
+    
+    a.prev {
+        left: -10px; 
+    }
+
+    a.next {
+        right: -10px; 
+    }
+
+    a.prev:hover, a.next:hover {
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
     }
 
     .contact-button-tempted {
@@ -1038,6 +1084,10 @@
         
             <div class="testimonial-container">
 
+                
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
 
                 <div class="testimonial">
                     <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines."
@@ -1259,6 +1309,33 @@
     
     setInterval(updateDateTime, 1000);
 </script>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("testimonial");
+      if (n > slides.length) {
+        slideIndex = 1; 
+      }
+      if (n < 1) {
+        slideIndex = slides.length; 
+      }
+      
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      
+      slides[slideIndex - 1].style.display = "block";  
+    }
+    </script>
 
 
     
