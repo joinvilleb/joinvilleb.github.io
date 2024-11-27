@@ -939,6 +939,65 @@
             color: rgb(87, 255, 87);
         }
 
+        /* completed work section */ 
+
+        #work-completed-text {
+
+            color: white;
+            font-size: 10px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .testimonals-section2 {
+            background-color: black !important;
+            padding: 40px 20px;
+            text-align: center;
+            margin: 0px auto;
+            width: 100%;
+        }
+
+        .testimonials-section2 h1 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .testimonal2 {
+
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 5px;
+            padding-top: 20px;
+
+        }
+
+        .testimonial2 p {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        .testimonial2 h4 {
+            font-size: 14px;
+            color: #4a90e2;
+            margin-top: 5px;
+            text-align: right;
+        }
+
+        .testimonal2 a {
+
+            color: rgb(156, 255, 6) !important; 
+
+        }
+
+        hr {
+
+            background-color: white; 
+        }
+
+
+
         
 
 </style>
@@ -1083,6 +1142,8 @@
 
         </div>
 
+        <!-- testimonals  section begin -->
+
         <div id="testimonials" class="testimonials-section">
 
             <br>
@@ -1118,8 +1179,48 @@
                     <h4>- Daniel K., Photographer</h4>
                     </div>
 
-                
 
+                </div>
+
+            <br>
+            <br>
+
+            <hr>
+
+        </div>
+
+
+
+        <!-- testimonals section begin -->
+
+        <div id="testimonials2" class="testimonials-section">
+
+            <br>
+            <br>
+            <h1>Samples Of My Completed Work</h1>
+
+            <br>
+
+        
+            <div class="testimonial-container">
+
+                
+                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                
+        
+
+                <div class="testimonial2">
+                    <p>Alpha Kappa Psi organization at the University of Miami, <strong><a href="umakpsi.com">umakpsi.com</a></strong>
+                    </p>
+                
+                </div>
+
+                <div class="testimonial2">
+                    <p>Facts website for a local Regal Theatre, <strong><a href="cherokee16facts.com">cherokee16facts.com</a></strong>
+                    </p>
+
+                </div>
 
             </div>
 
@@ -1344,7 +1445,32 @@
     }
     </script>
 
+<script>
+    /* for the completed work section */ 
 
+    let slideIndex2 = 1;
+    showSlides2(slideIndex2);
+
+    function plusSlides2(n) {
+    showSlides2(slideIndex2 += n);
+    }
+
+    function showSlides2(n) {
+    let i;
+    let slides = document.getElementsByClassName("testimonial2");
+    if (n > slides.length) {
+        slideIndex2 = 1;
+    }
+    if (n < 1) {
+        slideIndex2 = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex2 - 1].style.display = "block";
+    }
+
+</script>
     
 
 
