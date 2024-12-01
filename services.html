@@ -182,7 +182,7 @@
         }
 
         #price {
-            font-size: 16px;
+            font-size: 30px;
             color: white;
             text-align: center; 
         }
@@ -324,6 +324,13 @@
             line-height: 1;
             color: white;
             text-align: center;
+        }
+
+        #footer-text {
+
+            font-size: 9px;
+            margin-bottom: 5px;
+            
         }
 
         ul, li {
@@ -612,6 +619,23 @@
                 color: white !important;
         }
 
+        .testimonial {
+
+        width: 100%;
+        transition: opacity 1s ease-in-out;
+        }
+
+
+
+        .testimonial.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .testimonial.fade-out {
+            opacity: 0;
+        }
+
         .testimonials-section {
         background-color: black !important;
         padding: 40px 20px;
@@ -791,6 +815,18 @@
             font-size: 26px;
         }
 
+        
+
+    }
+
+    @media (min-width: 768px) {
+        .services-cards-container {
+            flex-direction: row;
+        }
+
+        .services-card {
+            flex: 1;
+        }
     }
 
     #header-services {
@@ -816,6 +852,7 @@
         display: flex;
         margin: 0 auto;
     }
+
 
     
 
@@ -883,6 +920,9 @@
         gap: 15px; 
         list-style: none;
         margin-bottom: 0;
+        transition: background-color 0.3s ease, color 0.3s ease;
+
+
     }
 
     .navbar-menu li a {
@@ -1112,19 +1152,21 @@
         <div class="services-cards-container">
 
             <section id="free-consultation" class="services-card">
-                <h3>Free Consultation </h3>
+                <h3>Consultation </h3>
+                <p id="price"><strong>Free</strong></p>
 
                 <p id="plan-features-free-consultation">Not sure what you're looking for? Need some more information? Schedule a free 15-minute consultation where we'll work to decide what will work best for you.  No obligations, no pressure! </p>
                 <br>
-                <p id="price">Price: <strong>Free</strong></p>
 
-                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule a Free Consultation</a>
+                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule Now</a>
             </section>
 
             
 
             <section id="full-setup" class="services-card">
                 <h3>Full Website Setup</h3>
+
+                <p id=price><b>$599</b></p>
 
                 <p>
                     <ul id="plan-features">
@@ -1133,14 +1175,12 @@
                         <li><span> -  </span>Free domain & hosting included<a href="#footnote1"><strong>*</strong></a>
                         <li><span> -  </span>GitHub Pages or WordPress setup</li>
                         <li><span> -  </span>Mobile-Responsive & SEO Optimized</li>
-                        </li>
                         <li><span> -  </span>18 months of support for updates and fixes</li>
                         <li><span> -  </span>Up to 8 pages of content, including a Contact Form
                         </li>
                     </ul>
                 </p>
-                <br> 
-                <p id=price>Price: <b>$599</b></p>
+                <br>
                 <!-- <p id="price">
                     Black Friday Sale: <strong style="color: rgb(255, 215, 0);">
                         $<strong style="color: rgb(255, 255, 255);">4</strong>4</strong><strong style="color: rgb(255, 255, 255);">9</strong>
@@ -1232,7 +1272,7 @@
 
             <br>
             <br>
-            <h1>A Few Samples Of My Completed Work</h1>
+            <h1>Some Of My Completed Sites</h1>
 
             <br>
 
@@ -1357,15 +1397,11 @@
         <br>
         <br>
         <p>Connect with Billy Joinville Web Services</p>
-
         <div class="social-media-links">
-            <br>
             <a href="https://www.facebook.com/share/129pv5HzLz7/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
                 <p>Facebook</p>
                 <i class="fab fa-facebook"></i>
             </a>
-            <br>
-            <br>
 
             <a href="https://www.linkedin.com/company/billy-joinville-web-services/" target="_blank" aria-label="LinkedIn">
 
@@ -1376,21 +1412,22 @@
 
         <br>
         <br>
-        <p>© 2024 Billy Joinville. All rights reserved.</p>
-        <p>Created, designed by Billy Joinville. Published on GitHub.</p>
+        <br>
         <p>
             <a href="terms.html">Terms of Service & Privacy Policy</a>
         </p>
         <p>
             <a href="refund-policy.html">Refund Policy</a>
         </p>
-        <p><a href="site-map.html">Site Map</a></p>
 
 
         <p><a href="services.html">Back to Top</a></p>
 
         <br>
         <br>
+
+        <p id="footer-text">© 2024 Billy Joinville. All rights reserved.</p>
+        <p id="footer-text">Created, designed by Billy Joinville. Published on GitHub.</p>
         <br>
 
     </footer>
@@ -1504,39 +1541,50 @@
       }
       
       for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
+        slides[i].classList.remove('active');
+        slides[i].classList.add('fade-out');
       }
       
-      slides[slideIndex - 1].style.display = "block";  
+
+      slides[slideIndex - 1].classList.remove('fade-out');
+      slides[slideIndex - 1].classList.add('active');
     }
+    setInterval(function() {
+        plusSlides(1);
+    }, 2500);
     </script>
 
 <script>
-    /* for the completed work section */ 
+    /* timer for slide show the completed work section */ 
 
     let slideIndex2 = 1;
     showSlides2(slideIndex2);
 
     function plusSlides2(n) {
-    showSlides2(slideIndex2 += n);
+        showSlides2(slideIndex2 += n);
     }
 
     function showSlides2(n) {
-    let i;
-    let slides = document.getElementsByClassName("testimonial2");
-    if (n > slides.length) {
-        slideIndex2 = 1;
-    }
-    if (n < 1) {
-        slideIndex2 = slides.length;
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndex2 - 1].style.display = "block";
+        let i;
+        let slides = document.getElementsByClassName("testimonial2");
+        if (n > slides.length) {
+            slideIndex2 = 1;
+        }
+        if (n < 1) {
+            slideIndex2 = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex2 - 1].style.display = "block";
     }
 
+
+    setInterval(function() {
+        plusSlides2(1);
+    }, 2500);
 </script>
+
     
 
 
