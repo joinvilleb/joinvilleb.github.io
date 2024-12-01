@@ -28,6 +28,12 @@ footer a {
     font-weight: bold;
 }
 
+#footer-text {
+
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+
 nav a:visited {
     color: inherit;
 }
