@@ -58,6 +58,27 @@
         box-sizing: border-box; 
     }
 
+    .dot-container {
+
+    text-align: center;
+    padding: 10px 0;
+
+    }
+
+    .dot {
+        height: 10px;
+        width: 10px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #717171;
+    }
+
     .contact-services {
         background-color: black;
     }
@@ -612,7 +633,7 @@
                 color: white !important;
         }
 
-        .testimonial {
+        .testimonial, .testimonial2 {
 
         width: 100%;
         transition: opacity 1s ease-in-out;
@@ -620,7 +641,7 @@
 
 
 
-        .testimonial.active {
+        .testimonial.active, .testimonial2.active {
             display: block;
             opacity: 1;
         }
@@ -643,7 +664,7 @@
         margin-bottom: 20px;
     }
 
-    .testimonial-container {
+    .testimonial-container, .testimonial2{
         display: flex;
         flex-direction: row;
         gap: 30px;
@@ -654,20 +675,20 @@
 
     }
 
-    .testimonial {
+    .testimonial, .testimonial2 {
         background-color: transparent;
         padding: 20px;
         border-radius: 5px;
 
     }
 
-    .testimonial p {
+    .testimonial p, .testimonial2 p {
         font-size: 16px;
         color: white;
         margin-bottom: 10px;
     }
 
-    .testimonial h4 {
+    .testimonial h4, .testimonial2 h4 {
         font-size: 14px;
         color: #4a90e2;
         margin-top: 5px;
@@ -678,7 +699,7 @@
         color: white;
     }
 
-        .testimonial-container {
+        .testimonial-container, .testimonial-container2 {
         position: relative;
         max-width: 600px; 
         margin: 0 auto;
@@ -687,11 +708,8 @@
         padding: 20px; 
     }
 
-    .testimonial {
-        display: none; 
-    }
 
-    .testimonial:first-child {
+    .testimonial:first-child, .testimonial2:first-child {
         display: block; 
     }
 
@@ -735,12 +753,12 @@
     }
 
     @media screen and (max-width: 768px) {
-        .testimonial-container {
+        .testimonial-container, .testimonial-container2 {
             flex-direction: column;
             width: 100%;
         }
 
-        .testimonial {
+        .testimonial, .testimonial2 {
             width: 100%;
         }
 
@@ -990,7 +1008,7 @@
             margin-top: 20px;
         }
 
-        .testimonals-section2 {
+        .testimonials-section2 {
             background-color: black !important;
             padding: 40px 20px;
             text-align: center;
@@ -1004,7 +1022,7 @@
             margin-bottom: 20px;
         }
 
-        .testimonal2 {
+        .testimonial2 {
 
             background-color: transparent;
             padding: 20px;
@@ -1026,7 +1044,7 @@
             text-align: right;
         }
 
-        .testimonal2 a {
+        .testimonial2 a {
 
             color: rgb(156, 255, 6) !important; 
 
@@ -1221,36 +1239,78 @@
             <div class="testimonial-container">
 
                 
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides('testimonial', -1)">&#10094;</a>
+                <a class="next" onclick="plusSlides('testimonial', 1)">&#10095;</a>
                 
 
                 <div class="testimonial">
                     <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines."
                         </p>
+
+                        <div class="star-rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                            <span class="star" data-value="5">&#9733;</span>
+                        </div>
+
+                        <br>
+
                     <h4>- Sarah M., Bakery Shop Owner</h4>
                 
                 </div>
 
                 <div class="testimonial">
+
                     <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out right. Highly recommend!"
 
                     </p>
 
-                    </p>
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+
+                    <br>
+
                     <h4>- Aislinn D., Yoga Instructor</h4>
+
                 </div>
         
                 <div class="testimonial">
                     <p>"Thank YOU! I'm so happy with my new site. Billy was patient and answered all my questions. He made sure my site was secure and helped me understand how to update it. Let the photograhy bookings begin!"
                         </p>
+
+                        <div class="star-rating">
+                            <span class="star" data-value="1">&#9733;</span>
+                            <span class="star" data-value="2">&#9733;</span>
+                            <span class="star" data-value="3">&#9733;</span>
+                            <span class="star" data-value="4">&#9733;</span>
+                        </div>
+
+
+                        <br>
+
                     <h4>- Daniel K., Photographer</h4>
                     </div>
 
 
                 </div>
 
+
+
             <br>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide('testimonial', 1)"></span>
+                <span class="dot" onclick="currentSlide('testimonial', 2)"></span>
+                <span class="dot" onclick="currentSlide('testimonial', 3)"></span>
+            </div>
+
             <br>
 
             <hr>
@@ -1259,13 +1319,13 @@
 
 
 
-        <!-- testimonals section begin -->
+        <!-- testimonials section begin -->
 
-        <div id="testimonials2" class="testimonials-section">
+        <div id="testimonials" class="testimonials-section">
 
             <br>
             <br>
-            <h1>Some Of My Completed Sites</h1>
+            <h1>Client Examples</h1>
 
             <br>
 
@@ -1273,8 +1333,8 @@
             <div class="testimonial-container">
 
                 
-                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides('testimonial2', -1)">&#10094;</a>
+                <a class="next" onclick="plusSlides('testimonial2', 1)">&#10095;</a>
                 
         
 
@@ -1295,6 +1355,13 @@
             </div>
 
             <br>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide('testimonial2', 1)"></span>
+                <span class="dot" onclick="currentSlide('testimonial2', 2)"></span>
+
+            </div>
+
             <br>
 
         </div>
@@ -1498,23 +1565,6 @@
     </script>
 
 <script>
-    function updateDateTime() {
-        const date = new Date();
-
-        const dateOptions = { year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById("lastUpdated").textContent = date.toLocaleDateString(undefined, dateOptions);
-        
-        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-        document.getElementById("currentTime").textContent = date.toLocaleTimeString(undefined, timeOptions);
-    }
-    
-
-    updateDateTime();
-    
-    setInterval(updateDateTime, 1000);
-</script>
-
-<script>
     let slideIndex = 1;
     showSlides(slideIndex);
     
@@ -1532,52 +1582,67 @@
       if (n < 1) {
         slideIndex = slides.length; 
       }
-      
-      for (i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-        slides[i].classList.add('fade-out');
-      }
-      
-
-      slides[slideIndex - 1].classList.remove('fade-out');
-      slides[slideIndex - 1].classList.add('active');
     }
-    setInterval(function() {
-        plusSlides(1);
-    }, 7000);
-    </script>
-
-<script>
-    /* timer for slide show the completed work section */ 
 
     let slideIndex2 = 1;
-    showSlides2(slideIndex2);
+    showSlides(slideIndex2);
+    
 
-    function plusSlides2(n) {
-        showSlides2(slideIndex2 += n);
+    function plusSlides(n) {
+      showSlides(slideIndex2 += n);
     }
+    
 
-    function showSlides2(n) {
+    </script>
+
+    <script>
+
+        function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("testimonial2");
         if (n > slides.length) {
-            slideIndex2 = 1;
+            slideIndex2 = 1; 
         }
         if (n < 1) {
-            slideIndex2 = slides.length;
+            slideIndex = slides.length; 
         }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex2 - 1].style.display = "block";
     }
 
+    </script>
 
-    setInterval(function() {
-        plusSlides2(1);
-    }, 2500);
+    <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+    let slideIndex = {
+        'testimonial': 1,
+        'testimonial2': 1
+    };
+
+    function showSlides(section, n) {
+        let slides = document.querySelectorAll(`.${section}`);
+        let dots = document.querySelectorAll(`.${section}-container .dot`);
+        if (n > slides.length) { slideIndex[section] = 1; }
+        if (n < 1) { slideIndex[section] = slides.length; }
+        slides.forEach(slide => slide.style.display = "none");
+        dots.forEach(dot => dot.classList.remove('active'));
+        slides[slideIndex[section] - 1].style.display = "block";
+        dots[slideIndex[section] - 1].classList.add('active');
+    }
+
+    function plusSlides(section, n) {
+        showSlides(section, slideIndex[section] += n);
+    }
+
+    function currentSlide(section, n) {
+        showSlides(section, slideIndex[section] = n);
+    }
+
+    window.plusSlides = plusSlides;
+    window.currentSlide = currentSlide;
+
+    Object.keys(slideIndex).forEach(section => showSlides(section, slideIndex[section]));
+});
 </script>
-
     
 
 
