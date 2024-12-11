@@ -709,7 +709,17 @@
     }
 
 
-    .testimonial:first-child, .testimonial2:first-child {
+    .testimonial:first-child {
+        display: block; 
+    }
+
+    .testimonial2 {
+
+        display: none;
+    }
+
+    .testimonial2:first-child {
+
         display: block; 
     }
 
@@ -1069,6 +1079,63 @@
 
         }
 
+        /* client example section */ 
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+            justify-content: center; 
+        }
+
+        .card {
+            background-color: #000000;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            flex: 1 1 calc(50% - 20px); 
+            max-width: 500px; 
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .card a {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7); 
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 25px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #ffffff;
+        }
+
+        .card p {
+            font-size: 1em;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                flex: 1 1 100%; 
+            }
+        }
+
 
 
         
@@ -1108,7 +1175,8 @@
         </h2> 
 
         <nav class="custom-navbar">
-            <div class="navbar-brand">Billy Joinville Web Services</div>
+            <div class="navbar-brand"><a href="/services.html
+                ">Billy Joinville Web Services</a></div>
             <ul class="navbar-menu">
                 <li><a href="index.html">Welcome</a></li>
                 <li><a href="projects-gallery.html">Projects</a></li>
@@ -1241,19 +1309,26 @@
                 
                 <a class="prev" onclick="plusSlides('testimonial', -1)">&#10094;</a>
                 <a class="next" onclick="plusSlides('testimonial', 1)">&#10095;</a>
+
+                <br>
+                <br>
                 
 
                 <div class="testimonial">
+
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+            
+                    </div>
+
+
                     <p>"Amazing service from start to finish. Billy completed my website within a week and made sure it was optimized for search engines."
                         </p>
 
-                        <div class="star-rating">
-                            <span class="star" data-value="1">&#9733;</span>
-                            <span class="star" data-value="2">&#9733;</span>
-                            <span class="star" data-value="3">&#9733;</span>
-                            <span class="star" data-value="4">&#9733;</span>
-                            <span class="star" data-value="5">&#9733;</span>
-                        </div>
 
                         <br>
 
@@ -1263,10 +1338,6 @@
 
                 <div class="testimonial">
 
-                    <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out right. Highly recommend!"
-
-                    </p>
-
                     <div class="star-rating">
                         <span class="star" data-value="1">&#9733;</span>
                         <span class="star" data-value="2">&#9733;</span>
@@ -1275,6 +1346,11 @@
                         <span class="star" data-value="5">&#9733;</span>
                     </div>
 
+
+                    <p>"I could speak to Billy's expertise all day. He helped me set up my yoga website, including a class booking system and ensures it works on mobile. He made everything easy to understand and the site turned out right. Highly recommend!"
+
+                    </p>
+
                     <br>
 
                     <h4>- Aislinn D., Yoga Instructor</h4>
@@ -1282,15 +1358,18 @@
                 </div>
         
                 <div class="testimonial">
+
+                    <div class="star-rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+
+                    </div>
+
                     <p>"Thank YOU! I'm so happy with my new site. Billy was patient and answered all my questions. He made sure my site was secure and helped me understand how to update it. Let the photograhy bookings begin!"
                         </p>
 
-                        <div class="star-rating">
-                            <span class="star" data-value="1">&#9733;</span>
-                            <span class="star" data-value="2">&#9733;</span>
-                            <span class="star" data-value="3">&#9733;</span>
-                            <span class="star" data-value="4">&#9733;</span>
-                        </div>
 
 
                         <br>
@@ -1315,55 +1394,49 @@
 
             <hr>
 
+            <br>
+            <br>
+        
+
+
+            <h1>Esteemed Clients</h1>
+
+            <br>
+            <br>
+            <div class="card-container">
+
+                <div class="card">
+        
+                    <h3>Alpha Kappa Psi</h3>
+        
+                    <p>Alpha Kappa Psi organization at the University of Miami</p>
+        
+                    <a href="https://umakpsi.com" target="_blank">umakpsi.com</a>
+        
+                </div>
+        
+                <!-- Card 2 -->
+        
+                <div class="card">
+        
+                    <h3>Local Regal Theatre</h3>
+        
+                    <p>Facts website for a local Regal Theatre</p>
+        
+                    <a href="https://cherokee16facts.com" target="_blank">cherokee16facts.com</a>
+        
+                </div>
+
         </div>
 
 
 
         <!-- testimonials section begin -->
 
-        <div id="testimonials" class="testimonials-section">
-
-            <br>
-            <br>
-            <h1>Client Examples</h1>
-
-            <br>
-
-        
-            <div class="testimonial-container">
-
-                
-                <a class="prev" onclick="plusSlides('testimonial2', -1)">&#10094;</a>
-                <a class="next" onclick="plusSlides('testimonial2', 1)">&#10095;</a>
-                
-        
-
-                <div class="testimonial2">
-                    <p>Alpha Kappa Psi organization at the University of Miami, <strong><a href="https://umakpsi.com">umakpsi.com</a></strong>
-                    </p>
-                
-                </div>
-
-                <div class="testimonial2">
-                    <p>Facts website for a local Regal Theatre, <strong><a href="https://cherokee16facts.com">cherokee16facts.com</a></strong>
-                    </p>
-
-                </div>
 
 
 
-            </div>
-
-            <br>
-
-            <div class="dot-container">
-                <span class="dot" onclick="currentSlide('testimonial2', 1)"></span>
-                <span class="dot" onclick="currentSlide('testimonial2', 2)"></span>
-
-            </div>
-
-            <br>
-
+    </div>
         </div>
 
         <h1 id="faq-title">Frequently Asked Questions</h1>
@@ -1584,38 +1657,19 @@
       }
     }
 
-    let slideIndex2 = 1;
-    showSlides(slideIndex2);
-    
-
-    function plusSlides(n) {
-      showSlides(slideIndex2 += n);
-    }
     
 
     </script>
 
-    <script>
 
-        function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("testimonial2");
-        if (n > slides.length) {
-            slideIndex2 = 1; 
-        }
-        if (n < 1) {
-            slideIndex = slides.length; 
-        }
-    }
-
-    </script>
 
     <script>
 
     document.addEventListener('DOMContentLoaded', () => {
+
+
     let slideIndex = {
         'testimonial': 1,
-        'testimonial2': 1
     };
 
     function showSlides(section, n) {

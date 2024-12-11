@@ -17,6 +17,23 @@ html, body {
     overflow-x: hidden;
 }
 
+.navbar-brand a {
+
+    text-decoration: none;
+}
+
+.navbar-brand:hover {
+
+    text-decoration: none;
+
+}
+
+.navbar-brand a:visited {
+
+    text-decoration: none;
+
+}
+
 
 a {
     text-decoration: none;
