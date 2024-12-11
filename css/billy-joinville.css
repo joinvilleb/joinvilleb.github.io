@@ -20,6 +20,7 @@ html, body {
 .navbar-brand a {
 
     text-decoration: none;
+    font-weight: bold!  important;
 }
 
 .navbar-brand:hover {
