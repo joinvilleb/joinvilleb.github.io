@@ -523,7 +523,7 @@
 
         }
 
-        #title-of-service {
+        #title-of-service, #random-question {
             font-weight: bold !important;
             margin-top: 40px;
 
@@ -1162,15 +1162,14 @@
         <img src="images/logo-transparent-2.png" alt="Website Services Logo" class="header-image">
 
 
-        <h1 id="title-of-service">
-            Building & Maintaining Websites For Success
-        </h1>
+
+        <h1 id="random-question">Need a website? </h1>
+
+
 
         <h2 id="intro-services-html-next1">
 
-            Every website tells a story. 
-            <br>
-            I'll create one that reflects your vision and meets your needs—all at a price you can afford.
+            Your website is your business's first impression— let's make it unforgettable. 
 
         </h2> 
 
@@ -1201,7 +1200,7 @@
         <div class="video-section">
 
             <br>
-            <br>
+        
             <br>
 
 
@@ -1707,6 +1706,23 @@
 
     Object.keys(slideIndex).forEach(section => showSlides(section, slideIndex[section]));
 });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const questions = [
+            "Need a website that drives results?",
+            "Is your website helping or hurting your business?",
+            "Want a site that works hard as you do?",
+            "Interested in my web design services?",
+            "How can I help you with your online presence?"
+        ];
+
+        const randomIndex = Math.floor(Math.random() * questions.length);
+        const randomQuestion = questions[randomIndex];
+
+        document.getElementById('random-question').innerText = randomQuestion;
+    });
 </script>
     
 
