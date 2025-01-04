@@ -1163,7 +1163,7 @@
 
 
 
-        <h1 id="random-question">Need a website? </h1>
+        <h1 id="random-question"></h1>
 
 
 
@@ -1230,7 +1230,7 @@
         <div class="services-cards-container">
 
             <section id="free-consultation" class="services-card">
-                <h3>Consultation </h3>
+                <h3>Virtual Consultation </h3>
                 <p id="price"><strong>Free</strong></p>
 
                 <p id="plan-features-free-consultation">Not sure what you're looking for? Need some more information? Schedule a free 15-minute consultation where we'll work to decide what will work best for you.  No obligations, no pressure! </p>
@@ -1413,7 +1413,7 @@
                     <h3>Luxevo Vacations with Irma</h3>
         
                     <p>
-                        Luxevo Vacations with Irma, a travel blog that offers travel tips and destination guides for the modern traveler.
+                        Luxevo Vacations with Irma, a travel website that offers travel consultations & itineraries for any trip.
                     </p>
         
                     <a href="https://luxevovacationswithirma.com" target="_blank">luxevovacationswithirma.com</a>
@@ -1710,15 +1710,19 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', (event) => {
+
         const questions = [
+
             "Need a website that drives results?",
             "Is your website helping or hurting your business?",
             "Want a site that works hard as you do?",
             "Interested in my web design services?",
             "How can I help you with your online presence?"
+
         ];
 
         const randomIndex = Math.floor(Math.random() * questions.length);
+
         const randomQuestion = questions[randomIndex];
 
         document.getElementById('random-question').innerText = randomQuestion;
