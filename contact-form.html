@@ -241,16 +241,21 @@
         <label>
             Subject:
             <select name="subject" required>
-                <option value="Deep Dive">Website Request</option>
-                <option value="Private Travel">Payment Issues</option>
-                <option value="Group Classes">TOS & Privacy Policy Inquiry</option>
-                <option value="Private Classes">Other Inquiry</option>
+                <option value="Website Request">Website Request</option>
+                <option value="Payment Issues">Payment Issues</option>
+                <option value="TOS Privacy Policy">TOS & Privacy Policy Inquiry</option>
+                <option value="Other Inquiry">Other Inquiry</option>
             </select>
         </label>
 
         <label>
             How can I help:
             <textarea name="message" required></textarea>
+        </label>
+
+        <label>
+            Attach a file:
+            <input type="file" name="image" accept="image/*">
         </label>
 
         <br>
