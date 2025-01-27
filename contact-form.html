@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Billy - Contact Form</title>
+    <title>Contact - Billy Joinville Web Services</title>
     <link href="css/billy-joinville.css" rel="stylesheet">
     <link rel="shortcut icon" href="images/website-services-logo.jpg" type="image/jpg">
 
@@ -127,6 +127,66 @@
                 
             }
 
+            label {
+                display: block;
+                margin-bottom: 10px;
+                align-content: center !important;
+                
+            }
+
+            label {
+                display: block;
+                margin-bottom: 10px;
+                align-content: center !important;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                padding: 20px;
+            
+            }
+
+            input[type="text"],
+            input[type="email"],
+            textarea,
+            select {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 16px;
+            }
+
+            button[type="submit"] {
+                background-color: black;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+            button[type="submit"]:hover {
+                background-color: green !important;
+            }
+            h1, p {
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
 
 </style>
 
@@ -152,11 +212,52 @@
 
 <main>
 
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScH6ev7_-OcshRA3OfwlbpSFX3Soh4gW5vZpswU48zXEjcOGQ/viewform?embedded=true" width="640" height="1038" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <h1>Need Support?</h1>
+
+
+    <p>Fill out the form below and I'll get back to you within 24-72 hours with an update on your request. All fields are required. </p>
 
     
 </main>
 <body>
+
+    <form
+        action="https://formspree.io/f/xeoopwln"
+        method="POST"
+    >
+
+    <label>
+            Name:
+            <input type="text" name="name" required>
+    </label>
+
+        <label>
+            Email:
+            <input type="email" name="email" required>
+        </label>
+
+  
+
+        <label>
+            Subject:
+            <select name="subject" required>
+                <option value="Deep Dive">Website Request</option>
+                <option value="Private Travel">Payment Issues</option>
+                <option value="Group Classes">TOS & Privacy Policy Inquiry</option>
+                <option value="Private Classes">Other Inquiry</option>
+            </select>
+        </label>
+
+        <label>
+            How can I help:
+            <textarea name="message" required></textarea>
+        </label>
+
+        <br>
+
+        <button type="submit">Submit Request</button>
+
+        </form>
 
     <br>
     <br>
