@@ -216,7 +216,8 @@
     <h1>Need Support?</h1>
 
 
-    <p>Fill out the form and I'll complete your request within 24-72 hours. All fields are required. </p>
+    <p>Fill out the form and I'll complete your request within 24-72 hours. Fields required are marked with an asterisk (*).
+         </p>
 
     
 
@@ -232,35 +233,38 @@
     >
 
     <label>
-            Name:
+            Name: *
             <input type="text" name="name" required>
     </label>
 
         <label>
-            Email:
+            Email: *
             <input type="email" name="email" required>
         </label>
 
   
 
         <label>
-            Subject:
+            Subject: *
             <select name="subject" required>
                 <option value="Website Request">Website Request</option>
-                <option value="Payment Issues">Payment Issues</option>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="Payment">Payments</option>
+  
+                <option value="Feedback">Feedback</option>
                 <option value="TOS Privacy Policy">TOS & Privacy Policy Inquiry</option>
-                <option value="Other Inquiry">Other Inquiry</option>
+
             </select>
         </label>
 
         <label>
-            How can I help:
+            How can I help: *
             <textarea name="message" required></textarea>
         </label>
 
         <label>
-            Attach a file:
-            <input type="file" name="image" accept="image/*">
+            Have an attachment? <a href="https://imgbb.com/">Upload it here</a> and paste the link below:
+            <input type="text" name="image">
         </label>
 
         <br>
