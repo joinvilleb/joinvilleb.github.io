@@ -19,6 +19,11 @@
         padding: 20px;
     }
 
+    #notice {
+
+        text-align: left; 
+    }
+
     @media screen and (max-width: 768px) {
         iframe {
 
@@ -262,10 +267,7 @@
             <textarea name="message" required></textarea>
         </label>
 
-        <label>
-            Have an attachment? <a href="https://imgbb.com/">Upload it here</a> and paste the link below:
-            <input type="text" name="image">
-        </label>
+        <p id="notice">Upload images <strong>after</strong> writing your request. Do not remove the link that's added automatically; I'll need it to access your attachments.</p>
 
         <br>
 
@@ -276,6 +278,8 @@
     <br>
     <br>
     <br>
+
+    <script async src="https://imgbb.com/upload.js"></script>
 
     <script>
         const menuToggle = document.querySelector('.menu-toggle');
