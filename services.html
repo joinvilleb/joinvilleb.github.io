@@ -40,6 +40,15 @@
 
     <style>
 
+    .services-cards-container {
+
+        padding: 0 !important;
+        margin: 0 !important;
+        text-align: left;
+
+
+    }
+
     html, body, main, header, footer, section {
         margin: 0;
         padding: 0;
@@ -80,7 +89,7 @@
     }
 
     .contact-services {
-        background-color: black;
+        background-color: #7851a9;
     }
 
     
@@ -115,18 +124,18 @@
         
         body.page-website-setup {
 
-            background-color: rgba(25, 1, 56, 0.723) !important;
+            background-color:  #5D4037 !important;
 
             width: 100%;
             min-height: 100vh;
             margin: 0;
             padding: 0;
-            color: #333;
+            color:  #5D4037;
         }
 
         header.page-website-setup-header {
 
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: #5D4037;
             color: white; 
             text-align: center;
             padding: 50px 20px;
@@ -146,7 +155,7 @@
         }
 
         main.page-website-setup-main {
-            display: flex;
+          
             flex-direction: column;
             align-items: center;
             justify-content: center; 
@@ -171,18 +180,7 @@
         }
 
 
-        .services-cards-container {
-            display: flex;
-            gap: 20px;
-            padding: 40px;
-            width: 100%;
-            text-align: center;
-            margin: 0 auto;
-
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-        }
+     
 
         #plan-features-free-consultation {
             font-size: 16px;
@@ -385,7 +383,7 @@
 
         footer, #footnotes, #footnote1, #footnote2, #footnote3, #footnote4 {
 
-            background-color: black !important;
+            background-color: #7851a9 !important;
             
         }
 
@@ -412,8 +410,8 @@
 
             font-size: 16px;
             color: white;
-            margin-top: 30px;
-            margin-bottom: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
             text-align: center !important;
             width: 100%;
         }
@@ -436,13 +434,7 @@
         @media screen and (max-width: 768px) {
 
 
-        .services-cards-container {
-            flex-direction: column;
-            gap: 20px;
-            width: 100%;
-            margin: 0 auto; 
-            padding: 20px 1px;
-        }
+    
 
         .background-video {
         height: 100%; 
@@ -606,7 +598,7 @@
             margin: 0 auto;
             padding: 10px;
             text-align: left;
-            color: rgb(144, 143, 143);
+            color: rgb(255, 255, 255);
         }
 
         #frequently-asked-questions-title {
@@ -651,7 +643,7 @@
         }
 
         .testimonials-section {
-        background-color: black !important;
+        background-color: #7851a9;
         padding: 40px 20px;
         text-align: center;
         margin: 0px auto;
@@ -806,7 +798,7 @@
 
         .video-section {
             padding: 20px;
-            background-color: black;
+            background-color: #7851a9;
 
 
         }
@@ -841,18 +833,12 @@
     }
 
     @media (min-width: 768px) {
-        .services-cards-container {
-            flex-direction: row;
-        }
 
-        .services-card {
-            flex: 1;
-        }
     }
 
     #header-services {
 
-        background-color: black;
+        background-color: #7851a9;
         color: white;
         text-align: center;
         padding: 40px 20px;
@@ -862,13 +848,13 @@
 
     .video-section {
             padding: 20px;
-            background-color: black;
+            background-color: #7851a9;
             align-items: center;
 
         }
 
     iframe {
-        border: 1px solid black;
+        border: 1px solid #7851a9;
         border-radius: 15px;
         display: flex;
         margin: 0 auto;
@@ -1019,7 +1005,7 @@
         }
 
         .testimonials-section2 {
-            background-color: black !important;
+            background-color: #7851a9 !important;
             padding: 40px 20px;
             text-align: center;
             margin: 0px auto;
@@ -1089,7 +1075,7 @@
         }
 
         .card {
-            background-color: #000000;
+            background-color: #7851a9;
             border: 2px solid #ccc;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1106,7 +1092,7 @@
             margin-top: 10px;
             text-decoration: none;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.7); 
+            background-color: #7851a9;
             border: 1px solid rgba(255, 255, 255, 0.6);
             border-radius: 25px;
             font-size: 1em;
@@ -1131,9 +1117,11 @@
         }
 
         @media screen and (max-width: 768px) {
+
             .card {
                 flex: 1 1 100%; 
             }
+
         }
 
 
@@ -1221,95 +1209,18 @@
 
 
 
-            <h1 id="setup-packages-heading">Ready to get started? </h1>
+            <h1 id="setup-packages-heading">Choose your flavor </h1>
             <p id="intro-services-html-next2">
-                The process is simple. Schedule a consultation, choose a package, and I'll handle the rest.
-        
+                One-time payment, no hidden fees. All packaged include 12 months of support and a free consultation prior.
             </p>
 
         <div class="services-cards-container">
 
-            <section id="free-consultation" class="services-card">
-                <h3>Virtual Consultation </h3>
-                <p id="price"><strong>Free</strong></p>
+            <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
 
-                <p id="plan-features-free-consultation">
-
-                    In a 15 minute consultation: 
-
-                    <ul id="plan-features">
-                        <li><span> - </span> We'll understand your website needs
-                        <li><span> - </span> Discuss your short and long term goals 
-                        <li><span> - </span> Discuss your budget and timeline
-                        <li><span> - </span> Answer any questions you have
-                    </ul>
-                <br>
-
-                <a href="https://calendly.com/billyjoinville/free-consultation" class="buy-now-btn">Schedule Now</a>
-            </section>
-
-            
-
-            <section id="full-setup" class="services-card">
-                <h3>Full Website Setup</h3>
-
-                <p id=price><b>Starting At $849<a href="#footnote1"><strong>*</strong></a>
-                </b></p>
-
-                <p>
-                    <ul id="plan-features">
-                        <li><span> -  </span<a target="_blank" href="https://www.freshbooks.com/hub/estimates/how-much-do-web-designers-charge#:~:text=Web%20designers%20typically%20charge%20about,according%20to%20Website%20Builder%20Expert."><strong>One of the best deals in the industry</strong></a></li>
-                        <li><span> -  </span>No hourly rates or fees</li>
-                        <li><span> - </span> Suitable for new and existing websites </li>
-                        <li><span> -  </span>Custom designs & templates</li>
-                        <li><span> -  </span>Site security included (https://)</li>
-                        <li><span> -  </span>Domain & hosting costs covered<a href="#footnote2"><strong>**</strong></a>
-                        <li><span> -  </span>GitHub, WordPress, or your existing setup</li>
-                        <li><span> -  </span> Mobile Responsiveness and SEO optimization</li>
-                        <li><span> -  </span>18 months of support for maintenance, updates, and fixes<a href="#footnote3"><strong>***</strong>
-                        </a>
-                        </li>
-                    </ul>
-                </p>
-            <br>
-                <!-- <p id="price">
-                    Black Friday Sale: <strong style="color: rgb(255, 215, 0);">
-                        $<strong style="color: rgb(255, 255, 255);">4</strong>4</strong><strong style="color: rgb(255, 255, 255);">9</strong>
-                    <a href="#footnote2"><strong style="color: rgb(255, 255, 255);">**</strong></a>
-                  </p> --> 
-            
-
-
-
-
-            <div id="buy-now-button-section">
-
-              
-                    
-
-                            <stripe-buy-button
-                            buy-button-id="buy_btn_1Qo7gmC23hYItUA5yFgwgvwq"
-                            publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
-                            >
-                            </stripe-buy-button>
-          
-
-
-                        
-            <!-- <stripe-buy-button
-            buy-button-id="buy_btn_1QHybDC23hYItUA57soFlEfr"
-            publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE"
-            >
-            </stripe-buy-button> -->
-
-            </div>
-
-    
-
-            </section>
-
-            <br>
-
+            <stripe-pricing-table pricing-table-id="prctbl_1QoY4gC23hYItUA5Ukmh8Iu8"
+            publishable-key="pk_live_51QHtphC23hYItUA5GFcY5FugjhNv8dFVHSye9hlIyZvTK6cnYTwaOnRfhMRxPVh7YDogWkqRlLfw7b3HMTWFcjit00Hvf2OUYE">
+            </stripe-pricing-table>
         </div>
 
         <!-- testimonals  section begin -->
@@ -1318,7 +1229,7 @@
 
             <br>
             <br>
-            <h1> Clean Website = Happy Clients<a href="#footnote4">****</a>
+            <h1> Clean Website = Happy Clients
 
             </h1>
         
@@ -1513,11 +1424,12 @@
             <br>
             <br>
 
-            
+
             <div class="faq-item">
-                <h3 class="faq-question">How does the deposit work? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">The deposit is 30% of the starting price for the web setup package and is applied toward the final price we agree upon. This deposit secures your project spot and allows work to begin. The remaining balance will be invoiced once the final price is determined (typically within 15 minutes - 2 hours from the time of deposit) and will be due within two business days. 
+                <h3 class="faq-question">Do I need any technical skills to work with you? <span class="arrow"> ▼ </span></h3>
+                <p class="faq-answer">No technical skills required! My offering is designed to be user-friendly and accessible to everyone. I handle the entire setup for you, so you can focus on what you do best.
                 </p>
+
             </div>
 
             <div class="faq-item">
@@ -1526,13 +1438,6 @@
                 </p>
             </div>
 
-
-            <div class="faq-item">
-                <h3 class="faq-question">Do I need any technical skills to work with you? <span class="arrow"> ▼ </span></h3>
-                <p class="faq-answer">No technical skills required! My offering is designed to be user-friendly and accessible to everyone. I handle the entire setup for you, so you can focus on what you do best.
-                </p>
-
-            </div>
 
      
             <div class="faq-item">
@@ -1573,10 +1478,9 @@
             <p id="intro-services-html">
                 I'm here every step of the way.
 
-                <br>
-                <br>
+    
 
-                Start with a free consultation and quote, and I'll get your website up and running in no time. 
+                Choose a package that suits your needs and we'll get started on your website today.
 
             </p>
             
@@ -1590,39 +1494,7 @@
         <br>
 
         
-        <p id="footnote1">
-
-            <strong>*</strong>
-            Final price will be determined after the consultation and will be based on the complexity of the project. A deposit of 30% is required to begin your project and will apply toward the final price. Payment plans are available. Please <a href="contact-form.html">contact us</a> for more information.  
-            
-
-        </p>
-
-
-       <p id="footnote2">
-            <strong>**</strong> 
-
-            Covers up to <strong>10% for any domain (website link) & hosting costs associated with your website</strong>. Only available once. If you own an existing website, domain & hosting costs are covered within the past 12 months only. Remaining balance for domain & hosting costs are the responsibility of the client.     
-            
-        </p> 
-
-        <p id="footnote3">
-
-            <strong>***</strong>
-
-            <strong>12 months of ongoing support will be offered beginning March 1, 2025</strong>. Existing clients who have signed the Scope of Work will not be affected. 
-            
-    
-        </p>
-
-        <p id="footnote4">
-
-            <strong>****</strong>
-
-            These reviews are from actual clients who have conducted business with Billy Joinville Web Services. Reviews were completed using Qualtrics, a third-party platform that allows clients to provide full and honest feedback, and were distributed after the website was launched.
-
-        </p>
-    
+       
     </div>
 
     <footer>
@@ -1719,13 +1591,6 @@
     </script>
 
 
-    <script async
-    src="https://js.stripe.com/v3/buy-button.js">
-    </script>
-
-    <script async
-    src="https://js.stripe.com/v3/buy-button.js">
-    </script>
 
 
     <script>
@@ -1737,7 +1602,10 @@
         });
     </script>
 
-<script src="https://billyjoinvillewebservices.statuspage.io/embed/script.js"></script>
+
+<script type="text/javascript"
+src="https://onsite.optimonk.com/script.js?account=247602"
+async></script>
 
 <script>
     let slideIndex = 1;
