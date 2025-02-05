@@ -54,6 +54,11 @@ async></script>
 
     }
 
+    footer{
+
+        background-color: #5D4037 !important;
+    }
+
     html, body, main, header, footer, section {
         margin: 0;
         padding: 0;
@@ -95,14 +100,11 @@ async></script>
 
     .contact-services {
         background-color: #7851a9;
+        margin-top: 20px;
+        padding: 60px ;
     }
 
     
-
-
-
-
-
         main {
             display: block;
             align-items: center;
@@ -257,6 +259,30 @@ async></script>
             background-color: #218838;
         }
 
+        .video-background-section-container {
+    display: flexbox;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.video-background-section {
+    flex: 1 1 30%; /* Adjust the percentage as needed */
+    max-width: 30%; /* Adjust the percentage as needed */
+    margin: 10px; /* Add some margin for spacing */
+}
+
+.video-background-section img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .video-background-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
 
 
         .faq-section {
@@ -337,8 +363,8 @@ async></script>
         }
 
         footer.page-website-setup-footer {
-            background-color: #20232a;
-            color: white;
+            background-color: #5D4037 !important;
+            color:#5D4037;
             text-align: center;
             padding: 20px;
         }
@@ -386,10 +412,20 @@ async></script>
             font-weight: bold;
         }
 
-        footer, #footnotes, #footnote1, #footnote2, #footnote3, #footnote4 {
+        footer, #footnote1, #footnote2, #footnote3, #footnote4 {
 
-            background-color: #7851a9 !important;
+            background-color: #5D4037 !important;
             
+        }
+
+        #footnotes {
+
+  
+
+            width: 100%;
+            padding: 20px;
+            margin: 30px;
+
         }
 
         #footnote1, #footnote2, #footnote3, #footnote4 {
@@ -437,9 +473,6 @@ async></script>
 
 
         @media screen and (max-width: 768px) {
-
-
-    
 
         .background-video {
         height: 100%; 
@@ -517,13 +550,25 @@ async></script>
 
         }
 
-
+        #random-question h1 {
+            font-size: 20px;
+            }
         }
 
         #title-of-service, #random-question {
             font-weight: bold !important;
             margin-top: 40px;
+            font-size: 45px;
 
+        }
+
+        #random-question {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #random-question.fade-in {
+            opacity: 1;
         }
 
 
@@ -777,32 +822,12 @@ async></script>
             font-size: 22px;
         }
 
-        .video-background-section {
-        width: 90%; 
-        max-height: 200px; 
-        }
-
-        .background-video {
-            max-width: 100%; 
-            height: auto; 
-        }
-
-        .video-background-section div {
-            text-align: center;
-            padding-top: 10px;
-
-        }
-
-        .video-background-section {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 200px;
-            width: 100%;
-        }
-
         .video-section {
-            padding: 20px;
+            display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #7851a9;
             background-color: #7851a9;
 
 
@@ -905,89 +930,67 @@ async></script>
         width: 100%;
         top: 0;
         z-index: 1000;
+        
     }
 
-    .custom-navbar {
+    .navbar {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        position: fixed; 
+        top: -5;
+        left: 0;
         display: flex;
-        align-items: center;
         justify-content: space-between;
-        padding: 10px 20px; 
-        backdrop-filter: blur(10px); 
-        background-color: none; 
-        color: white;
-        font-family: Arial, sans-serif;
+        align-items: center;
+        padding: 10px 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 1000; 
+        margin: 0; 
+        margin-top: -5;
     }
 
+    .navbar-nav {
 
-    .navbar-brand {
-        font-size: 1.3rem;
-        font-weight: bold;
-        margin-right: 10px;
-        margin-left: 20px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
 
-    .navbar-menu {
         display: flex;
-        gap: 15px; 
-        list-style: none;
-        margin-bottom: 0;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: -10px; 
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important; 
 
 
     }
 
-    .navbar-menu li a {
-
+    .navbar a {
+        color: #ffffff;
         text-decoration: none;
-        color: white;
-        font-size: 1rem;
-        transition: color 0.3s;
-        padding: 20px 30px; 
-        margin-top: 5px;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+        margin: 0 5px;
+        font-size: 1em;
+        transition: color 0.3s ease;
+        margin-top: -10px; 
+        border-radius: 30px; 
 
     }
 
-    .navbar-menu li a:hover {
-        color: #ddd;
+    .navbar a:hover {
+        color: #000000; /* Change color on hover */
+    }
+
+    .navbar-brand img {
+        height: 70px; /* Adjust the height as needed */
+        margin-bottom: -5px; 
     }
 
 
-    .menu-toggle {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
+    span {
+
+        color: white !important;
     }
 
-    .menu-toggle span {
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 3px 0; 
-        transition: all 0.3s ease;
-        margin-right: 20px;
-    }
-        .navbar-menu {
-            position: fixed;
-            top: 50px;
-            right: 0;
-            width: 100%;
-            max-width: 300px;
-            height: 100vh;
-            background-color: rgb(0, 0, 0);
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
 
-        .navbar-menu.open {
-            transform: translateX(0);
-        }
+
+ 
 
         .menu-toggle {
             display: flex;
@@ -1127,6 +1130,22 @@ async></script>
                 flex: 1 1 100%; 
             }
 
+            .navbar-brand img {
+
+                align-items: center !important;
+            }
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #5D4037;
+            transform: scale(1.05);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 10px;
+
+    
+          
         }
 
 
@@ -1152,35 +1171,50 @@ async></script>
     
 
 
-        <img src="images/logo-transparent-2.png" alt="Website Services Logo" class="header-image">
-
-
-
         <h1 id="random-question"></h1>
 
-
+        <br>
 
         <h2 id="intro-services-html-next1">
 
-            Your website is the first impression— let's make it unforgettable. 
+            <strong>Billy Joinville Web Services </strong> is a small web design agency, designed to create meaningful websites that include dedicated support, all for one low price. No hourly rates, no gimmicks.
+        </h2>
 
-        </h2> 
 
-        <nav class="custom-navbar">
-            <div class="navbar-brand"><a href="/services.html
-                ">Billy Joinville Web Services</a></div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Welcome</a></li>
-                <li><a href="projects-gallery.html">Projects</a></li>
-                <li><a href="services.html">Solutions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+         <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+
+            <a class="navbar-brand" href="services.html">
+               
+                <img src="images/logo-transparent-2 copy.png" alt="Brand Logo">
+            </a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+              <ul class="navbar-nav">
+
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="projects-gallery.html">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="services.html">Services</a>
+                </li>
+
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+
+              </ul>
+
             </div>
         </nav>
+
 
     </header>
 
@@ -1197,10 +1231,18 @@ async></script>
             <br>
 
 
-            <iframe width="600" height="315" src="https://www.youtube.com/embed/r9xUCYOcFh8?si=37YHw0otn2t9y1m-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <img src="images/cover-background-2.png" alt="Cover Background">
 
             <br>
 
+            <p id="intro-services-html-next2">Effortless.</p>
+            <img src="images/cover-background-1.png" alt="Cover Background">
+            <br>
+            <p id="intro-services-html-next2">Affordable.</p>
+            <img src="images/cover-background-3.png" alt="Cover Background">
+            <br>
+            <p id="intro-services-html-next2">With Support.</p>
+            <br>
             <br>
 
     
@@ -1237,9 +1279,7 @@ async></script>
 
             <br>
             <br>
-            <h1> Clean Website = Happy Clients
-
-            </h1>
+            <h1><strong>Don't take our word for it</strong></h1>
         
             <div class="testimonial-container">
 
@@ -1428,7 +1468,7 @@ async></script>
     </div>
         </div>
 
-        <h1 id="faq-title">Maybe you have questions</h1>
+        <h1 id="faq-title"><strong>Maybe you have questions</strong></h1>
 
         <section id="faq" class="faq-section">
         
@@ -1482,11 +1522,11 @@ async></script>
         </section>
 
 
-    <div id="footnotes">
+
 
         <div class="contact-services">
 
-            <h1 id="questions-heading"><strong>Isn't it easy?</strong></h1>
+            <h1 id="questions-heading"><strong>Would a free consultation help you?</strong></h1>
     
             <p id="intro-services-html">
             
@@ -1495,59 +1535,51 @@ async></script>
             </p>
             
     
-            <a href="https://calendly.com/billyjoinville/free-consultation" class="contact-button-tempted">Get Started Today</a>
+            <a href="https://calendly.com/billyjoinville/free-consultation" class="contact-button-tempted">Schedule a Consultation</a>
     
         </div>
 
-        <br>
-        <br>
-        <br>
+ 
 
         
        
-    </div>
 
-    <footer>
-
-        
-
-      
-        <p>Let's Connect!</p>
-        <div class="social-media-links">
-            <a href="https://www.facebook.com/share/129pv5HzLz7/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
-                <i class="fab fa-facebook"></i>
-            </a>
-
-            <a href="https://www.linkedin.com/company/billy-joinville-web-services/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <br>
-        <br>
-        <br>
-        <p>
-            <a href="terms.html">Terms of Service & Privacy Policy</a>
-        </p>
-        <p>
-            <a href="refund-policy.html">Refund Policy</a>
-        </p>
-
-        <p><a href="site-map.html">Site Map</a></p>
-
-
-        <p><a href="services.html">Back to Top</a></p>
-
-        <br>
-        <br>
-
-        <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
-        <p id="footer-text">Created, designed by Billy Joinville. Published on GitHub.</p>
-        <br>
-
-    </footer>
+    
 
 </main>
+
+<footer>
+    <div class="social-media-links">
+        <a href="https://www.facebook.com/share/129pv5HzLz7/?mibextid=LQQJ4d" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/company/billy-joinville-web-services/" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <br>
+
+    <p>
+        <a href="terms.html">Terms of Service & Privacy Policy</a>
+    </p>
+    <p>
+        <a href="refund-policy.html">Refund Policy</a>
+    </p>
+
+    <p><a href="site-map.html">Site Map</a></p>
+
+    <p><a href="services.html">Back to Top</a></p>
+
+    <br>
+ 
+
+    <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
+    <p id="footer-text">Created, designed by Billy Joinville. Published on GitHub.</p>
+    <br>
+
+</footer>
 
 
   
@@ -1674,27 +1706,37 @@ async></script>
 </script>
 
 <script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-
+    document.addEventListener('DOMContentLoaded', () => {
         const questions = [
-
-            "Need a website that drives results?",
-            "Is your website helping or hurting your business?",
-            "Want a site that works hard as you do?",
-            "Interested in my web design services?",
-            "How can I help you with your online presence?",
-            "Is your website mobile-friendly?",
+            "Fancy a new website? Welcome!",
+            "Domains add professionalism. Do you have one?",
+            "Need a website but don't know where to start?",
             "Hourly rates? Forget it. One package starting at $499."
-
         ];
 
         const randomIndex = Math.floor(Math.random() * questions.length);
-
         const randomQuestion = questions[randomIndex];
+        const randomQuestionElement = document.getElementById('random-question');
 
-        document.getElementById('random-question').innerText = randomQuestion;
+        randomQuestionElement.innerText = randomQuestion;
+
+        // Simple fade-in effect
+        let opacity = 0;
+        randomQuestionElement.style.opacity = opacity;
+        randomQuestionElement.style.display = 'block';
+
+        const fadeIn = () => {
+            opacity += 0.02;
+            if (opacity <= 3) {
+                randomQuestionElement.style.opacity = opacity;
+                requestAnimationFrame(fadeIn);
+            }
+        };
+
+        fadeIn();
     });
 </script>
+
     
 
 
