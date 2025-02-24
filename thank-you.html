@@ -257,195 +257,24 @@
 
 
 
-<body class="thank-you-background">
-    <header>
-        <h1 id="thank-you">Welcome!</h1>
-        <h2><a href="index.html" target="_blank">Billy Joinville</a> is your web designer. </h2>
-            
-        <h2>
-            You'll receive a welcome email with a link to schedule your first session.  This is your hub for resources related to your project. 
+<h1>Billy Joinville Web Services is now <strong>WebEaze</strong>. We're providing the same benefits that you love, under a new name and flavor.</h1>
 
-        </h2>
+<br>
 
-        <h2>User portal coming soon! </h2>
+<h1>Visit our new website to learn more about our services and how we can help you.</h1>
 
-        <nav class="custom-navbar">
-            <div class="navbar-brand"><a href="/services.html
-                ">Billy Joinville Web Services</a></div>
-            <ul class="navbar-menu">
-                <li><a href="index.html">Welcome</a></li>
-                <li><a href="projects-gallery.html">Projects</a></li>
-                <li><a href="services.html">Solutions</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+<br>
+<br>
 
-    <main>
-        <section id="next-steps">
-            <h2>Next steps?</h2>
-            <br>
+<a href="https://webeaze.io" class="contact-button"style="color: black;" target="_blank" style="font-size: 20px">Visit WebEaze <i style="margin-left: 10px;"class="fas fa-external-link-alt"></i></a>
 
-            <ul>
-                <li><strong>Email:</strong> You'll recieve a welcome email. Email will be the primary form of communication from here on out. All emails come from <strong>@bjwebservices.com</strong>.</li>
+<br>
 
-                <li>You're required to review and sign the <a href="scope-of-work.html" target="_blank"><u>Scope of Work</u></a> before I can begin work on your project. You'll get an email notification when it's ready.
-                </li>
+<hr>
 
-                <li>I'll begin working on your website based on what we agreed to. You'll be notified once your website requests are completed. </li>
-            
-    
-            </ul>
-        
-        </section>
+<h1>If you're an active client, you can check out our new Client Portal for easy access to WebEaze.</h1>
 
-        <br>
-        <br>
-        <br>
+<br>
 
-        <section id="next-steps1">
-            <h2>How do sessions work?</h2>
-
-            <p>Sessions are a support method to work "face-to-face" on your website. They're held on Zoom and last 30 minutes. You can schedule up to <strong>5 sessions</strong> per month. </p>
-
-            <p><strong>Cancellation policy: </strong>
-                Life happens and we're human. If something comes up, cancel or reschedule your session at least 12 hours in advance.</p>
-            </p>
-
-            <br>
-
-            <a href="schedule-session.html" class="btn">Schedule a session</a>
-
-            <p></p>
-        
-        </section>
-
-        <br>
-        <br>
-
-        <section id="next-steps-any-issues">
-            <h2>Website Requests</h2>
-
-
-           <p>I'm here to help if you need any updates, changes, or troubleshooting for your site. You can submit up to <strong>10 website requests</strong> per month. 
-            
-            <p>I'll complete requested tasks within a 48-72 hour timeframe.</p>
-
-           <a href="contact-form.html" class="btn">Submit Request</a>
-        
-        </section>
-
-        <br>
-        <br>
-
-        <section id="next-steps-didnt-receive">
-            <h2>Where is my invoice? </h2>
-            <p>
-                Invoices are emailed to the address used to make your deposit. You must make your final payment through your Client Portal.  
-            </p>
-
-            <a href="https://billing.stripe.com/p/login/7sI3gfaO14CEdlm144" class="btn">Client Portal</a>
-        
-        </section>
-
-        <br>
-        <br>
-
-
-    </main>
-
-    <footer>
-
-        <br>
-        <br>
-        <p>
-            <a href="terms.html">Terms of Service & Privacy Policy</a>
-        </p>
-
-        <p>
-            <a href="refund-policy.html">Refund Policy</a>
-        </p>
-
-        <p><a href="site-map.html">Site Map</a></p>
-        <p><a href="#top">Back to Top</a></p>
-
-        <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
-        <p id="footer-text">Created, designed by Billy Joinville. Published on GitHub.</p>
-    </footer>
-
-    <script>
-        let lastScrollTop = 0;
-        const delta = 5; 
-        const navbar = document.querySelector('nav'); 
-        const navbarHeight = navbar.offsetHeight; 
-
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            
-            if (Math.abs(scrollTop - lastScrollTop) <= delta) {
-                return;
-            }
-
-            if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
-                
-                navbar.style.top = '-100px'; 
-            } else {
-
-                navbar.style.top = '0'; 
-            }
-
-            lastScrollTop = scrollTop;
-        });
-
-    </script>
-
-<script src="https://billyjoinvillewebservices.statuspage.io/embed/script.js"></script>
-
-    <script>
-        const video = document.getElementById("introVideo");
-        let reverseInterval;
-
-        function playVideo() {
-            clearInterval(reverseInterval); // Stop reversing if active
-            video.play();
-        }
-
-        function stopVideo() {
-            video.pause();
-            video.currentTime = 0; // Reset to the beginning
-        }
-
-        function reverseVideo() {
-            clearInterval(reverseInterval);
-            video.pause();
-            
-            // Play video backward by reducing time at intervals
-            reverseInterval = setInterval(() => {
-                if (video.currentTime <= 0) {
-                    clearInterval(reverseInterval);
-                    video.pause();
-                } else {
-                    video.currentTime -= 0.1; // Adjust reverse speed as needed
-                }
-            }, 100);
-        }
-    </script>
-
-<script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navbarMenu = document.querySelector('.navbar-menu');
-
-    menuToggle.addEventListener('click', () => {
-        navbarMenu.classList.toggle('open');
-    });
-</script>
-
-</body>
-
+<a href="https://webeaze.io/portal" class="contact-button" style="color: black;"target="_blank" style="font-size: 20px">Client Portal <i style="margin-left: 10px;"class="fas fa-external-link-alt"></i></a>
 </html>
