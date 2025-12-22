@@ -1,341 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome - Billy Joinville</title>
-    <meta name="description" content="Student at the University of Miami. Bridging technology and creativity. Founder of Billy Joinville Web Services. Explore my projects and services.
-    ">
-    <link href="css/billy-joinville.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
-    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Billy Joinville</title>
+
+  <meta name="description" content="Product-focused software engineer building user-facing web experiences with React, JavaScript, and Python. Founder of WebEaze.">
+
+  <link href="css/billy-joinville.css" rel="stylesheet">
+  <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+  <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <meta property="og:title" content="Billy Joinville - Welcome">
+  <meta property="og:description" content="Student at the University of Miami. Bridging technology and creativity. Founder of WebEaze. Explore my history and past work.">
+  <meta property="og:image" content="images/website-services-logo.jpg">
+  <meta property="og:url" content="https://billyjoinville.me/">
+
+  <style>
+    body { padding-top: 60px; 
+      background: linear-gradient(to bottom, #e3e6e8, #0541f342) !important;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    p { text-align: left !important; }
+
+    #footer-links-home,
+    #footer-text {
+      text-align: center !important;
+      font-size: large;
+
+    }
+
+    .explore-button {
+      border-radius: 10px;
+      padding: 10px 20px;
+    }
+
+    .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 64px 20px;
+  }
 
 
-    <meta property="og:title" content="Billy Joinville - Welcome">
-    <meta property="og:description" content="Student at the University of Miami. Bridging technology and creativity. Founder of Billy Joinville Web Services. Explore my projects and services.">
-    <meta property="og:image" content="images/website-services-logo.jpg">
-    <meta property="og:url" content="https://billyjoinville.me/">
-
-    <style>
-        body {
-        padding-top: 60px;
-        }
-
-        nav {
-          position: fixed;
-          width: 100%;
-          top: 0;
-          z-index: 1000;
-        }
-
-        .custom-navbar {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 10px 20px; 
-          backdrop-filter: blur(10px); 
-          background-color:none; 
-          color: black;
-          font-family: Arial, sans-serif;
-        }
+  .content-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
 
 
-        .navbar-brand {
-            font-size: 1.3rem;
-            font-weight: bold;
-            margin-right: 10px;
-            margin-left: 20px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-        .navbar-menu {
-            display: flex;
-            gap: 15px; 
-            list-style: none;
-            margin-bottom: 0;
-        }
-
-        .navbar-menu li a {
-
-            text-decoration: none;
-            color: white;
-            font-size: 1rem;
-            transition: color 0.3s;
-            padding: 20px 30px; 
-            margin-top: 5px;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 
-        }
+  .content-card h3 {
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
 
-        .navbar-menu li a:hover {
-            color: #ddd;
-        }
+  .content-card p {
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
 
-
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: black;
-            margin: 3px 0; 
-            transition: all 0.3s ease;
-            margin-right: 20px;
-        }
-            .navbar-menu {
-                position: fixed;
-                top: 100%;
-                right: 0;
-                width: 100%;
-                max-width: 300px;
-                height: 125vh;
-                background-color: rgb(0, 0, 0);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 15px;
-                transform: translateX(100%);
-                transition: transform 0.3s ease-in-out;
-            }
-
-            .navbar-menu.open {
-                transform: translateX(0);
-            }
-
-            .menu-toggle {
-                display: flex;
-                
-            }
-
-          p {
-
-            text-align: left !important;
-          }
-
-          #footer-links-home, #footer-text {
-            text-align: center !important;
-          }
-            
-    </style>
+  .content-card ul {
+    padding-left: 18px;
+    margin-bottom: 16px;
+  }
 
 
+  .content-card .explore-button {
+    margin-top: 8px;
+    display: inline-block;
+  }
+
+  .content-card {
+  flex: 0 0 calc(25% - 18px);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 24px;
+}
+
+
+@media (max-width: 1024px) {
+  .content-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .content-card {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+
+
+
+  </style>
 </head>
-
 
 <body>
 
-  <header id="header">
-    <img src="images/billy-o-portrait.png" alt="A self portrait of Billy Joinville" class="portrait"/>
-    <div class="header-text">
+<nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand fw-bold" href="index.html">Billy Joinville</a>
 
-      <h1>Hello, I'm Billy Joinville!</h1>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <h2><strong>Hometown: Camden, Delaware</strong></h2>
-      <h2><strong>Currently: Miami, Florida</strong></h2> 
+    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+      <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Welcome</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="projects-gallery.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://webeaze.io" target="_blank">WebEaze</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-sm btn-outline-dark px-3" href="contact.html">Contact Billy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-      <br>
 
-      <p>Born and raised in Delaware, I'm a current student at the <a href="https://welcome.miami.edu" target="_blank"> University of Miami</a> pursuing degrees in Computer Science and Communication Studies. To understand the future of our planet and how organizations are contributing, I added a minor in Sustainable Business.</p>
+<header id="header">
+  <img src="images/billy-o-portrait.png" alt="A self portrait of Billy Joinville" class="portrait"/>
+
+  <div class="header-text">
+    <h1 style= "font-weight: 700;">Aspiring Software Engineer & Founder of WebEaze
+    </h1>
+
+    <h2>
+      My name is Billy Joinville. Welcome!
+    </h2>
+
+    <br>
+    
+    <p style="margin: 0 auto; text-align: center !important;">
+      I'm a Computer Science student at the University of Miami and Founder of WebEaze, where I design and ship custom websites and front-end applications used by real clients and businesses.
+    </p>
+  </div>
+</header>
+
+
+
+<section class="content">
+
+  <div class="content-flex">
+
+    
+    <div class="content-card">
+      <h3>What I Work On</h3>
 
       <p>
-        As the founder of <a href="https://webeaze.io" target="_blank">WebEaze</a>, I'm passionate about helping others create the website of their dreams in the digital world we live in today. I've worked with clients in various industries, including real estate, e-commerce, and entertainment. 
+        I focus on building intuitive, high-performance user interfaces and the underlying systems that power them. My work includes working with the front-end, User Interface (UI) design, analytics integration, and automation.
       </p>
 
-      <p>My passion lies in creating and contributing to the future of technology and how it can be used to solve problems and improve lives. My future goals include working in the tech industry for an esteemed and driven company, where I can continue to learn and grow as a professional.</p>
-        
-      <p>I'm also a member of <a href="https://akpsi.org" target="_blank">Alpha Kappa Psi</a>, the professional business fraternity, where I've had the opportunity to network with professionals and develop my leadership skills.
+      <p>
+        As the Founder of WebEaze, I've shipped 40+ production and scalable websites, partnering with stakeholders to translate their business needs into scalable technical solutions.
+      </p>
+    </div>
+
+
+    <div class="content-card">
+      <h3>Experience Snapshot</h3>
+
+      <ul>
+        <li>Frontend development with React, Javascript, HTML, and CSS</li>
+        <li>Backend scripting and automation with Python and Java</li>
+        <li>User experience development with analytics and experimentation</li>
+        <li>Cross-functional collaboration with designers, founders, and non-technical partners</li>
+      </ul>
+    </div>
+
+
+    <div class="content-card">
+      <h3>Founder & Lead Engineer @ WebEaze</h3>
+
+      <p>
+        WebEaze is a subscription-based web platform that I founded, serving small businesses with fully managed, user-facing websites and ongoing updates.
       </p>
 
-   </div>
+     
 
-
-   <div class="slideshow-container">
-
-    <div class="slide">
-      <img src="images/business-suit-bayside.png" alt="Billy with two other AKPsi brothers in Miami" class="slideshow-image">
+      <a href="https://webeaze.io" class="explore-button">Visit WebEaze</a>
     </div>
+
+    <div class="content-card">
+      <h3>View My Experiences</h3>
   
-    <div class="slide">
-      <img src="images/firstday-at-u.jpg" alt="Billy and his family at the University of Miami" class="slideshow-image">
-    </div>
-
-    <div class="slide">
-      <img src="images/spotify-office-billy.jpg" alt="Billy at Spotify" class="slideshow-image">
-    </div>
+      <p>
+        During my time at the University of Miami and through WebEaze, I've had the opportunity to work on a variety of projects that showcase my skills in software engineering, web development, user experience design, and a few of my personal endeavors. Explore some of my past work and experiences.
+      </p>
   
-    <div class="slide">
-      <img src="images/billy-emerge.jpg" alt="Billy at eMerge Americas" class="slideshow-image">
+      <a href="projects-gallery.html" class="explore-button">View Projects</a>
     </div>
 
-    <div class="slide">
-      <img src="images/billy-london.jpeg" alt="Billy as an emcee for Office of Academic Enhancement, with Antonio" class="slideshow-image">
-    </div>
-
-    <div class="slide">
-      <img src="images/akpsi-induction.jpg" alt="Billy at AKPsi" class="slideshow-image">
-    </div>
-
-    <div class="slide">
-      <img src="images/sebastian-and-billy.png" alt="Billy on a plane for school-related reason" class="slideshow-image">
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
   </div>
 
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("slide");
-      if (n > slides.length) {
-        slideIndex = 1; 
-      }
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
 
-      slides[slideIndex - 1].style.display = "block";  
-    }
-    </script>
-
-<p>As I move forward in my academic and professional journey, I've had the opportunity to work on a variety of projects and take on leadership
-  roles that bring together my technical and organizational skills. That includes being an active listener & collaborating on new ideas, understanding languages like Python, Java, and JavaScript, and building connections along the way. </p>
-  
-  <p>During my time at the University of Miami, I've had the opportunity to intern at companies like <a href="https://delawareelevator.com/" target="_blank">Delaware Elevator</a> and participate in events like <a href="https://emergeamericas.com/" target="_blank">eMerge Americas</a>. I'm dedicated to making an impact on everything I do, and I invite you to learn more about my work.
-</p> 
-
-  <br>
-  
-  <a href="projects-gallery.html" class="explore-button">Explore My Projects</a>
-  <br>
-  <a href="https://webeaze.io" class="explore-button">WebEaze</a>
-
-
-
-
-  <nav class="custom-navbar">
-    <div class="navbar-brand"><a href="/index.html
-      ">Billy Joinville</a></div>
-    <ul class="navbar-menu">
-        <li><a href="index.html">Welcome</a></li>
-        <li><a href="projects-gallery.html">Projects</a></li>
-        <li><a href="https://webeaze.io">WebEaze</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-  </nav>
- 
-  </header>
-
-  <script>
-    let lastScrollTop = 0;
-    const delta = 5; 
-    const navbar = document.querySelector('nav'); 
-    const navbarHeight = navbar.offsetHeight; 
-
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        
-        if (Math.abs(scrollTop - lastScrollTop) <= delta) {
-            return;
-        }
-
-        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
-            
-            navbar.style.top = '-100px'; 
-        } else {
-            
-            navbar.style.top = '0'; 
-        }
-
-        lastScrollTop = scrollTop;
-    });
-</script>
-
-<script>
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navbarMenu = document.querySelector('.navbar-menu');
-
-  menuToggle.addEventListener('click', () => {
-      navbarMenu.classList.toggle('open');
-  });
-</script>
-
-
-
-
-  </body>
-
-  <br>
-
-  <section id="donate" style="text-align: center; padding: 40px; margin: 40px auto; width: 80%; border: 3px solid #dcdcdc; background-color: #f9f9f9;
-   border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-    <h3>In Memory of My Mother, Ismaelie Antoine</h3>
-    <br>
-    <p id="donate-text">
-      Ovarian cancer took my mother's life in Feburary of 2022, but her spirit continues to inspire my work and future goals. 
-      If you feel moved to make a difference, please consider donating to ovarian cancer research. 
-      Together, we can support efforts to find a cure and improve the lives of those affected.
-    </p>
-    <a href="http://ocrahope.org/donate" target="_blank" class="explore-button">Donate to Ovarian Cancer Research</a>
-    <br><br>
-    <a href="https://www.benniesmithfuneralhome.com/obituaries/Ismaelie-Antoine/#!/TributeWall" target="_blank" class="explore-button">Read My Mother's Obituary</a>
 
 </section>
 
-  <footer>
 
-    <br>
-    <br>
 
-    <p id="footer-links-home">
-        <a href="https://webeaze.io">WebEaze</a>
-    </p>
 
-    <p id="footer-links-home">
-      <a href="terms.html">Terms of Service & Privacy Policy</a>
+<!-- MEMORIAL -->
+<section id="donate" style="text-align:center;padding:40px;margin:40px auto;width:80%;border:3px solid #dcdcdc;background-color:#f9f9f9;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+  <h3>In Memory of My Mother, Ismaelie Antoine</h3>
+  <p style="text-align: center;">
+    Ovarian cancer took my mother's life in Feburary of 2022, but her spirit continues to inspire my work and future goals. To honor her memory, I encourage you to support the <a href="http://ocrahope.org" target="_blank">Ovarian Cancer Research Alliance (OCRA)</a>, a leading organization dedicated to funding research and providing support for those affected by ovarian cancer.
   </p>
+  <a href="http://ocrahope.org/donate" target="_blank" class="explore-button">Donate to OCRA</a>
+</section>
 
-  <p id="footer-links-home">
-    <a href="https://webeaze.io/refund-policy">Refund Policy</a>
-</p>
-<p id="footer-links-home"><a href="https://webeaze.io/site-map.html">Site Map</a></p>
-    <p id="footer-links-home"><a href="#top">Back to Top</a></p>
+<!-- FOOTER -->
+<footer>
+  <p id="footer-links-home"><a href="https://webeaze.io">WebEaze</a></p>
 
-    <br>
-    <br>
+  <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
+</footer>
 
-
-    <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
-    <p id="footer-text">Created and designed by Billy Joinville, published on GitHub. </p>
-  
-   </footer>
-
- </html>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
