@@ -8,7 +8,7 @@
 html, body {
     
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: aliceblue;
+    background-color: linear-gradient(to bottom, #24609b, #030d18) !important;
     color: #444;
     line-height: 1.6;
     margin: 0;
@@ -179,13 +179,7 @@ main {
     
 }
 
-section {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: calc(33.333% - 40px); /* three columns */
-    min-width: 280px;
-}
+
 
 section:hover {
     transform: translateY(-5px);
