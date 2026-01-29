@@ -9,6 +9,7 @@
     <link href="css/billy-joinville.css" rel="stylesheet">
     <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
     <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
@@ -108,6 +109,14 @@
                 display: flex;
                 
             }
+
+            section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            width: calc(33.333% - 40px); /* three columns */
+            min-width: 280px;
+        }
     </style>
 
     
@@ -118,20 +127,38 @@
 
         <h2>I am always open to new opportunities and collaborations. Feel free to reach out to me through the following platforms.</h2>
 
-            <nav class="custom-navbar">
-                <div class="navbar-brand"><a href="/index.html">Billy Joinville</a></div>
-                <ul class="navbar-menu">
-                    <li><a href="index.html">Welcome</a></li>
-                    <li><a href="projects-gallery.html">Projects</a></li>
-                    <li><a href="services.html">Solutions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
+            <div class="container-fluid px-4">
+              
+              <a class="navbar-brand fw-bold" href="index.html">
+                Billy Joinville
+              </a>
+          
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          
+              <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
+                <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Welcome</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="projects-gallery.html">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://webeaze.io" target="_blank">WebEaze</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="btn btn-sm btn-outline-dark px-3" href="contact.html">
+                      Contact Billy
+                    </a>
+                  </li>
                 </ul>
-                <div class="menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
+              </div>
+          
+            </div>
+          </nav>
 
     </header>
     
@@ -180,16 +207,16 @@
 
         <section id="other" class="contact-card">
 
-            <img class="contact-icon" src="images/website-services-logo.jpg" alt="A question mark icon">
+            <img class="contact-icon" alt="WebEaze logo">
 
-            <h2>Questions related to <a href="services.html">Website Setup Services</a>?</h2>
+            <h2>Questions related to <a href="services.html">WebEaze</a>?</h2>
             </h2>
             <p>
                 If you have any questions related to my services, feel free to reach out to me through the contact form below. 
-                I will respond to your inquiry within 24-48 hours.
+                We'll respond to your inquiry within 1-2 days.
             </p>
 
-                <a href="contact-form.html" target="_blank" class="contact-button">Get in Touch</a>
+                <a href="https://webeaze.io/contact-us" target="_blank" class="contact-button">Get in Touch</a>
         </section>
 
         
@@ -280,6 +307,8 @@
     });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
    
 
@@ -287,12 +316,7 @@
 
     <footer>
 
-    <p>
-        <a href="terms.html">Terms of Service & Privacy Policy</a>
-    </p>
-    <p>
-        <a href="refund-policy.html">Refund Policy</a>
-    <p><a href="site-map.html">Site Map</a></p>
+    <p><a href="https://webeaze.io" target="_blank">WebEaze Web Design</a></p>
     <p><a href="#top">Back to Top</a></p>
 
     <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
