@@ -9,6 +9,7 @@
   <meta name="description" content="Product-focused software engineer building user-facing web experiences with React, JavaScript, and Python. Founder of WebEaze.">
 
   <link href="css/billy-joinville.css" rel="stylesheet">
+  <link href="css/portfolio-v2.css" rel="stylesheet">
   <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
   <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,101 +18,11 @@
   <meta property="og:description" content="Student at the University of Miami. Bridging technology and creativity. Founder of WebEaze. Explore my history and past work.">
   <meta property="og:image" content="images/website-services-logo.jpg">
   <meta property="og:url" content="https://billyjoinville.me/">
-
-  <style>
-    body { padding-top: 60px; 
-      background: linear-gradient(to bottom, #e3e6e8, #0541f342) !important;
-    }
-
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-
-    p { text-align: left !important; }
-
-    #footer-links-home,
-    #footer-text {
-      text-align: center !important;
-      font-size: large;
-
-    }
-
-    .explore-button {
-      border-radius: 10px;
-      padding: 10px 20px;
-    }
-
-    .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 64px 20px;
-  }
-
-
-  .content-flex {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-
-
-
-  .content-card h3 {
-    font-weight: 700;
-    margin-bottom: 12px;
-  }
-
-  .content-card p {
-    line-height: 1.6;
-    margin-bottom: 14px;
-  }
-
-  .content-card ul {
-    padding-left: 18px;
-    margin-bottom: 16px;
-  }
-
-
-  .content-card .explore-button {
-    margin-top: 8px;
-    display: inline-block;
-  }
-
-  .content-card {
-  flex: 0 0 calc(25% - 18px);
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 18px;
-  padding: 24px;
-}
-
-
-@media (max-width: 1024px) {
-  .content-card {
-    flex: 0 0 calc(50% - 12px);
-  }
-}
-
-
-@media (max-width: 600px) {
-  .content-card {
-    flex: 0 0 100%;
-  }
-}
-
-
-
-
-
-
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
-<body>
+<body class="page-portfolio" id="top">
 
 <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
   <div class="container-fluid px-4">
@@ -141,103 +52,118 @@
 </nav>
 
 
-<header id="header">
-  <img src="images/billy-o-portrait.png" alt="A self portrait of Billy Joinville" class="portrait"/>
-
-  <div class="header-text">
-    <h1 style= "font-weight: 700;">Aspiring Software Engineer & Founder of WebEaze
-    </h1>
-
-    <h2>
-      My name is Billy Joinville. Welcome!
-    </h2>
-
-    <br>
-    
-    <p style="margin: 0 auto; text-align: center !important;">
-      I'm a Computer Science student at the University of Miami and Founder of WebEaze, where I design and ship custom websites and front-end applications used by real clients and businesses.
-    </p>
-  </div>
-</header>
-
-
-
-<section class="content">
-
-  <div class="content-flex">
-
-    
-    <div class="content-card">
-      <h3>What I Work On</h3>
-
-      <p>
-        I focus on building intuitive, high-performance user interfaces and the underlying systems that power them. My work includes working with the front-end, User Interface (UI) design, analytics integration, and automation.
-      </p>
-
-      <p>
-        As the Founder of WebEaze, I've shipped 40+ production and scalable websites, partnering with stakeholders to translate their business needs into scalable technical solutions.
-      </p>
+<main class="site-wrap">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">Product-focused software engineer</p>
+      <h1 class="hero-title">Billy Joinville</h1>
+      <p class="hero-lede">Computer Science student at the University of Miami. Founder of WebEaze. Spotify Community Star. Member of Alpha Kappa Psi. </p>
+      <div class="hero-actions">
+        <a class="btn-solid" href="projects-gallery.html">View projects</a>
+        <a class="btn-ghost" href="contact.html">Contact</a>
+      </div>
+      <div class="metric-grid">
+        <div class="metric-card">
+          <span class="metric-value">40+</span>
+          <span class="metric-label">Production websites shipped</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">Frontend</span>
+          <span class="metric-label">React, JavaScript, HTML, CSS</span>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value">Backend</span>
+          <span class="metric-label">Python, Java, automation</span>
+        </div>
+      </div>
     </div>
-
-
-    <div class="content-card">
-      <h3>Experience Snapshot</h3>
-
-      <ul>
-        <li>Frontend development with React, Javascript, HTML, and CSS</li>
-        <li>Backend scripting and automation with Python and Java</li>
-        <li>User experience development with analytics and experimentation</li>
-        <li>Cross-functional collaboration with designers, founders, and non-technical partners</li>
-      </ul>
+    <div class="hero-media">
+      <img src="images/billy-o-portrait.png" alt="A self portrait of Billy Joinville" class="hero-portrait">
+      <div class="hero-note">Founder of WebEaze, a boutique studio for small business websites and front-end systems.</div>
     </div>
+  </section>
 
-
-    <div class="content-card">
-      <h3>Founder & Lead Engineer @ WebEaze</h3>
-
-      <p>
-        WebEaze is a subscription-based web platform that I founded, serving small businesses with fully managed, user-facing websites and ongoing updates.
-      </p>
-
-     
-
-      <a href="https://webeaze.io" class="explore-button">Visit WebEaze</a>
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">Focus areas</h2>
+      <p class="section-subtitle">I like the intersection of product, design, and engineering. My work is grounded in real users and practical delivery.</p>
     </div>
-
-    <div class="content-card">
-      <h3>View My Experiences</h3>
-  
-      <p>
-        During my time at the University of Miami and through WebEaze, I've had the opportunity to work on a variety of projects that showcase my skills in software engineering, web development, user experience design, and a few of my personal endeavors. Explore some of my past work and experiences.
-      </p>
-  
-      <a href="projects-gallery.html" class="explore-button">View Projects</a>
+    <div class="panel-grid">
+      <div class="panel">
+        <h3>Interface craft</h3>
+        <p>UI design, responsive systems, component libraries, and accessibility-first layouts.</p>
+      </div>
+      <div class="panel">
+        <h3>Performance and analytics</h3>
+        <p>Instrumentation, experiments, and optimizations that keep products fast and measurable.</p>
+      </div>
+      <div class="panel">
+        <h3>Founder mindset</h3>
+        <p>Stakeholder alignment, roadmapping, and shipping in real-world timelines.</p>
+      </div>
     </div>
+  </section>
 
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">Featured work</h2>
+      <p class="section-subtitle">A quick look at highlights across product, community, and leadership.</p>
+    </div>
+    <div class="media-grid">
+      <article class="media-card">
+        <img src="images/mockups-ad.png" alt="WebEaze website mockups">
+        <h3>WebEaze</h3>
+        <p>Founded and lead delivery for a subscription-based web platform serving small businesses with custom, managed websites.</p>
+        <a href="https://webeaze.io" class="btn-ghost">Visit WebEaze</a>
+      </article>
+      <article class="media-card">
+        <img src="images/dei-billy.jpg" alt="Billy Joinville at Delaware Elevator">
+        <h3>Delaware Elevator Internship</h3>
+        <p>Resolved cross-team technical issues, improved collaboration, and delivered structured solutions during two summer internships.</p>
+        <a href="projects-gallery.html" class="btn-ghost">Read more</a>
+      </article>
+      <article class="media-card">
+        <img src="images/spotify-team-billy.jpg" alt="Spotify community event">
+        <h3>Spotify Community Star</h3>
+        <p>Super User contributor focused on product support, published articles, and community leadership.</p>
+        <a href="projects-gallery.html" class="btn-ghost">Read more</a>
+      </article>
+    </div>
+  </section>
 
-  </div>
+  <section class="section">
+    <div class="section-head">
+      <h2 class="section-title">How I work</h2>
+      <p class="section-subtitle">Clear scope, thoughtful design, and direct collaboration with the people closest to the problem.</p>
+    </div>
+    <div class="panel-grid">
+      <div class="panel">
+        <h3>Discovery first</h3>
+        <p>Quick audits, user goals, and the smallest viable launch plan.</p>
+      </div>
+      <div class="panel">
+        <h3>Build and iterate</h3>
+        <p>Ship fast, measure impact, and refine with real feedback.</p>
+      </div>
+      <div class="panel">
+        <h3>Reliable delivery</h3>
+        <p>Transparent timelines, clean handoff, and support after launch.</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="section">
+    <div class="memorial-card">
+      <h3>In Memory of My Mother, Ismaelie Antoine</h3>
+      <p>Ovarian cancer took my mother's life in February 2022. Her spirit continues to inspire my work and future goals. To honor her memory, I encourage you to support the <a href="http://ocrahope.org" target="_blank">Ovarian Cancer Research Alliance (OCRA)</a>, a leading organization dedicated to funding research and providing support for those affected by ovarian cancer.</p>
+      <a href="http://ocrahope.org/donate" target="_blank" class="btn-solid">Donate to OCRA</a>
+    </div>
+  </section>
+</main>
 
-
-</section>
-
-
-
-
-<!-- MEMORIAL -->
-<section id="donate" style="text-align:center;padding:40px;margin:40px auto;width:80%;border:3px solid #dcdcdc;background-color:#f9f9f9;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-  <h3>In Memory of My Mother, Ismaelie Antoine</h3>
-  <p style="text-align: center;">
-    Ovarian cancer took my mother's life in Feburary of 2022, but her spirit continues to inspire my work and future goals. To honor her memory, I encourage you to support the <a href="http://ocrahope.org" target="_blank">Ovarian Cancer Research Alliance (OCRA)</a>, a leading organization dedicated to funding research and providing support for those affected by ovarian cancer.
-  </p>
-  <a href="http://ocrahope.org/donate" target="_blank" class="explore-button">Donate to OCRA</a>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p id="footer-links-home"><a href="https://webeaze.io">WebEaze</a></p>
-
-  <p id="footer-text">© 2025 Billy Joinville. All rights reserved.</p>
+<footer class="site-footer">
+  <p><a href="https://webeaze.io">WebEaze</a></p>
+  <p>© 2025 Billy Joinville. All rights reserved.</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
