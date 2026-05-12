@@ -1,127 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>Contact Billy</title>
-    <meta name="description" content="Get in touch with Billy Joinville for job opportunities, collaborations, or inquiries. Connect with him on LinkedIn, Instagram, and X.
-    ">
-    <link href="css/billy-joinville.css" rel="stylesheet">
-    <link href="css/portfolio-v2.css" rel="stylesheet">
-    <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
-    <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Billy Joinville</title>
+  <meta name="description" content="Get in touch with Billy Joinville for internships, collaborations, or general inquiries.">
+  <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="page-portfolio page-contact" id="top">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-glass">
-                <div class="container-fluid px-4">
-                    <a class="navbar-brand fw-bold" href="index.html">Billy Joinville</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-                        <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" href="index.html">Welcome</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="projects-gallery.html">Projects</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://webeaze.io" target="_blank">WebEaze</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="btn btn-sm btn-outline-dark px-3" href="contact.html">Contact Billy</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+<body id="top">
 
-        <header class="page-hero">
-                <div class="site-wrap">
-                        <p class="eyebrow">Get in touch</p>
-                        <h1 class="hero-title">Let's build something thoughtful</h1>
-                        <p class="hero-lede">Open to internships, collaborations, and product-focused opportunities. Reach out through any channel below and I will get back to you within 24-48 hours.</p>
-                        <div class="hero-actions">
-                                <a class="btn-solid" href="mailto:joinvillebilly@gmail.com">Email Billy</a>
-                                <a class="btn-ghost" href="projects-gallery.html">View projects</a>
-                        </div>
-                </div>
-        </header>
-    
-        <main class="site-wrap">
-                <section class="section">
-                        <div class="contact-grid">
-                                <article id="email" class="contact-card-modern">
-                                        <div class="contact-icon"><img src="images/email-icon.jpeg" alt="Email icon"></div>
-                                        <h3>Email</h3>
-                                        <p>For opportunities, collaborations, or general questions.</p>
-                                        <a href="mailto:joinvillebilly@gmail.com" class="btn-ghost">Send an email</a>
-                                </article>
+<!-- Nav -->
+<nav class="nav">
+  <div class="c">
+    <a class="nav-brand" href="index.html">Billy Joinville</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects-gallery.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+    </div>
+    <a class="nav-cta" href="contact.html" aria-current="page">Contact</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="drawer">
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="projects-gallery.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+  </div>
+  <a class="nav-cta btn btn-fill" href="contact.html">Contact</a>
+</div>
 
-                                <article id="linked-in" class="contact-card-modern">
-                                        <div class="contact-icon"><img src="images/linkedin.jpeg" alt="LinkedIn icon"></div>
-                                        <h3>LinkedIn</h3>
-                                        <p>Professional networking, updates, and new connections.</p>
-                                        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" class="btn-ghost">Connect on LinkedIn</a>
-                                </article>
+<!-- Page header -->
+<header class="page-head">
+  <div class="c">
+    <p class="page-kicker">Get in touch</p>
+    <h1 class="page-title">Contact</h1>
+    <p class="page-desc">Open to internships, part-time roles, and collaborations. I typically respond within 24 hours. You can also reach me directly at <a href="mailto:joinvillebilly@gmail.com" style="text-decoration:underline;">joinvillebilly@gmail.com</a>.</p>
+    <div class="page-actions">
+      <a class="btn btn-fill" href="mailto:joinvillebilly@gmail.com">Send an email</a>
+      <a class="btn btn-outline" href="resume.html">View resume</a>
+    </div>
+  </div>
+</header>
 
-                                <article id="instagram" class="contact-card-modern">
-                                        <div class="contact-icon"><img src="images/instagram-icon.jpeg" alt="Instagram icon"></div>
-                                        <h3>Instagram</h3>
-                                        <p>More personal updates, interests, and creative work.</p>
-                                        <a href="https://instagram.com/billy.joinville" target="_blank" class="btn-ghost">Follow on Instagram</a>
-                                </article>
+<main>
 
-                                <article id="x-social" class="contact-card-modern">
-                                        <div class="contact-icon"><img src="images/x-icon.jpeg" alt="X icon"></div>
-                                        <h3>X (formerly Twitter)</h3>
-                                        <p>Tech thoughts, quick updates, and community chatter.</p>
-                                        <a href="https://twitter.com/BillyJoinville" target="_blank" class="btn-ghost">Follow on X</a>
-                                </article>
+  <!-- Contact channels -->
+  <section class="section">
+    <div class="c">
+      <p class="sec-tag">Channels</p>
+      <h2 class="sec-title">Where to find me</h2>
+      <div class="contact-grid">
 
-                                <article id="other" class="contact-card-modern">
-                                        <div class="contact-icon"><img src="images/website-services-logo.jpg" alt="WebEaze logo"></div>
-                                        <h3>WebEaze inquiries</h3>
-                                        <p>Questions related to WebEaze services or ongoing support.</p>
-                                        <a href="https://webeaze.io/contact-us" target="_blank" class="btn-ghost">Contact WebEaze</a>
-                                </article>
-                        </div>
-                </section>
-        </main>
+        <a class="contact-card" href="mailto:joinvillebilly@gmail.com">
+          <div class="contact-icon">
+            <img src="images/email-icon.jpeg" alt="Email">
+          </div>
+          <div class="contact-text">
+            <p class="contact-label">Email</p>
+            <p class="contact-val">joinvillebilly@gmail.com</p>
+          </div>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
 
-<a href="#top" id="scroll-to-top">
-    &#8593; 
-</a>
+        <a class="contact-card" href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <img src="images/linkedin.jpeg" alt="LinkedIn">
+          </div>
+          <div class="contact-text">
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-val">linkedin.com/in/billyjoinville</p>
+          </div>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
 
+        <a class="contact-card" href="https://www.instagram.com/billy.joinville" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <img src="images/instagram-icon.jpeg" alt="Instagram">
+          </div>
+          <div class="contact-text">
+            <p class="contact-label">Instagram</p>
+            <p class="contact-val">@billy.joinville</p>
+          </div>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
 
-<script>
-    window.onscroll = function() {
-        var scrollToTopButton = document.getElementById("scroll-to-top");
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            scrollToTopButton.style.opacity = "1";
-            scrollToTopButton.style.visibility = "visible";
-        } else {
-            scrollToTopButton.style.opacity = "0";
-            scrollToTopButton.style.visibility = "hidden";
-        }
-    };
-</script>
+        <a class="contact-card" href="https://x.com/BillyJoinville" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <img src="images/x-icon.jpeg" alt="X">
+          </div>
+          <div class="contact-text">
+            <p class="contact-label">X</p>
+            <p class="contact-val">@BillyJoinville</p>
+          </div>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
 
+        <a class="contact-card" href="https://webeaze.io" target="_blank" rel="noopener">
+          <div class="contact-icon">
+            <img src="images/website-services-logo.jpg" alt="WebEaze">
+          </div>
+          <div class="contact-text">
+            <p class="contact-label">WebEaze</p>
+            <p class="contact-val">webeaze.io</p>
+          </div>
+          <span class="contact-arrow">&#8599;</span>
+        </a>
 
-<footer class="site-footer">
-    <p><a href="https://webeaze.io" target="_blank">WebEaze Web Design</a></p>
-    <p><a href="#top">Back to Top</a></p>
-    <p>© 2025 Billy Joinville. All rights reserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Availability -->
+  <section class="section">
+    <div class="c">
+      <div class="avail-block">
+        <div>
+          <p class="sec-tag" style="margin-bottom:8px;">Availability</p>
+          <h2 class="sec-title" style="margin-bottom:16px;">Open to new opportunities</h2>
+          <p style="font-size:15px;line-height:1.75;color:var(--muted);max-width:560px;">Graduating May 2026 from the University of Miami with a B.A. in Computer Science. Available for full-time roles, internships, or freelance projects starting Summer 2026. Especially interested in product engineering, frontend, and growth-adjacent roles.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px;">
+          <a class="btn btn-fill" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download resume</a>
+          <a class="btn btn-outline" href="projects-gallery.html">See my work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="c">
+    <p class="footer-copy">&copy; 2025 Billy Joinville</p>
+    <div class="footer-links">
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+      <a href="terms.html">Terms</a>
+      <a href="#top">Top</a>
+    </div>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<a href="#top" id="top-btn" aria-label="Back to top">&#8593;</a>
 
+<script>
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('drawer');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('is-open');
+    drawer.classList.toggle('open');
+  });
+  document.querySelectorAll('#drawer a').forEach(a =>
+    a.addEventListener('click', () => {
+      burger.classList.remove('is-open');
+      drawer.classList.remove('open');
+    })
+  );
+  window.addEventListener('scroll', () => {
+    document.getElementById('top-btn').classList.toggle('show', scrollY > 300);
+  });
+</script>
 </body>
 </html>

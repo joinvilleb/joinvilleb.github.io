@@ -1,171 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Billy Joinville</title>
-
-  <meta name="description" content="Product-focused software engineer building user-facing web experiences with React, JavaScript, and Python. Founder of WebEaze.">
-
-  <link href="css/billy-joinville.css" rel="stylesheet">
-  <link href="css/portfolio-v2.css" rel="stylesheet">
+  <meta name="description" content="Computer science student at the University of Miami. Founder of WebEaze. Graduating May 2026.">
   <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
-  <link rel="shortcut icon" href="images/favicon-portfolio.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <meta property="og:title" content="Billy Joinville - Welcome">
-  <meta property="og:description" content="Student at the University of Miami. Bridging technology and creativity. Founder of WebEaze. Explore my history and past work.">
-  <meta property="og:image" content="images/website-services-logo.jpg">
-  <meta property="og:url" content="https://billyjoinville.me/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
 </head>
-<body class="page-portfolio" id="top">
+<body id="top">
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-glass">
-  <div class="container-fluid px-4">
-    <a class="navbar-brand fw-bold" href="index.html">Billy Joinville</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="mainNavbar">
-      <ul class="navbar-nav align-items-lg-center gap-lg-3 mt-3 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="index.html">Welcome</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="projects-gallery.html">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://webeaze.io" target="_blank">WebEaze</a>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-sm btn-outline-dark px-3" href="contact.html">Contact Billy</a>
-        </li>
-      </ul>
+<!-- Nav -->
+<nav class="nav">
+  <div class="c">
+    <a class="nav-brand" href="index.html">Billy Joinville</a>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects-gallery.html">Work</a>
+      <a href="resume.html">Resume</a>
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
     </div>
+    <a class="nav-cta" href="contact.html">Contact</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
+<!-- Mobile drawer -->
+<div class="nav-drawer" id="drawer">
+  <div class="nav-links">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="projects-gallery.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+  </div>
+  <a class="nav-cta btn btn-fill" href="contact.html">Contact</a>
+</div>
 
-<main class="site-wrap">
-  <section class="hero">
+<!-- Hero -->
+<section class="hero">
+  <div class="c">
     <div class="hero-copy">
-      <p class="eyebrow">Product-focused software engineer</p>
-      <h1 class="hero-title">Billy Joinville</h1>
-      <p class="hero-lede">Computer Science student at the University of Miami. Founder of WebEaze. Spotify Community Star. Member of Alpha Kappa Psi. </p>
+      <p class="hero-kicker">CS Student &nbsp;/&nbsp; University of Miami &nbsp;/&nbsp; Class of 2026</p>
+      <h1 class="hero-name">Billy<br>Joinville</h1>
+      <p class="hero-bio">
+        I build web interfaces and software tools. Founder of WebEaze, a studio that ships custom websites for small businesses. Previously an IT intern at Delaware Elevator and a social media intern at Fizz Social. I study computer science at the University of Miami, carry a 3.70 GPA, and run the club running team as president.
+      </p>
       <div class="hero-actions">
-        <a class="btn-solid" href="projects-gallery.html">View projects</a>
-        <a class="btn-ghost" href="contact.html">Contact</a>
+        <a class="btn btn-fill" href="projects-gallery.html">View my work</a>
+        <a class="btn btn-outline" href="resume.html">Resume</a>
       </div>
-      <div class="metric-grid">
-        <div class="metric-card">
-          <span class="metric-value">40+</span>
-          <span class="metric-label">Production websites shipped</span>
+      <div class="hero-stats">
+        <div>
+          <span class="stat-val">40+</span>
+          <span class="stat-lbl">Sites shipped</span>
         </div>
-        <div class="metric-card">
-          <span class="metric-value">Frontend</span>
-          <span class="metric-label">React, JavaScript, HTML, CSS</span>
+        <div>
+          <span class="stat-val">React</span>
+          <span class="stat-lbl">JS / HTML / CSS</span>
         </div>
-        <div class="metric-card">
-          <span class="metric-value">Backend</span>
-          <span class="metric-label">Python, Java, automation</span>
+        <div>
+          <span class="stat-val">Python</span>
+          <span class="stat-lbl">Java / automation</span>
         </div>
       </div>
     </div>
-    <div class="hero-media">
-      <img src="images/billy-o-portrait.png" alt="A self portrait of Billy Joinville" class="hero-portrait">
-      <div class="hero-note">Founder of WebEaze, a boutique studio for small business websites and front-end systems.</div>
+    <div class="hero-img-wrap">
+      <img class="hero-img" src="images/billy-o-portrait.png" alt="Billy Joinville">
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="section-head">
-      <h2 class="section-title">Focus areas</h2>
-      <p class="section-subtitle">I like the intersection of product, design, and engineering. My work is grounded in real users and practical delivery.</p>
+<!-- Focus areas -->
+<section class="section">
+  <div class="c">
+    <p class="sec-tag">Focus</p>
+    <h2 class="sec-title">What I work on</h2>
+    <div class="panels">
+      <div class="panel">
+        <h3>Frontend engineering</h3>
+        <p>Responsive layouts and component systems using React, JavaScript, HTML, and CSS. I care about load time, accessibility, and code that is easy to hand off.</p>
+      </div>
+      <div class="panel">
+        <h3>Workflow automation</h3>
+        <p>Python scripts, REST API integrations, and internal tooling that cuts manual work. I have built automations with Google Workspace, HubSpot, Calendly, and custom JavaScript.</p>
+      </div>
+      <div class="panel">
+        <h3>Product and analytics</h3>
+        <p>UX research, conversion tracking, and experimentation. I work directly with clients and users before writing the first line of code.</p>
+      </div>
     </div>
-    <div class="panel-grid">
-      <div class="panel">
-        <h3>Interface craft</h3>
-        <p>UI design, responsive systems, component libraries, and accessibility-first layouts.</p>
-      </div>
-      <div class="panel">
-        <h3>Performance and analytics</h3>
-        <p>Instrumentation, experiments, and optimizations that keep products fast and measurable.</p>
-      </div>
-      <div class="panel">
-        <h3>Founder mindset</h3>
-        <p>Stakeholder alignment, roadmapping, and shipping in real-world timelines.</p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="section-head">
-      <h2 class="section-title">Featured work</h2>
-      <p class="section-subtitle">A quick look at highlights across product, community, and leadership.</p>
+<!-- Education -->
+<section class="section">
+  <div class="c">
+    <p class="sec-tag">Background</p>
+    <h2 class="sec-title">Education</h2>
+    <div class="edu-block">
+      <p class="edu-school">University of Miami &nbsp;&mdash;&nbsp; Coral Gables, Florida</p>
+      <p class="edu-degree">B.A. Computer Science &nbsp;/ Minor in Sustainable Business and Communication Studies &nbsp;/ GPA 3.70 &nbsp;/ May 2026</p>
+      <p class="edu-honors">President's Honor Roll &nbsp;&middot;&nbsp; Provost's Honor Roll &nbsp;&middot;&nbsp; Dean's List</p>
+      <div class="edu-grid">
+        <div>
+          <p class="edu-lbl">Relevant coursework</p>
+          <p class="edu-val">Data Structures, Java, Python, C, C++, Discrete Mathematics, Corporate Sustainability</p>
+        </div>
+        <div>
+          <p class="edu-lbl">Study abroad</p>
+          <p class="edu-val">Barcelona, Spain &nbsp;&middot;&nbsp; Fall 2025<br>International Business, Technology &amp; Communication</p>
+        </div>
+        <div>
+          <p class="edu-lbl">Languages</p>
+          <p class="edu-val">English, Haitian Creole, Spanish</p>
+        </div>
+      </div>
     </div>
-    <div class="media-grid">
-      <article class="media-card">
-        <img src="images/mockups-ad.png" alt="WebEaze website mockups">
-        <h3>WebEaze</h3>
-        <p>Founded and lead delivery for a subscription-based web platform serving small businesses with custom, managed websites.</p>
-        <a href="https://webeaze.io" class="btn-ghost">Visit WebEaze</a>
-      </article>
-      <article class="media-card">
-        <img src="images/dei-billy.jpg" alt="Billy Joinville at Delaware Elevator">
+  </div>
+</section>
+
+<!-- Selected work -->
+<section class="section">
+  <div class="c">
+    <p class="sec-tag">Selected work</p>
+    <h2 class="sec-title">Featured projects</h2>
+    <div class="work-grid">
+      <div class="work-card">
+        <img src="images/mockups-ad.png" alt="WebEaze mockups">
+        <h3>WebEaze Web Design</h3>
+        <p>Founded and lead a subscription-based web studio delivering 40+ production websites for small businesses. Built frontend systems in React and JavaScript, managed all client delivery.</p>
+        <a class="btn btn-outline" href="https://webeaze.io" target="_blank" rel="noopener">Visit WebEaze</a>
+      </div>
+      <div class="work-card">
+        <img src="images/dei-billy.jpg" alt="Billy at Delaware Elevator">
         <h3>Delaware Elevator Internship</h3>
-        <p>Resolved cross-team technical issues, improved collaboration, and delivered structured solutions during two summer internships.</p>
-        <a href="projects-gallery.html" class="btn-ghost">Read more</a>
-      </article>
-      <article class="media-card">
-        <img src="images/spotify-team-billy.jpg" alt="Spotify community event">
+        <p>IT intern for two consecutive summers. Built Python and JavaScript automation that cut help desk response times by 30%, and integrated Power BI dashboards for executive reporting.</p>
+        <a class="btn btn-outline" href="projects-gallery.html#delaware-elevator">See more</a>
+      </div>
+      <div class="work-card">
+        <img src="images/spotify-team-billy.jpg" alt="Spotify Star Jam">
         <h3>Spotify Community Star</h3>
-        <p>Super User contributor focused on product support, published articles, and community leadership.</p>
-        <a href="projects-gallery.html" class="btn-ghost">Read more</a>
-      </article>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <h2 class="section-title">How I work</h2>
-      <p class="section-subtitle">Clear scope, thoughtful design, and direct collaboration with the people closest to the problem.</p>
-    </div>
-    <div class="panel-grid">
-      <div class="panel">
-        <h3>Discovery first</h3>
-        <p>Quick audits, user goals, and the smallest viable launch plan.</p>
-      </div>
-      <div class="panel">
-        <h3>Build and iterate</h3>
-        <p>Ship fast, measure impact, and refine with real feedback.</p>
-      </div>
-      <div class="panel">
-        <h3>Reliable delivery</h3>
-        <p>Transparent timelines, clean handoff, and support after launch.</p>
+        <p>Super User since 2018. Published platform guides, analyzed user engagement trends, and attended the annual Star Jam at Spotify headquarters to meet product teams.</p>
+        <a class="btn btn-outline" href="projects-gallery.html#spotify">See more</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="memorial-card">
-      <h3>In Memory of My Mother, Ismaelie Antoine</h3>
-      <p>Ovarian cancer took my mother's life in February 2022. Her spirit continues to inspire my work and future goals. To honor her memory, I encourage you to support the <a href="http://ocrahope.org" target="_blank">Ovarian Cancer Research Alliance (OCRA)</a>, a leading organization dedicated to funding research and providing support for those affected by ovarian cancer.</p>
-      <a href="http://ocrahope.org/donate" target="_blank" class="btn-solid">Donate to OCRA</a>
+<!-- Skills -->
+<section class="section">
+  <div class="c">
+    <p class="sec-tag">Skills</p>
+    <h2 class="sec-title">Tools and technologies</h2>
+    <div class="skills">
+      <div class="skill-col">
+        <h4>Frontend</h4>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Backend</h4>
+        <ul>
+          <li>Python</li>
+          <li>Java</li>
+          <li>REST APIs</li>
+          <li>Automation scripting</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Product</h4>
+        <ul>
+          <li>UX research</li>
+          <li>Analytics</li>
+          <li>Experimentation</li>
+          <li>A/B testing</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h4>Tools</h4>
+        <ul>
+          <li>Figma</li>
+          <li>Git</li>
+          <li>HubSpot</li>
+          <li>Power BI</li>
+          <li>Google Workspace</li>
+        </ul>
+      </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
-<footer class="site-footer">
-  <p><a href="https://webeaze.io">WebEaze</a></p>
-  <p>© 2025 Billy Joinville. All rights reserved.</p>
+<!-- How I work -->
+<section class="section">
+  <div class="c">
+    <p class="sec-tag">Process</p>
+    <h2 class="sec-title">How I work</h2>
+    <div class="panels">
+      <div class="panel">
+        <h3>Start with scope</h3>
+        <p>I audit what exists, talk to the actual users, and define the smallest version that solves the real problem before touching any code.</p>
+      </div>
+      <div class="panel">
+        <h3>Build and ship</h3>
+        <p>I move fast, keep the code readable, and prioritize shipping something real over over-engineering something perfect.</p>
+      </div>
+      <div class="panel">
+        <h3>Own the outcome</h3>
+        <p>I stay available after delivery, track what matters, and keep iterating when the numbers say something is off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Memorial -->
+<section class="section">
+  <div class="c">
+    <div class="memorial">
+      <h3>In memory of Ismaelie Antoine</h3>
+      <p>My mother passed from ovarian cancer in February 2022. Her resilience and love for others continue to shape how I approach work and life. If you are able, please consider supporting the <a href="http://ocrahope.org" target="_blank" rel="noopener" style="text-decoration:underline;color:inherit;">Ovarian Cancer Research Alliance (OCRA)</a>, which funds research and supports families affected by the disease.</p>
+      <a class="btn btn-fill" href="http://ocrahope.org/donate" target="_blank" rel="noopener">Donate to OCRA</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="c">
+    <p class="footer-copy">&copy; 2025 Billy Joinville</p>
+    <div class="footer-links">
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+      <a href="terms.html">Terms</a>
+      <a href="#top">Top</a>
+    </div>
+  </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<a href="#top" id="top-btn" aria-label="Back to top">&#8593;</a>
+
+<script>
+  const burger = document.getElementById('burger');
+  const drawer = document.getElementById('drawer');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('is-open');
+    drawer.classList.toggle('open');
+  });
+  document.querySelectorAll('#drawer a').forEach(a =>
+    a.addEventListener('click', () => {
+      burger.classList.remove('is-open');
+      drawer.classList.remove('open');
+    })
+  );
+  window.addEventListener('scroll', () => {
+    document.getElementById('top-btn').classList.toggle('show', scrollY > 300);
+  });
+</script>
 </body>
 </html>
