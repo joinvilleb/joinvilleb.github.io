@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Billy Joinville</title>
-  <meta name="description" content="Computer science student at the University of Miami. Founder of WebEaze. Graduating May 2026.">
-  <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+  <meta name="description" content="Billy Joinville is a software engineer and computer science graduate from the University of Miami. Former Spotify intern and founder of WebEaze.">
+  <link rel="icon" href="images/favicon-billy.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <meta property="og:title" content="Billy Joinville">
+  <meta property="og:description" content="Software engineer and CS grad. Former Spotify intern, founder of WebEaze.">
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body id="top">
 
-<!-- Nav -->
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="c">
     <a class="nav-brand" href="index.html">Billy Joinville</a>
     <div class="nav-links">
@@ -23,14 +26,10 @@
       <a href="resume.html">Resume</a>
       <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
     </div>
-    <a class="nav-cta" href="contact.html">Contact</a>
-    <button class="nav-burger" id="burger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a class="nav-cta" href="contact.html">Get in touch</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
-
-<!-- Mobile drawer -->
 <div class="nav-drawer" id="drawer">
   <div class="nav-links">
     <a href="index.html" aria-current="page">Home</a>
@@ -38,213 +37,246 @@
     <a href="resume.html">Resume</a>
     <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
   </div>
-  <a class="nav-cta btn btn-fill" href="contact.html">Contact</a>
+  <a class="nav-cta" href="contact.html">Get in touch</a>
 </div>
 
-<!-- Hero -->
-<section class="hero">
+<header class="hero">
   <div class="c">
     <div class="hero-copy">
-      <p class="hero-kicker">CS Student &nbsp;/&nbsp; University of Miami &nbsp;/&nbsp; Class of 2026</p>
-      <h1 class="hero-name">Billy<br>Joinville</h1>
-      <p class="hero-bio">
-        I build web interfaces and software tools. Founder of WebEaze, a studio that ships custom websites for small businesses. Previously an IT intern at Delaware Elevator and a social media intern at Fizz Social. I study computer science at the University of Miami, carry a 3.70 GPA, and run the club running team as president.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-fill" href="projects-gallery.html">View my work</a>
-        <a class="btn btn-outline" href="resume.html">Resume</a>
+      <h1 class="hero-name reveal">Billy Joinville</h1>
+      <p class="hero-bio reveal">I'm a software engineer and a recent computer science graduate from the University of Miami. This past summer I interned on Spotify's mobile team in New York. The rest of my time goes to WebEaze, a small studio I started that builds websites for local businesses.</p>
+      <p class="hero-bio reveal">I like working across the whole stack, from the interface down to the scripts that keep things running. I'm looking for a full-time engineering role for 2026.</p>
+      <div class="hero-actions reveal">
+        <a class="btn btn-fill" href="projects-gallery.html">See my work</a>
+        <a class="btn btn-outline" href="resume.html">Read my resume</a>
       </div>
-      <div class="hero-stats">
+      <div class="hero-now reveal">
         <div>
-          <span class="stat-val">40+</span>
-          <span class="stat-lbl">Sites shipped</span>
+          <p class="hero-now-lbl">Now</p>
+          <p class="hero-now-val">Founder, WebEaze</p>
+          <p class="hero-now-sub">Building sites for small businesses</p>
         </div>
         <div>
-          <span class="stat-val">React</span>
-          <span class="stat-lbl">JS / HTML / CSS</span>
+          <p class="hero-now-lbl">Last summer</p>
+          <p class="hero-now-val">SWE Intern, Spotify</p>
+          <p class="hero-now-sub">Messages team, New York</p>
         </div>
         <div>
-          <span class="stat-val">Python</span>
-          <span class="stat-lbl">Java / automation</span>
+          <p class="hero-now-lbl">Studying</p>
+          <p class="hero-now-val">B.A. Computer Science</p>
+          <p class="hero-now-sub">University of Miami, 2026</p>
         </div>
       </div>
     </div>
-    <div class="hero-img-wrap">
-      <img class="hero-img" src="images/billy-o-portrait.png" alt="Billy Joinville">
+    <div class="hero-media reveal">
+      <div class="hero-frame">
+        <img class="hero-portrait" src="images/billy-o-portrait.png" alt="Billy Joinville">
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="section" id="work">
+  <div class="c">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Some things I've worked on</h2>
+    </div>
+
+    <div class="work-list">
+      <article class="work-item reveal">
+        <div class="work-media"><img src="images/mockups-ad.png" alt="A WebEaze client site shown across devices"></div>
+        <div class="work-body">
+          <p class="work-idx">Founder &amp; engineer</p>
+          <h3 class="work-title">WebEaze</h3>
+          <p class="work-org">2024 – now</p>
+          <p class="work-desc">I started WebEaze in 2024 as a subscription web studio for small businesses. So far I've built and shipped more than 40 responsive sites in React, plus the analytics, SEO, and small automation scripts that handle client onboarding behind the scenes.</p>
+          <div class="work-tags"><span class="tag">React</span><span class="tag">JavaScript</span><span class="tag">HTML &amp; CSS</span><span class="tag">SEO</span></div>
+          <a class="tlink" href="https://webeaze.io" target="_blank" rel="noopener">webeaze.io</a>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="work-media"><img src="images/spotify-team-billy.jpg" alt="Billy with the Spotify engineering team"></div>
+        <div class="work-body">
+          <p class="work-idx">Software engineering intern</p>
+          <h3 class="work-title">Spotify, Messages</h3>
+          <p class="work-org">Summer 2025 &middot; New York</p>
+          <p class="work-desc">I spent the summer on Spotify's mobile team working on the Messages feature. Most of my work was in the backend services (Java, Python, and Scala) running on Google Cloud and Kubernetes, shipped through the usual cycle of code reviews and iteration.</p>
+          <div class="work-tags"><span class="tag">Java</span><span class="tag">Python</span><span class="tag">Scala</span><span class="tag">GCP</span></div>
+          <a class="tlink" href="projects-gallery.html#spotify">More on this</a>
+        </div>
+      </article>
+
+      <article class="work-item reveal">
+        <div class="work-media"><img src="images/dei-billy.jpg" alt="Billy with the Delaware Elevator team"></div>
+        <div class="work-body">
+          <p class="work-idx">IT intern</p>
+          <h3 class="work-title">Delaware Elevator</h3>
+          <p class="work-org">Summers 2023 – 24 &middot; Maryland</p>
+          <p class="work-desc">Two summers in the IT department of an elevator company. I wrote Python and JavaScript scripts that cut help desk response times by about a third, and built a few Power BI dashboards on top of Microsoft Dynamics so leadership could see what was going on.</p>
+          <div class="work-tags"><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">Power BI</span></div>
+          <a class="tlink" href="projects-gallery.html">See the full history</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- Focus areas -->
-<section class="section">
+<section class="section section-alt" id="experience">
   <div class="c">
-    <p class="sec-tag">Focus</p>
-    <h2 class="sec-title">What I work on</h2>
-    <div class="panels">
-      <div class="panel">
-        <h3>Frontend engineering</h3>
-        <p>Responsive layouts and component systems using React, JavaScript, HTML, and CSS. I care about load time, accessibility, and code that is easy to hand off.</p>
+    <div class="sec-head reveal">
+      <h2 class="sec-title">Where I've worked</h2>
+    </div>
+    <div class="exp-list">
+      <div class="exp-row reveal">
+        <span class="exp-when">2025</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Software Engineering Intern</h3>
+          <p class="exp-org">Spotify</p>
+          <p class="exp-desc">Worked on the Messages feature with the mobile team, mostly in the Java, Python, and Scala backend, on Google Cloud and Kubernetes.</p>
+        </div>
+        <span class="exp-loc">New York</span>
       </div>
-      <div class="panel">
-        <h3>Workflow automation</h3>
-        <p>Python scripts, REST API integrations, and internal tooling that cuts manual work. I have built automations with Google Workspace, HubSpot, Calendly, and custom JavaScript.</p>
+      <div class="exp-row reveal">
+        <span class="exp-when">2025</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Social Media &amp; Growth Intern</h3>
+          <p class="exp-org">Fizz Social</p>
+          <p class="exp-desc">Dug through onboarding and retention data in SQL and Excel to find where people dropped off, and prototyped a few school-specific features in Figma.</p>
+        </div>
+        <span class="exp-loc">Remote</span>
       </div>
-      <div class="panel">
-        <h3>Product and analytics</h3>
-        <p>UX research, conversion tracking, and experimentation. I work directly with clients and users before writing the first line of code.</p>
+      <div class="exp-row reveal">
+        <span class="exp-when">2024 –</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Founder &amp; Engineer</h3>
+          <p class="exp-org">WebEaze</p>
+          <p class="exp-desc">Run a subscription web studio: 40+ responsive React sites so far, plus analytics, SEO, and the automation that keeps onboarding moving.</p>
+        </div>
+        <span class="exp-loc">Coral Gables, FL</span>
+      </div>
+      <div class="exp-row reveal">
+        <span class="exp-when">2024 –</span>
+        <div class="exp-main">
+          <h3 class="exp-role">CS &amp; Math Tutor</h3>
+          <p class="exp-org">Ibis Prep</p>
+          <p class="exp-desc">Write coding exercises in Python and Java and walk students through data structures, algorithms, and how to think through a problem.</p>
+        </div>
+        <span class="exp-loc">Coral Gables, FL</span>
+      </div>
+      <div class="exp-row reveal">
+        <span class="exp-when">2022 –</span>
+        <div class="exp-main">
+          <h3 class="exp-role">IT Lab Technician</h3>
+          <p class="exp-org">University of Miami IT</p>
+          <p class="exp-desc">Imaged and deployed 500+ devices, and handled the day-to-day hardware and software support for faculty and staff on Windows and macOS.</p>
+        </div>
+        <span class="exp-loc">Coral Gables, FL</span>
+      </div>
+      <div class="exp-row reveal">
+        <span class="exp-when">2023 – 24</span>
+        <div class="exp-main">
+          <h3 class="exp-role">IT Intern</h3>
+          <p class="exp-org">Delaware Elevator</p>
+          <p class="exp-desc">Automated help desk work with Python and JavaScript, and built Power BI dashboards on Microsoft Dynamics for the leadership team.</p>
+        </div>
+        <span class="exp-loc">Salisbury, MD</span>
+      </div>
+    </div>
+    <p style="margin-top:32px;"><a class="tlink" href="projects-gallery.html">See everything, including earlier roles</a></p>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="c">
+    <div class="about-grid">
+      <div class="about-media reveal"><img src="images/business-suit-bayside.png" alt="Billy in Miami"></div>
+      <div class="about-copy reveal">
+        <p class="about-lead">I got into this because I like making things people actually use.</p>
+        <p class="about-p">I'm finishing a computer science degree at the University of Miami, with minors in communication studies and sustainable business. Outside of class I've been building websites, tutoring students in Python and Java, and interning wherever I could, from a small IT department in Maryland to Spotify in New York.</p>
+        <p class="about-p">I work best when I own a problem end to end: figuring out what someone actually needs, building it, and sticking around to fix what breaks. When I'm not at a computer I'm usually running. I'm president of the club running team here.</p>
+        <div class="about-stats">
+          <div class="about-stat"><div class="num">3.70</div><div class="lbl">GPA at Miami</div></div>
+          <div class="about-stat"><div class="num">40<small>+</small></div><div class="lbl">Sites built for clients</div></div>
+          <div class="about-stat"><div class="num">2026</div><div class="lbl">Graduating this spring</div></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Education -->
-<section class="section">
+<section class="section section-alt" id="skills">
   <div class="c">
-    <p class="sec-tag">Background</p>
-    <h2 class="sec-title">Education</h2>
-    <div class="edu-block">
-      <p class="edu-school">University of Miami &nbsp;&mdash;&nbsp; Coral Gables, Florida</p>
-      <p class="edu-degree">B.A. Computer Science &nbsp;/ Minor in Sustainable Business and Communication Studies &nbsp;/ GPA 3.70 &nbsp;/ May 2026</p>
-      <p class="edu-honors">President's Honor Roll &nbsp;&middot;&nbsp; Provost's Honor Roll &nbsp;&middot;&nbsp; Dean's List</p>
-      <div class="edu-grid">
-        <div>
-          <p class="edu-lbl">Relevant coursework</p>
-          <p class="edu-val">Data Structures, Java, Python, C, C++, Discrete Mathematics, Corporate Sustainability</p>
-        </div>
-        <div>
-          <p class="edu-lbl">Study abroad</p>
-          <p class="edu-val">Barcelona, Spain &nbsp;&middot;&nbsp; Fall 2025<br>International Business, Technology &amp; Communication</p>
-        </div>
-        <div>
-          <p class="edu-lbl">Languages</p>
-          <p class="edu-val">English, Haitian Creole, Spanish</p>
-        </div>
-      </div>
+    <div class="sec-head reveal">
+      <h2 class="sec-title">What I work with</h2>
     </div>
-  </div>
-</section>
-
-<!-- Selected work -->
-<section class="section">
-  <div class="c">
-    <p class="sec-tag">Selected work</p>
-    <h2 class="sec-title">Featured projects</h2>
-    <div class="work-grid">
-      <div class="work-card">
-        <img src="images/mockups-ad.png" alt="WebEaze mockups">
-        <h3>WebEaze Web Design</h3>
-        <p>Founded and lead a subscription-based web studio delivering 40+ production websites for small businesses. Built frontend systems in React and JavaScript, managed all client delivery.</p>
-        <a class="btn btn-outline" href="https://webeaze.io" target="_blank" rel="noopener">Visit WebEaze</a>
-      </div>
-      <div class="work-card">
-        <img src="images/dei-billy.jpg" alt="Billy at Delaware Elevator">
-        <h3>Delaware Elevator Internship</h3>
-        <p>IT intern for two consecutive summers. Built Python and JavaScript automation that cut help desk response times by 30%, and integrated Power BI dashboards for executive reporting.</p>
-        <a class="btn btn-outline" href="projects-gallery.html#delaware-elevator">See more</a>
-      </div>
-      <div class="work-card">
-        <img src="images/spotify-team-billy.jpg" alt="Spotify Star Jam">
-        <h3>Spotify Community Star</h3>
-        <p>Super User since 2018. Published platform guides, analyzed user engagement trends, and attended the annual Star Jam at Spotify headquarters to meet product teams.</p>
-        <a class="btn btn-outline" href="projects-gallery.html#spotify">See more</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Skills -->
-<section class="section">
-  <div class="c">
-    <p class="sec-tag">Skills</p>
-    <h2 class="sec-title">Tools and technologies</h2>
     <div class="skills">
-      <div class="skill-col">
-        <h4>Frontend</h4>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>React</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Backend</h4>
-        <ul>
-          <li>Python</li>
-          <li>Java</li>
-          <li>REST APIs</li>
-          <li>Automation scripting</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Product</h4>
-        <ul>
-          <li>UX research</li>
-          <li>Analytics</li>
-          <li>Experimentation</li>
-          <li>A/B testing</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h4>Tools</h4>
-        <ul>
-          <li>Figma</li>
-          <li>Git</li>
-          <li>HubSpot</li>
-          <li>Power BI</li>
-          <li>Google Workspace</li>
-        </ul>
-      </div>
+      <div class="skill-col reveal"><h3>Frontend</h3><ul><li>React</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
+      <div class="skill-col reveal"><h3>Backend</h3><ul><li>Python</li><li>Java</li><li>REST APIs</li><li>Automation</li></ul></div>
+      <div class="skill-col reveal"><h3>Data</h3><ul><li>SQL</li><li>Excel</li><li>Power BI</li><li>Dynamics</li></ul></div>
+      <div class="skill-col reveal"><h3>Design &amp; tools</h3><ul><li>Figma</li><li>Git</li><li>Prototyping</li><li>Analytics</li></ul></div>
     </div>
   </div>
 </section>
 
-<!-- How I work -->
-<section class="section">
+<section class="section" id="education">
   <div class="c">
-    <p class="sec-tag">Process</p>
-    <h2 class="sec-title">How I work</h2>
-    <div class="panels">
-      <div class="panel">
-        <h3>Start with scope</h3>
-        <p>I audit what exists, talk to the actual users, and define the smallest version that solves the real problem before touching any code.</p>
+    <div class="sec-head reveal">
+      <h2 class="sec-title">School</h2>
+    </div>
+    <div class="edu-card reveal">
+      <div>
+        <h3 class="edu-school">University of Miami</h3>
+        <p class="edu-degree">B.A. Computer Science<br>Minors in Communication Studies &amp; Sustainable Business</p>
+        <p class="edu-honor">Coral Gables, Florida &middot; Class of 2026</p>
+        <div class="edu-gpa"><span class="g-num">3.70</span><span class="g-lbl">GPA / 4.00</span></div>
       </div>
-      <div class="panel">
-        <h3>Build and ship</h3>
-        <p>I move fast, keep the code readable, and prioritize shipping something real over over-engineering something perfect.</p>
-      </div>
-      <div class="panel">
-        <h3>Own the outcome</h3>
-        <p>I stay available after delivery, track what matters, and keep iterating when the numbers say something is off.</p>
+      <div>
+        <div class="edu-detail">
+          <p class="edu-lbl">Coursework I got the most out of</p>
+          <p class="edu-val">Data Structures, Algorithms, Java, Python, Discrete Mathematics, and Corporate Sustainability.</p>
+        </div>
+        <div class="edu-detail">
+          <p class="edu-lbl">Capstone</p>
+          <p class="edu-val">Led the IT side of a 30-person team building a mobile app prototype for Palmetto Goodwill: a loyalty program, donation scheduling, a store locator, and online shopping. We handed the finished prototype off to their dev team.</p>
+        </div>
+        <div class="edu-detail">
+          <p class="edu-lbl">Around campus</p>
+          <p class="edu-val">President of UM Club Running, and on the Student Government elections committee. I speak English and Haitian Creole.</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Memorial -->
-<section class="section">
-  <div class="c">
-    <div class="memorial">
-      <h3>In memory of Ismaelie Antoine</h3>
-      <p>My mother passed from ovarian cancer in February 2022. Her resilience and love for others continue to shape how I approach work and life. If you are able, please consider supporting the <a href="http://ocrahope.org" target="_blank" rel="noopener" style="text-decoration:underline;color:inherit;">Ovarian Cancer Research Alliance (OCRA)</a>, which funds research and supports families affected by the disease.</p>
-      <a class="btn btn-fill" href="http://ocrahope.org/donate" target="_blank" rel="noopener">Donate to OCRA</a>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
 <footer class="footer">
   <div class="c">
-    <p class="footer-copy">&copy; 2025 Billy Joinville</p>
-    <div class="footer-links">
-      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-      <a href="terms.html">Terms</a>
-      <a href="#top">Top</a>
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <p class="footer-brand">Billy Joinville</p>
+        <p class="footer-tag">Software engineer and CS grad in Miami. Currently building WebEaze and looking for what's next.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="projects-gallery.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+        <a href="mailto:joinvillebilly@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <p>&copy; 2026 Billy Joinville</p>
     </div>
   </div>
 </footer>
 
-<a href="#top" id="top-btn" aria-label="Back to top">&#8593;</a>
+<a href="#top" id="top-btn" aria-label="Back to top">↑</a>
 
 <script>
   const burger = document.getElementById('burger');
@@ -253,15 +285,26 @@
     burger.classList.toggle('is-open');
     drawer.classList.toggle('open');
   });
-  document.querySelectorAll('#drawer a').forEach(a =>
-    a.addEventListener('click', () => {
-      burger.classList.remove('is-open');
-      drawer.classList.remove('open');
-    })
-  );
-  window.addEventListener('scroll', () => {
-    document.getElementById('top-btn').classList.toggle('show', scrollY > 300);
-  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('is-open');
+    drawer.classList.remove('open');
+  }));
+
+  const nav = document.getElementById('nav');
+  const topBtn = document.getElementById('top-btn');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+    topBtn.classList.toggle('show', window.scrollY > 500);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>

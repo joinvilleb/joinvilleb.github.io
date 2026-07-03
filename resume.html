@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume — Billy Joinville</title>
-  <meta name="description" content="Resume of Billy Joinville, CS student at the University of Miami graduating May 2026.">
-  <link rel="icon" href="images/favicon-portfolio.png" type="image/png">
+  <title>Resume · Billy Joinville</title>
+  <meta name="description" content="Billy Joinville's resume. Software engineer and CS graduate, University of Miami, class of 2026.">
+  <link rel="icon" href="images/favicon-billy.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body id="top">
 
-<!-- Nav -->
-<nav class="nav">
+<nav class="nav" id="nav">
   <div class="c">
     <a class="nav-brand" href="index.html">Billy Joinville</a>
     <div class="nav-links">
@@ -23,10 +23,8 @@
       <a href="resume.html" aria-current="page">Resume</a>
       <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
     </div>
-    <a class="nav-cta" href="contact.html">Contact</a>
-    <button class="nav-burger" id="burger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
+    <a class="nav-cta" href="contact.html">Get in touch</a>
+    <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="nav-drawer" id="drawer">
@@ -36,149 +34,115 @@
     <a href="resume.html" aria-current="page">Resume</a>
     <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
   </div>
-  <a class="nav-cta btn btn-fill" href="contact.html">Contact</a>
+  <a class="nav-cta" href="contact.html">Get in touch</a>
 </div>
 
-<!-- Page header -->
 <header class="page-head">
   <div class="c">
-    <p class="page-kicker">Download or view</p>
-    <h1 class="page-title">Resume</h1>
-    <p class="page-desc">Billy Joinville &mdash; CS student at the University of Miami, graduating May 2026. To display your PDF below, commit <code style="font-size:0.85em;background:#f8fafc;padding:2px 6px;border:1px solid #e5e7eb;font-family:monospace;">resume.pdf</code> to the site root.</p>
-    <div class="page-actions">
+    <h1 class="page-title reveal">Resume</h1>
+    <p class="page-desc reveal">The whole thing is below. You can read it here or grab a PDF.</p>
+    <div class="page-actions reveal">
       <a class="btn btn-fill" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download PDF</a>
-      <a class="btn btn-outline" href="contact.html">Get in touch</a>
+      <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
     </div>
   </div>
 </header>
 
-<main>
-
-  <!-- PDF viewer -->
-  <section class="section">
-    <div class="c">
-      <iframe
-        class="resume-embed"
-        src="resume.pdf"
-        title="Billy Joinville Resume"
-        aria-label="Resume PDF viewer">
-      </iframe>
+<section class="section" style="padding-top:clamp(20px,3vw,36px);">
+  <div class="c">
+    <div class="resume-bar reveal">
+      <p><strong>Billy Joinville</strong> &middot; updated 2026</p>
+      <a class="tlink" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download a copy</a>
     </div>
-  </section>
+    <iframe class="resume-embed reveal" src="resume.pdf#view=FitH" title="Billy Joinville resume" aria-label="Resume PDF"></iframe>
+  </div>
+</section>
 
-  <!-- Text summary -->
-  <section class="section">
-    <div class="c">
-      <p class="sec-tag">At a glance</p>
-      <h2 class="sec-title">Quick overview</h2>
-
-      <div class="exp-list">
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">University of Miami</p>
-            <p class="exp-org">B.A. Computer Science &nbsp;/ Minor in Sustainable Business and Communication Studies</p>
-            <p style="font-size:13.5px;color:var(--muted);margin-top:4px;">GPA 3.70 &nbsp;&middot;&nbsp; President's Honor Roll, Provost's Honor Roll, Dean's List &nbsp;&middot;&nbsp; Study abroad Barcelona, Fall 2025</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">May 2026</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">Founder and Lead Engineer &mdash; WebEaze</p>
-            <p class="exp-org">40+ websites shipped. React, JavaScript, Python, automation.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Oct 2024 &ndash; Present</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">CS and Math Tutor &mdash; Ibis Prep</p>
-            <p class="exp-org">Lesson design, algorithmic thinking, student retention.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Nov 2024 &ndash; Present</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">Social Media Intern &mdash; Fizz Social Corp.</p>
-            <p class="exp-org">Engagement analytics, behavioral insights, platform optimization.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">May &ndash; Sep 2025</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">IT Intern &mdash; Delaware Elevator, Inc.</p>
-            <p class="exp-org">Python and JS automation (-30% response time), Power BI dashboards. Two summers.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Jun 2023 &ndash; Aug 2024</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">IT Lab Technician &mdash; University of Miami</p>
-            <p class="exp-org">500+ device deployments, encryption, hardware and software support.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Sep 2022 &ndash; May 2026</span>
-          </div>
-        </div>
-        <div class="exp-row">
-          <div>
-            <p class="exp-role">Community Star &mdash; Spotify</p>
-            <p class="exp-org">Super User, published content, annual Star Jam. Remote.</p>
-          </div>
-          <div class="exp-right">
-            <span class="exp-date">Aug 2018 &ndash; Present</span>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top:48px;">
-        <p class="sec-tag" style="margin-bottom:8px;">Skills</p>
-        <div class="skills">
-          <div class="skill-col">
-            <h4>Frontend</h4>
-            <ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li></ul>
-          </div>
-          <div class="skill-col">
-            <h4>Backend</h4>
-            <ul><li>Python</li><li>Java</li><li>REST APIs</li><li>Automation</li></ul>
-          </div>
-          <div class="skill-col">
-            <h4>Product</h4>
-            <ul><li>UX research</li><li>Analytics</li><li>Experimentation</li></ul>
-          </div>
-          <div class="skill-col">
-            <h4>Tools</h4>
-            <ul><li>Figma</li><li>Git</li><li>HubSpot</li><li>Power BI</li><li>Google Workspace</li></ul>
-          </div>
-        </div>
-      </div>
-
+<section class="section section-alt">
+  <div class="c">
+    <div class="sec-head reveal">
+      <h2 class="sec-title">If you'd rather skim</h2>
     </div>
-  </section>
+    <div class="exp-list reveal">
+      <div class="exp-row">
+        <span class="exp-when">2026</span>
+        <div class="exp-main">
+          <h3 class="exp-role">B.A. Computer Science, University of Miami</h3>
+          <p class="exp-org">GPA 3.70 &middot; minors in Communication Studies and Sustainable Business</p>
+        </div>
+        <span class="exp-loc">Coral Gables, FL</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-when">2025</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Software Engineering Intern, Spotify</h3>
+          <p class="exp-org">Messages feature &middot; Java, Python, Scala on GCP and Kubernetes</p>
+        </div>
+        <span class="exp-loc">New York</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-when">2024 –</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Founder &amp; Engineer, WebEaze</h3>
+          <p class="exp-org">40+ sites in React, plus analytics, SEO, and onboarding automation</p>
+        </div>
+        <span class="exp-loc">Coral Gables, FL</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-when">2023 – 24</span>
+        <div class="exp-main">
+          <h3 class="exp-role">IT Intern, Delaware Elevator</h3>
+          <p class="exp-org">Automation that cut response times ~30% &middot; Power BI on Dynamics</p>
+        </div>
+        <span class="exp-loc">Salisbury, MD</span>
+      </div>
+      <div class="exp-row">
+        <span class="exp-when">Since 2018</span>
+        <div class="exp-main">
+          <h3 class="exp-role">Community Star, Spotify</h3>
+          <p class="exp-org">Volunteer super-user, early feature testing, annual trips to Spotify HQ</p>
+        </div>
+        <span class="exp-loc">Remote</span>
+      </div>
+    </div>
 
-</main>
+    <div class="skills reveal" style="margin-top:clamp(28px,4vw,44px);">
+      <div class="skill-col"><h3>Frontend</h3><ul><li>React</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
+      <div class="skill-col"><h3>Backend</h3><ul><li>Python</li><li>Java</li><li>REST APIs</li><li>Automation</li></ul></div>
+      <div class="skill-col"><h3>Data</h3><ul><li>SQL</li><li>Excel</li><li>Power BI</li><li>Dynamics</li></ul></div>
+      <div class="skill-col"><h3>Design &amp; tools</h3><ul><li>Figma</li><li>Git</li><li>Prototyping</li><li>Analytics</li></ul></div>
+    </div>
+  </div>
+</section>
 
-<!-- Footer -->
 <footer class="footer">
   <div class="c">
-    <p class="footer-copy">&copy; 2025 Billy Joinville</p>
-    <div class="footer-links">
-      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-      <a href="terms.html">Terms</a>
-      <a href="#top">Top</a>
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <p class="footer-brand">Billy Joinville</p>
+        <p class="footer-tag">Software engineer and CS grad in Miami. Currently building WebEaze and looking for what's next.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="projects-gallery.html">Work</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Elsewhere</h4>
+        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+        <a href="mailto:joinvillebilly@gmail.com">Email</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <p>&copy; 2026 Billy Joinville</p>
     </div>
   </div>
 </footer>
 
-<a href="#top" id="top-btn" aria-label="Back to top">&#8593;</a>
+<a href="#top" id="top-btn" aria-label="Back to top">↑</a>
 
 <script>
   const burger = document.getElementById('burger');
@@ -187,15 +151,26 @@
     burger.classList.toggle('is-open');
     drawer.classList.toggle('open');
   });
-  document.querySelectorAll('#drawer a').forEach(a =>
-    a.addEventListener('click', () => {
-      burger.classList.remove('is-open');
-      drawer.classList.remove('open');
-    })
-  );
-  window.addEventListener('scroll', () => {
-    document.getElementById('top-btn').classList.toggle('show', scrollY > 300);
-  });
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('is-open');
+    drawer.classList.remove('open');
+  }));
+
+  const nav = document.getElementById('nav');
+  const topBtn = document.getElementById('top-btn');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+    topBtn.classList.toggle('show', window.scrollY > 500);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 </body>
 </html>
