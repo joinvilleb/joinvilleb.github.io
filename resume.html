@@ -1,176 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Resume · Billy Joinville</title>
-  <meta name="description" content="Billy Joinville's resume. Software engineer and CS graduate, University of Miami, class of 2026.">
-  <link rel="icon" href="images/favicon-billy.png" type="image/png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body id="top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume &middot; Billy Joinville</title>
+<meta name="description" content="Billy Joinville's resume. Software engineer, B.A. computer science, University of Miami, 2026.">
 
-<nav class="nav" id="nav">
-  <div class="c">
-    <a class="nav-brand" href="index.html">Billy Joinville</a>
-    <div class="nav-links">
+<link rel="icon" href="images/site/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/site/apple-touch-icon.png">
+<meta name="theme-color" content="#f2f1ed">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Resume &middot; Billy Joinville">
+<meta property="og:description" content="Billy Joinville's resume. Software engineer, B.A. computer science, University of Miami, 2026.">
+<meta property="og:url" content="https://billyjoinville.me/resume.html">
+<meta property="og:image" content="https://billyjoinville.me/images/site/hero-portrait.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="ident" href="index.html">
+      <span>Billy Joinville</span>
+      <span class="role">Software <span class="mark">engineer</span></span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="projects-gallery.html">Work</a>
       <a href="resume.html" aria-current="page">Resume</a>
-      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-    </div>
-    <a class="nav-cta" href="contact.html">Get in touch</a>
-    <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="nav-drawer" id="drawer">
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="projects-gallery.html">Work</a>
-    <a href="resume.html" aria-current="page">Resume</a>
-    <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-  </div>
-  <a class="nav-cta" href="contact.html">Get in touch</a>
-</div>
-
-<header class="page-head">
-  <div class="c">
-    <h1 class="page-title reveal">Resume</h1>
-    <p class="page-desc reveal">The whole thing is below. You can read it here or grab a PDF.</p>
-    <div class="page-actions reveal">
-      <a class="btn btn-fill" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download PDF</a>
-      <a class="btn btn-outline" href="resume.pdf" target="_blank" rel="noopener">Open in a new tab</a>
-    </div>
+      <a href="contact.html">Contact</a>
+      <span class="social">
+        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.5 8.75h3v11.75h-3V8.75Zm5.25 0h2.88v1.6h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v7.11h-3v-6.3c0-1.5-.03-3.44-2.1-3.44-2.1 0-2.42 1.64-2.42 3.33v6.41h-3V8.75Z"/></svg></a>
+        <a href="mailto:joinvillebilly@gmail.com" aria-label="Email Billy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5Zm2.4 2L12 12.2 19.6 7H4.4ZM20 8.6l-8 5.5-8-5.5V17h16V8.6Z"/></svg></a>
+      </span>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
   </div>
 </header>
 
-<section class="section" style="padding-top:clamp(20px,3vw,36px);">
-  <div class="c">
-    <div class="resume-bar reveal">
-      <p><strong>Billy Joinville</strong> &middot; updated 2026</p>
-      <a class="tlink" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download a copy</a>
+<div class="drawer" id="drawer">
+  <nav class="drawer-in" aria-label="Menu">
+    <a href="index.html">Home</a>
+    <a href="projects-gallery.html">Work</a>
+    <a href="resume.html" aria-current="page">Resume</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+<div class="pagehead">
+  <div class="pagehead-in">
+    <h1 class="reveal">The whole thing, on <span class="sw mark">one page</span>.</h1>
+    <div class="lede reveal">
+      <p class="body">Read it below or take the PDF.</p>
+      <p><a class="btn" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download the PDF</a></p>
     </div>
-    <iframe class="resume-embed reveal" src="resume.pdf#view=FitH" title="Billy Joinville resume" aria-label="Resume PDF"></iframe>
+    <div class="pagehead-side reveal">
+      <img src="images/site/portrait-square.jpg" alt="Billy Joinville" width="440" height="440">
+    </div>
+  </div>
+</div>
+
+
+<section class="wrap">
+  <div class="pdf-frame reveal">
+    <iframe src="resume.pdf#view=FitH" title="Billy Joinville resume, PDF" loading="lazy"></iframe>
+  </div>
+  <p class="pdf-small micro">The embedded viewer is unreadable at phone size. Open or download the PDF, or read the summary below.</p>
+  <div class="pdf-note">
+    <p class="micro">Billy Joinville &middot; resume</p>
+    <p><a class="tlink micro" href="resume.pdf" target="_blank" rel="noopener">Open the PDF in a new tab</a></p>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="c">
-    <div class="sec-head reveal">
-      <h2 class="sec-title">If you'd rather skim</h2>
-    </div>
-    <div class="exp-list reveal">
-      <div class="exp-row">
-        <span class="exp-when">2026</span>
-        <div class="exp-main">
-          <h3 class="exp-role">B.A. Computer Science, University of Miami</h3>
-          <p class="exp-org">GPA 3.70 &middot; minors in Communication Studies and Sustainable Business</p>
-        </div>
-        <span class="exp-loc">Coral Gables, FL</span>
-      </div>
-      <div class="exp-row">
-        <span class="exp-when">2025</span>
-        <div class="exp-main">
-          <h3 class="exp-role">Software Engineering Intern, Spotify</h3>
-          <p class="exp-org">Messages feature &middot; Java, Python, Scala on GCP and Kubernetes</p>
-        </div>
-        <span class="exp-loc">New York</span>
-      </div>
-      <div class="exp-row">
-        <span class="exp-when">2024 –</span>
-        <div class="exp-main">
-          <h3 class="exp-role">Founder &amp; Engineer, WebEaze</h3>
-          <p class="exp-org">40+ sites in React, plus analytics, SEO, and onboarding automation</p>
-        </div>
-        <span class="exp-loc">Coral Gables, FL</span>
-      </div>
-      <div class="exp-row">
-        <span class="exp-when">2023 – 24</span>
-        <div class="exp-main">
-          <h3 class="exp-role">IT Intern, Delaware Elevator</h3>
-          <p class="exp-org">Automation that cut response times ~30% &middot; Power BI on Dynamics</p>
-        </div>
-        <span class="exp-loc">Salisbury, MD</span>
-      </div>
-      <div class="exp-row">
-        <span class="exp-when">Since 2018</span>
-        <div class="exp-main">
-          <h3 class="exp-role">Community Star, Spotify</h3>
-          <p class="exp-org">Volunteer super-user, early feature testing, annual trips to Spotify HQ</p>
-        </div>
-        <span class="exp-loc">Remote</span>
-      </div>
-    </div>
 
-    <div class="skills reveal" style="margin-top:clamp(28px,4vw,44px);">
-      <div class="skill-col"><h3>Frontend</h3><ul><li>React</li><li>JavaScript</li><li>HTML</li><li>CSS</li></ul></div>
-      <div class="skill-col"><h3>Backend</h3><ul><li>Python</li><li>Java</li><li>REST APIs</li><li>Automation</li></ul></div>
-      <div class="skill-col"><h3>Data</h3><ul><li>SQL</li><li>Excel</li><li>Power BI</li><li>Dynamics</li></ul></div>
-      <div class="skill-col"><h3>Design &amp; tools</h3><ul><li>Figma</li><li>Git</li><li>Prototyping</li><li>Analytics</li></ul></div>
+<section>
+  <div class="slab-row slab-row--left reveal">
+    <div class="slab slab--left"><h2><span class="ser">If you</span> <span class="sw">skim</span></h2></div>
+    <div class="slab-tail"><span class="idx">01</span></div>
+  </div>
+  <div class="wrap">
+    <div class="ledger">
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">2026 to now</p>
+        <div class="ledger-main">
+          <h3>Associate Software Engineer, Baptist Health</h3>
+          <p>The Technology and Digital department. Started September 2026.</p>
+        </div>
+        <p class="ledger-where meta">Miami, FL</p>
+      </div>
+
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">2026</p>
+        <div class="ledger-main">
+          <h3>B.A. Computer Science, University of Miami</h3>
+          <p>GPA 3.70. Minors in sustainable business and communication studies. President's Honor Roll, Provost's Honor Roll and Dean's List. Coursework in data structures, Java, Python, C, C++, discrete mathematics and corporate sustainability. Studied abroad in Barcelona in autumn 2025.</p>
+        </div>
+        <p class="ledger-where meta">Coral Gables, FL</p>
+      </div>
+
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">2025</p>
+        <div class="ledger-main">
+          <h3>Software Engineering Intern, Spotify</h3>
+          <p>The Messages feature on the mobile team. Java, Python and Scala services on Google Cloud and Kubernetes.</p>
+        </div>
+        <p class="ledger-where meta">New York</p>
+      </div>
+
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">2024 to now</p>
+        <div class="ledger-main">
+          <h3>Founder and Engineer, WebEaze</h3>
+          <p>More than forty React sites, plus the analytics, SEO and onboarding automation behind them.</p>
+        </div>
+        <p class="ledger-where meta">Coral Gables, FL</p>
+      </div>
+
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">2023 &ndash; 24</p>
+        <div class="ledger-main">
+          <h3>IT Intern, Delaware Elevator</h3>
+          <p>Automation that cut help desk response times by about 30%. Power BI dashboards on Microsoft Dynamics.</p>
+        </div>
+        <p class="ledger-where meta">Salisbury, MD</p>
+      </div>
+
+      <div class="ledger-row reveal">
+        <p class="ledger-when meta">Since 2018</p>
+        <div class="ledger-main">
+          <h3>Community Star, Spotify</h3>
+          <p>Volunteer super-user. Early feature testing and an annual visit to Spotify's offices to give the teams feedback.</p>
+        </div>
+        <p class="ledger-where meta">Remote</p>
+      </div>
     </div>
   </div>
 </section>
+
+
+<section class="run">
+  <div class="slab-row slab-row--right reveal">
+    <div class="slab-tail"><span class="idx">02</span></div>
+    <div class="slab slab--right slab--field"><h2><span class="ser">What</span> <span class="sw">I use</span></h2></div>
+  </div>
+  <div class="wrap">
+    <p class="run-text reveal">
+      <span class="mark mark--ink">Python</span>
+      <span class="mark mark--field">Java</span>
+      <span class="mark mark--ink">JavaScript</span>
+      <span class="mark mark--field">React</span>
+      <span class="mark mark--ink">Scala</span>
+      <span class="mark mark--field">SQL</span>
+      <span class="mark mark--ink">HTML &amp; CSS</span>
+      <span class="mark mark--field">REST APIs</span>
+      <span class="mark mark--ink">Google Cloud</span>
+      <span class="mark mark--field">Kubernetes</span>
+      <span class="mark mark--ink">Git</span>
+      <span class="mark mark--field">Figma</span>
+      <span class="mark mark--ink">Power BI</span>
+      <span class="mark mark--field">Automation</span>
+      <span class="mark mark--ink">Accessibility</span>
+      <span class="mark mark--field">SEO</span>
+    </p>
+  </div>
+</section>
+
+</main>
 
 <footer class="footer">
-  <div class="c">
-    <div class="footer-top">
-      <div class="footer-brand-col">
-        <p class="footer-brand">Billy Joinville</p>
-        <p class="footer-tag">Software engineer and CS grad in Miami. Currently building WebEaze and looking for what's next.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="index.html">Home</a>
-        <a href="projects-gallery.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Elsewhere</h4>
-        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-        <a href="mailto:joinvillebilly@gmail.com">Email</a>
-      </div>
-    </div>
-    <div class="footer-bot">
-      <p>&copy; 2026 Billy Joinville</p>
-    </div>
+  <div class="footer-in">
+    <p>
+      Billy Joinville &middot; Miami, Florida &middot;
+      <a href="mailto:joinvillebilly@gmail.com">joinvillebilly@gmail.com</a> &middot;
+      <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a> &middot;
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+    </p>
   </div>
 </footer>
 
-<a href="#top" id="top-btn" aria-label="Back to top">↑</a>
-
-<script>
-  const burger = document.getElementById('burger');
-  const drawer = document.getElementById('drawer');
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('is-open');
-    drawer.classList.toggle('open');
-  });
-  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    burger.classList.remove('is-open');
-    drawer.classList.remove('open');
-  }));
-
-  const nav = document.getElementById('nav');
-  const topBtn = document.getElementById('top-btn');
-  function onScroll() {
-    nav.classList.toggle('scrolled', window.scrollY > 8);
-    topBtn.classList.toggle('show', window.scrollY > 500);
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>

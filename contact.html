@@ -1,160 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact - Billy Joinville</title>
-  <meta name="description" content="Get in touch with Billy Joinville about engineering roles, projects, or anything else.">
-  <link rel="icon" href="images/favicon-billy.png" type="image/png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
-</head>
-<body id="top">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &middot; Billy Joinville</title>
+<meta name="description" content="Get in touch with Billy Joinville about engineering roles, freelance work, or anything else.">
 
-<nav class="nav" id="nav">
-  <div class="c">
-    <a class="nav-brand" href="index.html">Billy Joinville</a>
-    <div class="nav-links">
+<link rel="icon" href="images/site/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/site/apple-touch-icon.png">
+<meta name="theme-color" content="#f2f1ed">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contact &middot; Billy Joinville">
+<meta property="og:description" content="Get in touch with Billy Joinville about engineering roles, freelance work, or anything else.">
+<meta property="og:url" content="https://billyjoinville.me/contact.html">
+<meta property="og:image" content="https://billyjoinville.me/images/site/hero-portrait.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+
+<script>document.documentElement.className = 'js';</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="ident" href="index.html">
+      <span>Billy Joinville</span>
+      <span class="role">Software <span class="mark">engineer</span></span>
+    </a>
+
+    <nav class="top-nav" aria-label="Primary">
       <a href="index.html">Home</a>
       <a href="projects-gallery.html">Work</a>
       <a href="resume.html">Resume</a>
-      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-    </div>
-    <a class="nav-cta" href="contact.html" aria-current="page">Get in touch</a>
-    <button class="nav-burger" id="burger" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-<div class="nav-drawer" id="drawer">
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="projects-gallery.html">Work</a>
-    <a href="resume.html">Resume</a>
-    <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-  </div>
-  <a class="nav-cta" href="contact.html" aria-current="page">Get in touch</a>
-</div>
-
-<header class="page-head">
-  <div class="c">
-    <h1 class="page-title reveal">Say hello</h1>
-    <p class="page-desc reveal">I'm looking for a full-time engineering role for 2026, and open to freelance and projects too. Email is the best way to reach me and I usually reply within a day.</p>
-    <div class="page-actions reveal">
-      <a class="btn btn-fill" href="mailto:joinvillebilly@gmail.com">joinvillebilly@gmail.com</a>
-      <a class="btn btn-outline" href="resume.pdf" download="Billy-Joinville-Resume.pdf">Download resume</a>
-    </div>
+      <a href="contact.html" aria-current="page">Contact</a>
+      <span class="social">
+        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.5 8.75h3v11.75h-3V8.75Zm5.25 0h2.88v1.6h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v7.11h-3v-6.3c0-1.5-.03-3.44-2.1-3.44-2.1 0-2.42 1.64-2.42 3.33v6.41h-3V8.75Z"/></svg></a>
+        <a href="mailto:joinvillebilly@gmail.com" aria-label="Email Billy"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2V5Zm2.4 2L12 12.2 19.6 7H4.4ZM20 8.6l-8 5.5-8-5.5V17h16V8.6Z"/></svg></a>
+      </span>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
   </div>
 </header>
 
-<section class="section" style="padding-top:clamp(24px,4vw,44px);">
-  <div class="c">
-    <div class="sec-head reveal">
-      <h2 class="sec-title">Other places to find me</h2>
+<div class="drawer" id="drawer">
+  <nav class="drawer-in" aria-label="Menu">
+    <a href="index.html">Home</a>
+    <a href="projects-gallery.html">Work</a>
+    <a href="resume.html">Resume</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+</div>
+
+<main>
+
+<div class="pagehead">
+  <div class="pagehead-in">
+    <h1 class="reveal">Say <span class="sw mark">hello</span>.</h1>
+    <div class="lede reveal">
+      <p class="body">I am an associate software engineer at Baptist Health, and I run WebEaze on the
+        side. Email is the best way to reach me, about a site, about the work here, or about nothing in
+        particular. I usually reply within a day, and I read everything.</p>
     </div>
-    <div class="contact-grid">
-      <a class="contact-card reveal" href="mailto:joinvillebilly@gmail.com">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">Email</span><span class="contact-val">joinvillebilly@gmail.com</span></span>
+  </div>
+</div>
+
+
+<section class="email-line">
+  <div class="wrap">
+    <p class="micro reveal">Write to</p>
+    <p class="reveal"><a href="mailto:joinvillebilly@gmail.com">joinvillebilly@gmail.com</a></p>
+  </div>
+</section>
+
+
+<section>
+  <div class="slab-row slab-row--left reveal">
+    <div class="slab slab--left"><h2><span class="ser">Or</span> <span class="sw">elsewhere</span></h2></div>
+    <div class="slab-tail"><span class="idx">01</span></div>
+  </div>
+  <div class="wrap">
+    <div class="ledger">
+      <a class="ledger-row reveal" href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">
+        <p class="ledger-when meta">LinkedIn</p>
+        <div class="ledger-main">
+          <h3>in/billyjoinville</h3>
+          <p>The full history, and the place to message me if email is not your thing.</p>
+        </div>
+        <p class="ledger-where meta">Open &rarr;</p>
       </a>
-      <a class="contact-card reveal" href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.5 8.75h3v11.75h-3V8.75Zm5.25 0h2.88v1.6h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.6v7.11h-3v-6.3c0-1.5-.03-3.44-2.1-3.44-2.1 0-2.42 1.64-2.42 3.33v6.41h-3V8.75Z"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">LinkedIn</span><span class="contact-val">in/billyjoinville</span></span>
+
+      <a class="ledger-row reveal" href="https://webeaze.io" target="_blank" rel="noopener">
+        <p class="ledger-when meta">Studio</p>
+        <div class="ledger-main">
+          <h3>webeaze.io</h3>
+          <p>WebEaze, the web studio I run. Start here if you want a site rather than an engineer.</p>
+        </div>
+        <p class="ledger-where meta">Open &rarr;</p>
       </a>
-      <a class="contact-card reveal" href="https://webeaze.io" target="_blank" rel="noopener">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">My studio</span><span class="contact-val">webeaze.io</span></span>
+
+      <a class="ledger-row reveal" href="resume.html">
+        <p class="ledger-when meta">Resume</p>
+        <div class="ledger-main">
+          <h3>The PDF</h3>
+          <p>Read it on the site or download a copy.</p>
+        </div>
+        <p class="ledger-where meta">Open &rarr;</p>
       </a>
-      <a class="contact-card reveal" href="https://www.instagram.com/billy.joinville" target="_blank" rel="noopener">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">Instagram</span><span class="contact-val">@billy.joinville</span></span>
+
+      <a class="ledger-row reveal" href="https://www.instagram.com/billy.joinville" target="_blank" rel="noopener">
+        <p class="ledger-when meta">Instagram</p>
+        <div class="ledger-main">
+          <h3>@billy.joinville</h3>
+          <p>Mostly running, and the rest of life outside a text editor.</p>
+        </div>
+        <p class="ledger-where meta">Open &rarr;</p>
       </a>
-      <a class="contact-card reveal" href="https://x.com/BillyJoinville" target="_blank" rel="noopener">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-6.6 7.5L21.7 21h-6l-4.3-5.6L6.4 21h-3l7-8L2.7 3h6.1l3.9 5.1L17.5 3Zm-1.05 16h1.65L7.6 4.7H5.85L16.45 19Z"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">X</span><span class="contact-val">@BillyJoinville</span></span>
-      </a>
-      <a class="contact-card reveal" href="resume.html">
-        <span class="contact-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-5Z"/><path d="M8 13h8M8 17h5"/></svg></span>
-        <span class="contact-t"><span class="contact-lbl">Resume</span><span class="contact-val">Read or download</span></span>
+
+      <a class="ledger-row reveal" href="https://x.com/BillyJoinville" target="_blank" rel="noopener">
+        <p class="ledger-when meta">X</p>
+        <div class="ledger-main">
+          <h3>@BillyJoinville</h3>
+          <p>Occasional notes on what I am building.</p>
+        </div>
+        <p class="ledger-where meta">Open &rarr;</p>
       </a>
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
-  <div class="c">
-    <div class="about-grid">
-      <div class="about-media reveal"><img src="images/spotify-office-billy.jpg" alt="Billy at the Spotify office" onerror="this.src='images/billy-o-portrait.png'"></div>
-      <div class="about-copy reveal">
-        <p class="about-lead">I graduate this spring and I'm ready for what's next.</p>
-        <p class="about-p">I'm open to full-time software engineering, frontend, and data roles, and I still take on the occasional freelance build. I care most about working on something people use and being trusted to own it.</p>
-        <p class="about-p">If any of that sounds like a fit, send me a note. I read everything.</p>
-        <div class="page-actions" style="margin-top:28px;">
-          <a class="btn btn-fill" href="mailto:joinvillebilly@gmail.com">Email me</a>
-          <a class="btn btn-outline" href="projects-gallery.html">See my work</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
+
+<div class="signal-rule" aria-hidden="true"></div>
 
 <footer class="footer">
-  <div class="c">
-    <div class="footer-top">
-      <div class="footer-brand-col">
-        <p class="footer-brand">Billy Joinville</p>
-        <p class="footer-tag">Software engineer and CS grad in Miami. Currently building WebEaze and looking for what's next.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Pages</h4>
-        <a href="index.html">Home</a>
-        <a href="projects-gallery.html">Work</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Elsewhere</h4>
-        <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
-        <a href="mailto:joinvillebilly@gmail.com">Email</a>
-      </div>
-    </div>
-    <div class="footer-bot">
-      <p>&copy; 2026 Billy Joinville</p>
-    </div>
+  <div class="footer-in">
+    <p>
+      Billy Joinville &middot; Miami, Florida &middot;
+      <a href="mailto:joinvillebilly@gmail.com">joinvillebilly@gmail.com</a> &middot;
+      <a href="https://www.linkedin.com/in/billyjoinville" target="_blank" rel="noopener">LinkedIn</a> &middot;
+      <a href="https://webeaze.io" target="_blank" rel="noopener">WebEaze</a>
+    </p>
   </div>
 </footer>
 
-<a href="#top" id="top-btn" aria-label="Back to top">↑</a>
-
-<script>
-  const burger = document.getElementById('burger');
-  const drawer = document.getElementById('drawer');
-  burger.addEventListener('click', () => {
-    burger.classList.toggle('is-open');
-    drawer.classList.toggle('open');
-  });
-  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    burger.classList.remove('is-open');
-    drawer.classList.remove('open');
-  }));
-
-  const nav = document.getElementById('nav');
-  const topBtn = document.getElementById('top-btn');
-  function onScroll() {
-    nav.classList.toggle('scrolled', window.scrollY > 8);
-    topBtn.classList.toggle('show', window.scrollY > 500);
-  }
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>

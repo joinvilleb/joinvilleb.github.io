@@ -1,0 +1,929 @@
+/* billyjoinville.me
+   One stylesheet, no build step. Order below matches the order things
+   appear on the page: tokens, base, primitives, header, home, inner
+   pages, footer, then breakpoints and print.
+
+   House rules, so the pages stay consistent:
+   - Four surfaces only: paper, field, ink, signal. Nothing in between.
+   - --signal is a block colour. It sits behind ink text or stands alone
+     as a bar. It is never used as a text colour: it fails contrast both
+     on paper and carrying paper text. --signal-deep is the text version.
+   - No border-radius, no box-shadow, no gradients.
+   - Every photograph is grayscale. */
+
+:root {
+  color-scheme: light;
+
+  /* surfaces */
+  --paper:  #f2f1ed;
+  --field:  #d5d4d0;
+  --ink:    #14140f;
+  --rule:   #c4c2bc;
+
+  /* text */
+  --ink-70: #55534c;        /* 6.8:1 on paper, 5.2:1 on field */
+
+  /* accent */
+  --signal:      #e35a2e;   /* ink on signal 5.2:1 */
+  --signal-deep: #a8380f;   /* 5.7:1 on paper */
+
+  /* type */
+  --serif: "Instrument Serif", "Times New Roman", Times, serif;
+  --sans:  "Archivo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  --t-display: clamp(2.5rem, 6.1vw, 4.75rem);
+  --t-page:    clamp(2.25rem, 4.5vw, 3.5rem);
+  --t-label:   clamp(1.75rem, 3.3vw, 2.75rem);
+  --t-h2:      clamp(1.75rem, 3vw, 2.5rem);
+  --t-title:   clamp(1.5rem, 2.5vw, 2.125rem);
+  --t-marker:  clamp(1.1875rem, 2.1vw, 1.6875rem);
+  --t-email:   clamp(1.875rem, 6.4vw, 5.25rem);
+  --t-body:    0.875rem;
+  --t-meta:    0.6875rem;
+  --t-micro:   0.625rem;
+
+  --lh-body:  2.05;
+  --tr-meta:  0.14em;
+  --tr-micro: 0.2em;
+
+  /* space */
+  --s1: 0.5rem;
+  --s2: 1rem;
+  --s3: 1.5rem;
+  --s4: 2.5rem;
+  --s5: 4rem;
+  --s6: 6rem;
+  --s7: 9rem;
+
+  /* layout */
+  --margin:   clamp(1.25rem, 4vw, 4rem);
+  --gutter:   1.5rem;
+  --grid-max: 1560px;
+  --measure:  380px;
+  --field-h:  clamp(28.75rem, 52vw, 38.75rem);
+  --slab-h:   5.9375rem;
+  --hang:     5.9375rem;    /* matches --slab-h: the hero photo and the
+                               first slab end on the same line */
+  --tap:      120ms linear;
+
+  /* Distance from the page grid to the viewport edge, for blocks that
+     bleed off the side. Percentages resolve against the element's own
+     containing block, so --inset is only correct on children of a
+     full-width parent; nested blocks use --bleed instead. */
+  --inset: max(var(--margin), calc((100% - var(--grid-max)) / 2 + var(--margin)));
+  --bleed: calc(50vw - 50%);
+}
+
+
+/* base
+   ------------------------------------------------------------------ */
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+/* Blocks bleed past the viewport by design; clip rather than scroll.
+   clip is used over hidden so position:sticky keeps working. */
+html,
+body { overflow-x: clip; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, p, ul, ol, figure, dl, dd { margin: 0; }
+ul { padding: 0; list-style: none; }
+a  { color: inherit; text-decoration: none; }
+
+img {
+  display: block;
+  max-width: 100%;
+  filter: grayscale(1) contrast(1.06);
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+::selection { background: var(--signal); color: var(--ink); }
+
+/* No single colour clears 3:1 on paper, field and ink at once, so the
+   ring is ink by default and switches to signal on the ink blocks. */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+.footer :focus-visible,
+.drawer :focus-visible {
+  outline-color: var(--signal);
+}
+
+
+/* layout and type primitives
+   ------------------------------------------------------------------ */
+
+.wrap {
+  max-width: var(--grid-max);
+  margin: 0 auto;
+  padding: 0 var(--margin);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--gutter);
+}
+
+/* marker highlight */
+.mark {
+  padding: 0.06em 0.16em 0.14em;
+  background: var(--signal);
+  color: var(--ink);
+  -webkit-box-decoration-break: clone;
+          box-decoration-break: clone;
+}
+.mark--ink   { background: var(--ink);   color: var(--paper); }
+.mark--field { background: var(--field); color: var(--ink); }
+
+/* A grotesk word dropped into a serif headline. Archivo's x-height runs
+   larger than Instrument Serif's, so it needs winding back to sit on the
+   same optical line. Whole words only, never more than two per heading. */
+.sw {
+  font-family: var(--sans);
+  font-size: 0.86em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.ser { font-family: var(--serif); font-weight: 400; }
+
+.meta,
+.micro {
+  color: var(--ink-70);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.meta  { font-size: var(--t-meta);  letter-spacing: var(--tr-meta);  line-height: 1.7; }
+.micro { font-size: var(--t-micro); letter-spacing: var(--tr-micro); line-height: 1.6; }
+
+.body {
+  max-width: var(--measure);
+  color: var(--ink-70);
+  line-height: var(--lh-body);
+}
+.body + .body { margin-top: var(--s3); }
+
+.body a,
+.tlink {
+  color: var(--signal-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.tlink { display: inline-block; margin-top: var(--s2); }
+
+.btn {
+  display: inline-block;
+  padding: 1.125rem 2.125rem;
+  border: 1px solid var(--ink);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 0.9375rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  transition: background var(--tap), color var(--tap);
+}
+.btn:hover,
+.btn:focus-visible { background: var(--ink); color: var(--paper); }
+
+.cap { padding-top: 0.75rem; }
+
+
+/* header
+   ------------------------------------------------------------------ */
+
+.top-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s3);
+  max-width: var(--grid-max);
+  min-height: 4.75rem;
+  margin: 0 auto;
+  padding: 1.5rem var(--margin);
+}
+
+.ident {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.ident > span { display: block; white-space: nowrap; }
+.ident .role  { font-weight: 500; }
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.top-nav > a {
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: border-color var(--tap);
+}
+.top-nav > a:hover                 { border-bottom-color: var(--ink); }
+.top-nav > a[aria-current="page"]  { border-bottom-color: var(--signal-deep); }
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.social a {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.social svg { display: block; width: 1rem; height: 1rem; fill: currentColor; }
+
+.burger {
+  position: relative;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.625rem;
+}
+.burger span {
+  position: absolute;
+  left: 0.625rem;
+  right: 0.625rem;
+  height: 1px;
+  background: var(--ink);
+  transition: transform var(--tap), opacity var(--tap);
+}
+.burger span:nth-child(1) { top: 1rem; }
+.burger span:nth-child(2) { top: 1.375rem; }
+.burger span:nth-child(3) { top: 1.75rem; }
+.burger.open span:nth-child(1) { transform: translateY(0.375rem) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-0.375rem) rotate(-45deg); }
+
+.drawer {
+  display: none;
+  background: var(--ink);
+  color: var(--paper);
+}
+.drawer.open { display: block; }
+.drawer-in   { padding: var(--s3) var(--margin) var(--s4); }
+.drawer a {
+  display: block;
+  border-bottom: 1px solid rgba(242, 241, 237, 0.16);
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  line-height: 1.9;
+}
+.drawer a:last-child { border-bottom: 0; }
+.drawer a[aria-current="page"] { color: var(--signal); }
+
+
+/* hero
+   ------------------------------------------------------------------ */
+
+.hero {
+  position: relative;
+  background: var(--field);
+}
+.hero-in {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-content: center;
+  gap: var(--gutter);
+  max-width: var(--grid-max);
+  min-height: var(--field-h);
+  margin: 0 auto;
+  padding: var(--s6) var(--margin);
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / 8;
+}
+
+.statement {
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: var(--t-display);
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.06;
+}
+
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3) var(--s4);
+  max-width: 44rem;
+  margin-top: var(--s4);
+  padding-top: var(--s2);
+  border-top: 1px solid var(--rule);
+}
+.hero-meta div { min-width: 8.5rem; }
+.hero-meta dt {
+  margin-bottom: 0.25rem;
+  color: var(--ink-70);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: var(--tr-micro);
+  text-transform: uppercase;
+}
+.hero-meta dd {
+  color: var(--ink);
+  font-size: var(--t-meta);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.hero-cta { margin-top: var(--s4); }
+
+/* The portrait was shot on a seamless that lands on --field once it is
+   desaturated, so the photo has no visible top or left edge. The tuned
+   brightness is what makes the two meet; do not change one without the
+   other. It hangs --hang past the band onto paper, which is the only
+   hard horizontal edge in the hero. */
+.hero-photo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: clamp(18.75rem, 38vw, 35rem);
+  height: calc(100% + var(--hang));
+  object-fit: cover;
+  object-position: 52% 6%;
+  filter: grayscale(1) contrast(1.04) brightness(0.973);
+}
+
+
+/* section slabs
+   ------------------------------------------------------------------ */
+
+.slab-row { display: flex; align-items: center; }
+
+.slab {
+  display: flex;
+  flex: 0 0 43%;
+  align-items: center;
+  width: 43%;
+  height: var(--slab-h);
+  background: var(--ink);
+  color: var(--paper);
+}
+.slab--field { background: var(--field); color: var(--ink); }
+.slab h2 {
+  font-family: var(--serif);
+  font-size: var(--t-label);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.slab h2 .sw { letter-spacing: 0.01em; text-transform: uppercase; }
+
+.slab--left  { padding-left: var(--inset); padding-right: var(--s3); }
+.slab--right {
+  justify-content: flex-end;
+  margin-left: auto;
+  padding-left: var(--s3);
+  padding-right: var(--inset);
+}
+
+/* The slab's inner edge carries on as a hairline to the far margin,
+   tying the bleeding rectangle back to the grid. */
+.slab-tail {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 2rem;
+  height: 1px;
+  background: var(--rule);
+}
+.slab-tail .idx {
+  position: absolute;
+  top: 50%;
+  padding: 0 0.75rem;
+  transform: translateY(-50%);
+  background: var(--paper);
+  color: var(--ink-70);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: var(--tr-micro);
+}
+.slab-row--left  .slab-tail .idx { left: 0; }
+.slab-row--right .slab-tail .idx { right: 0; }
+
+
+/* home: in short
+   ------------------------------------------------------------------ */
+
+.short { padding-bottom: var(--s5); }
+
+/* The hero portrait hangs over this row, so the hairline stops where
+   the photo starts rather than running underneath it. */
+.short .slab-tail { margin-right: clamp(18.75rem, 38vw, 35rem); }
+
+.short-grid { margin-top: var(--s7); }
+.short-copy { grid-column: 3 / 7; }
+.short-rail { grid-column: 9 / 12; }
+
+.rail-item {
+  padding: var(--s2) 0;
+  border-top: 1px solid var(--rule);
+}
+.rail-item dt {
+  color: var(--ink-70);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: var(--tr-micro);
+  text-transform: uppercase;
+}
+.rail-item dd {
+  margin-top: 0.375rem;
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+
+/* home: work index
+   ------------------------------------------------------------------ */
+
+.work      { padding-bottom: var(--s5); }
+.work-list { margin-top: var(--s6); border-top: 1px solid var(--rule); }
+
+.work-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
+  gap: var(--gutter);
+  padding: var(--s4) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.work-when {
+  grid-column: 1 / 3;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+  text-transform: uppercase;
+}
+.work-head  { grid-column: 3 / 8; }
+.work-body  { grid-column: 8 / 12; }   /* column 12 stays empty on purpose */
+.work-title {
+  font-family: var(--serif);
+  font-size: var(--t-title);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
+}
+.work-where { margin-top: 0.5rem; }
+.work-more  { margin-top: var(--s5); }
+
+
+/* home: tool run
+   ------------------------------------------------------------------ */
+
+.run { padding-bottom: var(--s6); }
+.run-text {
+  max-width: 760px;
+  margin-top: var(--s6);
+  color: var(--ink);
+  font-size: var(--t-marker);
+  font-weight: 500;
+  line-height: 2;
+}
+.run-text span { margin-right: 0.25rem; white-space: nowrap; }
+
+
+/* home: overlap set piece
+   ------------------------------------------------------------------ */
+
+.overlap { padding: var(--s5) 0 var(--s6); }
+
+/* The photo and bar are positioned, so the container needs a floor tall
+   enough to hold them or the caption lands on the footer. */
+.overlap-in {
+  position: relative;
+  min-height: calc(3.75rem + 32.5rem + 2.5rem);
+}
+
+.overlap-photo {
+  position: absolute;
+  top: 3.75rem;
+  right: calc(-1 * var(--bleed));
+  z-index: 1;
+  width: 46%;
+  height: 32.5rem;
+  object-fit: cover;
+  object-position: 64% 42%;
+  filter: grayscale(1) contrast(1.12) brightness(1.05);
+}
+
+.overlap-panel {
+  position: relative;
+  z-index: 2;
+  width: calc(66% + var(--bleed));
+  margin-left: calc(-1 * var(--bleed));
+  padding: var(--s5) var(--s5) var(--s5) var(--bleed);
+  background: var(--field);
+}
+.overlap-panel h2 {
+  max-width: 16em;
+  font-family: var(--serif);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: 1.14;
+}
+.overlap-panel .btn { margin-top: var(--s4); }
+
+.overlap-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s4);
+  margin-top: var(--s4);
+}
+.overlap-cols .body { max-width: none; }
+
+/* Wedged on the seam between the panel in front and the photo behind. */
+.overlap-bar {
+  position: absolute;
+  top: 1.25rem;
+  left: 66%;
+  z-index: 3;
+  width: 0.5rem;
+  height: 32.5rem;
+  transform: translateX(-50%);
+  background: var(--signal);
+}
+
+.figcap {
+  position: absolute;
+  top: calc(3.75rem + 32.5rem + 0.75rem);
+  left: 66%;
+  z-index: 3;
+  transform: translateX(1.5rem);
+}
+
+
+/* inner pages
+   ------------------------------------------------------------------ */
+
+.pagehead { background: var(--field); }
+.pagehead-in {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: end;
+  gap: var(--gutter);
+  max-width: var(--grid-max);
+  margin: 0 auto;
+  padding: var(--s6) var(--margin);
+}
+.pagehead h1 {
+  grid-column: 1 / 9;
+  font-family: var(--serif);
+  font-size: var(--t-page);
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  line-height: 1.08;
+}
+.pagehead .lede { grid-column: 1 / 6; margin-top: var(--s3); }
+.pagehead-side  { grid-column: 11 / 13; justify-self: end; }
+.pagehead-side img {
+  width: 11.5rem;
+  height: 11.5rem;
+  object-fit: cover;
+  object-position: 50% 24%;
+  filter: grayscale(1) contrast(1.04) brightness(0.973);
+}
+
+.entry { padding: var(--s6) 0; border-bottom: 1px solid var(--rule); }
+.entry:last-of-type { border-bottom: 0; }
+.entry-grid { align-items: start; }
+.entry-head { grid-column: 1 / 6; }
+.entry-body { grid-column: 7 / 11; }
+.entry h3,
+.capstone h3 {
+  font-family: var(--serif);
+  font-size: var(--t-h2);
+  font-weight: 400;
+  letter-spacing: -0.018em;
+  line-height: 1.14;
+}
+.entry-media { margin-top: var(--s4); }
+.entry-media img { width: 100%; height: 23rem; object-fit: cover; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.375rem;
+  margin-top: var(--s3);
+}
+.tags span {
+  padding: 0.375rem 0.625rem;
+  background: var(--field);
+  color: var(--ink);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: var(--tr-micro);
+  text-transform: uppercase;
+}
+
+.capstone-media { grid-column: 1 / 5; }
+.capstone-media img { width: 100%; height: 35rem; object-fit: cover; object-position: 50% 34%; }
+.capstone .entry-head { grid-column: 6 / 9; }
+.capstone .entry-body { grid-column: 9 / 13; }
+
+
+/* ledger rows
+   ------------------------------------------------------------------ */
+
+.ledger { margin-top: var(--s6); border-top: 1px solid var(--rule); }
+.ledger-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: baseline;
+  gap: var(--gutter);
+  padding: var(--s3) 0;
+  border-bottom: 1px solid var(--rule);
+}
+.ledger-when  { grid-column: 1 / 3; }
+.ledger-main  { grid-column: 3 / 9; }
+.ledger-where { grid-column: 10 / 13; justify-self: end; text-align: right; }
+.ledger-main h3 { font-size: 0.9375rem; font-weight: 600; line-height: 1.6; }
+.ledger-main p  { margin-top: 0.25rem; color: var(--ink-70); line-height: 1.75; }
+
+a.ledger-row { transition: background var(--tap); }
+a.ledger-row:hover { background: var(--field); }
+a.ledger-row .ledger-main h3 {
+  font-family: var(--serif);
+  font-size: var(--t-title);
+  font-weight: 400;
+}
+
+
+/* resume page
+   ------------------------------------------------------------------ */
+
+.pdf-frame {
+  margin-top: var(--s5);
+  padding: 0.75rem;
+  border: 1px solid var(--rule);
+}
+.pdf-frame iframe {
+  display: block;
+  width: 100%;
+  height: min(85vh, 56.25rem);
+  border: 0;
+}
+.pdf-note {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--s2) var(--s4);
+  margin-top: var(--s2);
+}
+.pdf-note .tlink { margin-top: 0; }
+.pdf-small { display: none; margin-top: var(--s4); }
+
+
+/* contact page
+   ------------------------------------------------------------------ */
+
+.email-line { padding: var(--s7) 0 var(--s6); }
+.email-line a {
+  display: inline-block;
+  margin-top: var(--s2);
+  border-bottom: 2px solid transparent;
+  font-family: var(--serif);
+  font-size: var(--t-email);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  word-break: break-word;
+  transition: border-color var(--tap);
+}
+.email-line a:hover { border-bottom-color: var(--ink); }
+
+.signal-rule { width: 100%; height: 0.5rem; background: var(--signal); }
+
+
+/* footer
+   ------------------------------------------------------------------ */
+
+.footer { background: var(--ink); color: var(--paper); }
+.footer-in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: var(--grid-max);
+  min-height: 5.25rem;
+  margin: 0 auto;
+  padding: var(--s4) var(--margin);
+}
+.footer p {
+  color: var(--paper);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: var(--tr-micro);
+  line-height: 2;
+  text-align: center;
+  text-transform: uppercase;
+}
+.footer a { border-bottom: 1px solid rgba(242, 241, 237, 0.35); }
+.footer a:hover { border-bottom-color: var(--paper); }
+
+
+/* scroll reveal
+   Gated on .js so the page still renders with scripting turned off. */
+
+.js .reveal { opacity: 0; transform: translateY(10px); }
+.js .reveal.in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 480ms linear, transform 480ms cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal,
+  .js .reveal.in { opacity: 1; transform: none; transition: none; }
+  * { transition: none !important; }
+}
+
+
+/* breakpoints
+   ------------------------------------------------------------------ */
+
+@media (max-width: 1200px) {
+  .short-copy { grid-column: 1 / 7; }
+  .short-rail { grid-column: 8 / 13; }
+  .work-body  { grid-column: 8 / 13; }
+  .entry-body { grid-column: 6 / 13; }
+  .ledger-main { grid-column: 3 / 10; }
+
+  .overlap-panel { width: calc(72% + var(--bleed)); }
+  .overlap-bar   { left: 72%; }
+  .figcap        { left: 72%; }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --slab-h: 4.625rem;
+    --field-h: auto;
+    --gutter: 1rem;
+  }
+
+  /* One column below this width. grid-column has to go back to auto,
+     or a single-track grid grows twelve implicit columns. */
+  .grid,
+  .work-row,
+  .ledger-row,
+  .pagehead-in,
+  .entry-grid { grid-template-columns: 1fr; }
+
+  .short-copy, .short-rail,
+  .work-when, .work-head, .work-body,
+  .entry-head, .entry-body,
+  .capstone-media, .capstone .entry-head, .capstone .entry-body,
+  .ledger-when, .ledger-main, .ledger-where,
+  .pagehead h1, .pagehead .lede, .pagehead-side { grid-column: auto; }
+
+  .top-nav > a { display: none; }
+  .burger { display: block; }
+
+  .hero-in { min-height: 0; padding: var(--s5) var(--margin) 0; }
+  .statement { font-size: clamp(2.125rem, 8.4vw, 2.875rem); }
+  .statement br.lg { display: none; }
+
+  /* Stacked, the portrait keeps its own proportions and is capped so a
+     tablet does not end up with a wall-sized face. It still sits right
+     against the field, the way it does on desktop. */
+  .hero-photo {
+    position: static;
+    width: min(100%, 26rem);
+    max-width: none;
+    height: auto;
+    aspect-ratio: 1160 / 1613;
+    margin: var(--s5) 0 0 auto;
+    /* uncropped, so slightly more of the light top corner shows than on
+       desktop; nudged back onto --field */
+    filter: grayscale(1) contrast(1.04) brightness(0.955);
+  }
+
+  .slab { flex-basis: 78%; width: 78%; }
+  .slab h2 { font-size: clamp(1.5rem, 5.4vw, 2rem); }
+  .slab-tail .idx { display: none; }
+  .short .slab-tail { margin-right: 0; }
+
+  .short-grid { margin-top: var(--s5); gap: var(--s4); }
+  .body { max-width: 34rem; }
+
+  .work-row { gap: 0.5rem; padding: var(--s3) 0; }
+  .work-body { margin-top: 0.5rem; }
+
+  .run-text { margin-top: var(--s5); font-size: 1.25rem; line-height: 1.95; }
+
+  .overlap { padding: var(--s4) 0 var(--s5); }
+  .overlap-in { min-height: 0; }
+  .overlap-panel {
+    width: calc(100% + var(--margin) * 2);
+    margin-left: calc(-1 * var(--margin));
+    padding: var(--s4) var(--margin);
+  }
+  .overlap-cols { grid-template-columns: 1fr; gap: var(--s3); }
+  .overlap-photo {
+    position: static;
+    width: calc(100% + var(--margin) * 2);
+    max-width: none;
+    height: clamp(18rem, 72vw, 32rem);
+    margin-left: calc(-1 * var(--margin));
+    object-position: 64% 20%;
+  }
+  .overlap-bar { display: none; }
+  .figcap { position: static; margin-top: 0.75rem; transform: none; }
+
+  .pagehead-in { padding: var(--s5) var(--margin); }
+  .pagehead-side { display: none; }
+
+  .entry { padding: var(--s5) 0; }
+  .entry-body { margin-top: var(--s3); }
+  .entry-media img { height: 15rem; }
+  .capstone-media { margin-bottom: var(--s3); }
+  .capstone-media img { height: 22rem; }
+
+  .ledger-row { gap: 0.25rem; padding: var(--s3) 0; }
+  .ledger-where { justify-self: start; text-align: left; }
+
+  .pdf-frame { display: none; }
+  .pdf-small { display: block; }
+
+  .email-line { padding: var(--s5) 0 var(--s4); }
+  .btn { display: block; width: max-content; }
+}
+
+@media (max-width: 520px) {
+  .slab { flex-basis: 88%; width: 88%; }
+  .hero-meta { gap: var(--s2) var(--s3); }
+  .hero-meta div {
+    min-width: 100%;
+    padding-bottom: var(--s1);
+    border-bottom: 1px solid var(--rule);
+  }
+  .hero-meta div:last-child { border-bottom: 0; }
+  .run-text { font-size: 1.125rem; }
+}
+
+
+/* print
+   Ink blocks and marker highlights would come out near-white on white,
+   so everything falls back to plain black on white. */
+
+@media print {
+  :root { --paper: #fff; --field: #fff; --ink: #000; --ink-70: #222; --rule: #999; }
+
+  body { font-size: 11pt; line-height: 1.5; }
+
+  .top, .drawer, .burger, .hero-photo, .overlap-photo, .overlap-bar,
+  .signal-rule, .pdf-frame, .btn { display: none; }
+
+  .mark, .mark--ink, .mark--field { background: none; color: #000; padding: 0; }
+
+  .slab { width: auto; height: auto; background: none; color: #000; padding: 0; }
+  .slab h2 { font-size: 16pt; }
+  .slab-tail { display: none; }
+
+  .hero-in, .pagehead-in, .overlap-panel { padding: 0; min-height: 0; }
+  .overlap-panel { width: auto; margin: 0; }
+  .overlap-in { min-height: 0; }
+
+  .footer { background: none; color: #000; }
+  .footer p { color: #000; }
+
+  a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; }
+}
