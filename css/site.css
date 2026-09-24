@@ -888,6 +888,12 @@ a.ledger-row .ledger-main h3 {
 }
 
 @media (max-width: 520px) {
+  /* three social icons plus the burger need the header to give ground */
+  .top-in { gap: var(--s2); }
+  .top-nav { gap: 0.875rem; }
+  .ident { font-size: 0.75rem; }
+  .social a { width: 2rem; height: 2rem; }
+
   .slab { flex-basis: 88%; width: 88%; }
   .hero-meta { gap: var(--s2) var(--s3); }
   .hero-meta div {
