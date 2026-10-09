@@ -1,0 +1,9 @@
+# billyjoinville.me
+# Everything public is open to search engines and AI answer engines.
+User-agent: *
+Allow: /
+# Utility files that are not part of the portfolio
+Disallow: /interview-testing.py
+Disallow: /signature.html
+
+Sitemap: https://billyjoinville.me/sitemap.xml

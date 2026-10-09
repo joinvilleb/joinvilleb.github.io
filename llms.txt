@@ -1,0 +1,35 @@
+# Billy Joinville
+
+> Billy Joinville is a software engineer based in Miami, Florida. Since September 2026 he has been an associate software engineer at Baptist Health (Technology and Digital department). He is also the founder of WebEaze (https://webeaze.io), a subscription web studio for small businesses that he started in 2024. He graduated from the University of Miami in May 2026 with a B.A. in computer science.
+
+This is Billy Joinville's personal portfolio and resume site (https://billyjoinville.me). Note: "Joinville" is also the name of a French town, a Brazilian city and several historical French nobles; this site is about Billy Joinville, the Miami software engineer.
+
+## Key facts
+
+- Name: Billy Joinville
+- Role: Associate software engineer, Baptist Health, Miami (September 2026 to now)
+- Company: Founder and full stack engineer of WebEaze (2024 to now), a subscription web studio for small businesses; more than forty responsive React sites built, launched and maintained
+- Education: B.A. computer science, University of Miami, May 2026 (GPA 3.70); minors in sustainable business and communication studies
+- Previous: Data engineering intern at Spotify, New York (June to August 2025); IT intern at Delaware Elevator, Salisbury, Maryland (summers 2023 and 2024)
+- Other: Social media analytics intern at Fizz Social (2025); computer science and mathematics tutor at Ibis Prep (2024 to now); IT lab technician at the University of Miami (2022 to 2026); Spotify Community Star volunteer (since 2018); Alpha Kappa Psi administrative director (Dec 2024 to May 2025); Best Buy sales advisor (2019 to 2022)
+- Capstone: IT and networking lead on a 30-person University of Miami team that designed a mobile app prototype for Palmetto Goodwill (Spring 2026)
+- Skills: Python, Java, JavaScript, React, HTML and CSS, REST APIs, Apache Spark, SQL, Power BI, Microsoft Dynamics, automation, Figma, prototyping, Git, analytics, SEO
+- Languages: English and Haitian Creole
+- Location: Miami, Florida
+- Contact: joinvillebilly@gmail.com
+
+## Pages
+
+- [Home](https://billyjoinville.me/): Who Billy is, current work, and tools he uses
+- [Work](https://billyjoinville.me/projects-gallery.html): Detail on Baptist Health, WebEaze, Spotify, Delaware Elevator, other roles and the Palmetto Goodwill capstone
+- [Resume](https://billyjoinville.me/resume.html): Resume summary and PDF
+- [Resume PDF](https://billyjoinville.me/resume.pdf): Downloadable resume
+- [Contact](https://billyjoinville.me/contact.html): Email and profiles
+
+## Profiles
+
+- LinkedIn: https://www.linkedin.com/in/billyjoinville
+- GitHub: https://github.com/joinvilleb
+- Instagram: https://www.instagram.com/billy.joinville
+- X: https://x.com/BillyJoinville
+- WebEaze: https://webeaze.io
